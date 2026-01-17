@@ -1,24 +1,111 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="de">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- TODO: Set the document title to the name of your application -->
-    <title>Lovable App</title>
-    <meta name="description" content="Lovable Generated Project" />
-    <meta name="author" content="Lovable" />
-
-    <!-- TODO: Update og:title to match your application name -->
-    <meta property="og:title" content="Lovable App" />
-    <meta property="og:description" content="Lovable Generated Project" />
+    <title>Gebäudereinigung Bad Neuenahr-Ahrweiler | AhrGlanz</title>
+    <meta name="description" content="AhrGlanz Gebäudereinigung: Unterhaltsreinigung, Grundreinigung, Glasreinigung, Bauendreinigung & Außenanlagenpflege. Zuverlässig in Bad Neuenahr-Ahrweiler & Umgebung. Kostenloses Angebot anfordern." />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://ahrglanz.de/" />
+    
+    <!-- Open Graph -->
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
-
+    <meta property="og:title" content="Gebäudereinigung Bad Neuenahr-Ahrweiler | AhrGlanz" />
+    <meta property="og:description" content="Professionelle Gebäudereinigung für Privat, Gewerbe und Bauprojekte. Zuverlässig, gründlich, fair." />
+    <meta property="og:locale" content="de_DE" />
+    <meta property="og:site_name" content="AhrGlanz Gebäudereinigung" />
+    
+    <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@Lovable" />
-    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+    <meta name="twitter:title" content="Gebäudereinigung Bad Neuenahr-Ahrweiler | AhrGlanz" />
+    <meta name="twitter:description" content="Professionelle Gebäudereinigung für Privat, Gewerbe und Bauprojekte. Zuverlässig, gründlich, fair." />
+    
+    <!-- Geo -->
+    <meta name="geo.region" content="DE-RP" />
+    <meta name="geo.placename" content="Bad Neuenahr-Ahrweiler" />
+    
+    <!-- Structured Data: LocalBusiness -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "@id": "https://ahrglanz.de/#business",
+      "name": "AhrGlanz Gebäudereinigung",
+      "description": "Professionelle Gebäudereinigung für Privat, Gewerbe und Bauprojekte in Bad Neuenahr-Ahrweiler und Umgebung.",
+      "url": "https://ahrglanz.de",
+      "telephone": "+49 2641 3968989",
+      "email": "info@ahrglanz.de",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Ehlinger Str. 74",
+        "addressLocality": "Bad Neuenahr-Ahrweiler",
+        "postalCode": "53474",
+        "addressCountry": "DE"
+      },
+      "areaServed": {
+        "@type": "GeoCircle",
+        "geoMidpoint": {
+          "@type": "GeoCoordinates",
+          "latitude": 50.5485,
+          "longitude": 7.1135
+        },
+        "geoRadius": "30000"
+      },
+      "serviceType": [
+        "Unterhaltsreinigung",
+        "Grundreinigung",
+        "Glas- und Fensterreinigung",
+        "Bauendreinigung",
+        "Außenanlagenpflege"
+      ],
+      "priceRange": "$$"
+    }
+    </script>
+    
+    <!-- Structured Data: FAQPage -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "In welchem Gebiet sind Sie tätig?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Wir sind in Bad Neuenahr-Ahrweiler und der näheren Umgebung tätig. Der genaue Radius hängt vom Auftrag ab."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Wie schnell bekomme ich ein Angebot?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "In der Regel erhalten Sie nach kurzer Klärung der Eckdaten innerhalb weniger Tage ein individuelles Angebot."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Bieten Sie regelmäßige Reinigung an?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ja, unsere Unterhaltsreinigung kann im passenden Turnus erfolgen – wöchentlich, 14-tägig, monatlich oder nach individueller Vereinbarung."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Reinigen Sie auch nach Bauarbeiten?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ja, wir bieten professionelle Bauendreinigung an. Das umfasst die Entfernung von Bauschmutz, Staub und Rückständen sowie die gründliche Reinigung aller Oberflächen."
+          }
+        }
+      ]
+    }
+    </script>
+    
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
   </head>
-
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
