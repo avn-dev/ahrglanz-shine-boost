@@ -31,6 +31,11 @@ export function Header() {
     setIsMobileMenuOpen(false);
   };
 
+  // Dynamic text colors based on scroll state
+  const textColor = isScrolled ? 'text-foreground' : 'text-white';
+  const textColorMuted = isScrolled ? 'text-foreground/80' : 'text-white/90';
+  const logoSubtext = isScrolled ? 'text-muted-foreground' : 'text-white/70';
+
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -43,14 +48,16 @@ export function Header() {
         <nav className="flex items-center justify-between">
           {/* Logo */}
           <a href="#" className="flex items-center gap-2 group">
-            <div className="w-10 h-10 rounded-lg bg-primary flex items-center justify-center transition-transform group-hover:scale-105">
-              <span className="text-primary-foreground font-display font-bold text-xl">A</span>
+            <div className={`w-10 h-10 rounded-lg flex items-center justify-center transition-all group-hover:scale-105 ${
+              isScrolled ? 'bg-primary' : 'bg-white/20 backdrop-blur-sm'
+            }`}>
+              <span className="text-white font-display font-bold text-xl">A</span>
             </div>
             <div className="flex flex-col">
-              <span className="font-display font-bold text-lg text-foreground leading-tight">
+              <span className={`font-display font-bold text-lg leading-tight transition-colors ${textColor}`}>
                 AhrGlanz
               </span>
-              <span className="text-xs text-muted-foreground leading-tight">
+              <span className={`text-xs leading-tight transition-colors ${logoSubtext}`}>
                 Gebäudereinigung
               </span>
             </div>
@@ -62,7 +69,11 @@ export function Header() {
               <a
                 key={item.label}
                 href={item.href}
-                className="text-sm font-medium text-foreground/80 hover:text-primary transition-colors relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-primary after:transition-all hover:after:w-full"
+                className={`text-sm font-medium transition-colors relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:transition-all hover:after:w-full ${
+                  isScrolled 
+                    ? 'text-foreground/80 hover:text-primary after:bg-primary' 
+                    : 'text-white/90 hover:text-white after:bg-white'
+                }`}
               >
                 {item.label}
               </a>
@@ -71,7 +82,12 @@ export function Header() {
 
           {/* CTA Buttons */}
           <div className="hidden lg:flex items-center gap-3">
-            <a href="tel:+4926413968989" className="flex items-center gap-2 text-sm font-medium text-foreground/80 hover:text-primary transition-colors">
+            <a 
+              href="tel:+4926413968989" 
+              className={`flex items-center gap-2 text-sm font-medium transition-colors ${
+                isScrolled ? 'text-foreground/80 hover:text-primary' : 'text-white/90 hover:text-white'
+              }`}
+            >
               <Phone className="w-4 h-4" />
               <span className="hidden xl:inline">+49 2641 3968989</span>
             </a>
@@ -82,7 +98,7 @@ export function Header() {
 
           {/* Mobile Menu Button */}
           <button
-            className="lg:hidden p-2 text-foreground"
+            className={`lg:hidden p-2 transition-colors ${textColor}`}
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-label={isMobileMenuOpen ? 'Menü schließen' : 'Menü öffnen'}
           >
