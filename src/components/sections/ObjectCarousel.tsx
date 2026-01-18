@@ -105,7 +105,10 @@ export const ObjectCarousel = () => {
                     
                     {/* Content Overlay */}
                     <div className="absolute inset-0 flex flex-col items-center justify-center p-6">
-                      <h3 className="text-2xl md:text-3xl font-display font-bold text-white mb-4 drop-shadow-lg">
+                      <h3 
+                        className="text-2xl md:text-3xl font-display font-bold text-white mb-4"
+                        style={{ textShadow: '0 2px 8px rgba(0,0,0,0.7), 0 4px 16px rgba(0,0,0,0.5)' }}
+                      >
                         {object.title}
                       </h3>
                       <Button
