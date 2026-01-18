@@ -31,9 +31,9 @@
     --muted: 210 20% 96%;
     --muted-foreground: 210 15% 45%;
 
-    /* Accent: Bright cyan for CTAs and highlights - complements blue hero */
-    --accent: 190 95% 60%;
-    --accent-foreground: 210 25% 10%;
+    /* Accent: Warm terracotta/copper - elegant complement to blue */
+    --accent: 25 75% 55%;
+    --accent-foreground: 0 0% 100%;
 
     /* Success green for form states */
     --success: 152 70% 40%;
@@ -95,8 +95,8 @@
     --muted: 210 25% 18%;
     --muted-foreground: 210 15% 60%;
 
-    --accent: 190 95% 65%;
-    --accent-foreground: 210 25% 10%;
+    --accent: 25 75% 60%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 70% 50%;
     --destructive-foreground: 0 0% 100%;
