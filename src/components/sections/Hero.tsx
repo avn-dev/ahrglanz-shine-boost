@@ -1,6 +1,6 @@
-import { CheckCircle, Phone, ArrowRight } from 'lucide-react';
+import { CheckCircle, Phone, ArrowRight, ChevronDown } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import heroImage from '@/assets/hero-cleaning.jpg';
+import heroImage from '@/assets/hero-building.jpg';
 
 const trustBadges = [
   'Schnelle Rückmeldung',
@@ -16,95 +16,95 @@ export function Hero() {
     }
   };
 
+  const scrollToServices = () => {
+    const element = document.getElementById('services');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
-    <section className="relative min-h-screen flex items-center pt-24 pb-16 overflow-hidden">
-      {/* Background gradient */}
-      <div 
-        className="absolute inset-0 bg-gradient-to-br from-secondary via-background to-background"
-        aria-hidden="true"
-      />
+    <section className="relative h-screen min-h-[600px] flex items-center justify-center overflow-hidden">
+      {/* Fullscreen Background Image */}
+      <div className="absolute inset-0">
+        <img 
+          src={heroImage} 
+          alt="Moderne Glasfassaden - Professionelle Gebäudereinigung"
+          className="w-full h-full object-cover"
+          loading="eager"
+        />
+        {/* Dark overlay for text readability */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/70" />
+        {/* Subtle glanz accent */}
+        <div 
+          className="absolute inset-0 bg-gradient-to-tr from-primary/10 via-transparent to-accent/5"
+          aria-hidden="true"
+        />
+      </div>
       
-      {/* Decorative glanz glow */}
-      <div 
-        className="absolute top-1/4 right-0 w-[600px] h-[600px] rounded-full opacity-30 blur-3xl"
-        style={{ background: 'radial-gradient(circle, hsl(195 85% 28% / 0.2) 0%, transparent 70%)' }}
-        aria-hidden="true"
-      />
-      
-      <div className="section-container relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          {/* Content */}
-          <div className="space-y-8">
-            {/* Badge */}
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium animate-fade-up">
-              <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-              Professionelle Gebäudereinigung
+      {/* Content */}
+      <div className="relative z-10 text-center px-4 sm:px-6 max-w-4xl mx-auto">
+        {/* Badge */}
+        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm text-white text-sm font-medium mb-6 animate-fade-up border border-white/20">
+          <span className="w-2 h-2 rounded-full bg-accent animate-pulse" />
+          Professionelle Gebäudereinigung
+        </div>
+
+        {/* Headline */}
+        <h1 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight mb-6 animate-fade-up stagger-1">
+          Gebäudereinigung, die{' '}
+          <span className="text-accent">wirklich glänzt.</span>
+        </h1>
+
+        {/* Subheadline */}
+        <p className="text-lg sm:text-xl md:text-2xl text-white/90 max-w-2xl mx-auto mb-8 animate-fade-up stagger-2">
+          Professionelle Reinigungsleistungen für Privat, Gewerbe und Bauprojekte 
+          in Bad Neuenahr-Ahrweiler & Umgebung.
+        </p>
+
+        {/* CTAs */}
+        <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8 animate-fade-up stagger-3">
+          <Button onClick={scrollToQuoteForm} variant="hero" size="xl" className="group">
+            Kostenloses Angebot anfordern
+            <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
+          </Button>
+          <Button asChild variant="outline" size="xl" className="border-white/30 text-white hover:bg-white/10 hover:text-white backdrop-blur-sm">
+            <a href="tel:+4926413968989">
+              <Phone className="w-5 h-5" />
+              Anrufen
+            </a>
+          </Button>
+        </div>
+
+        {/* Trust badges */}
+        <div className="flex flex-wrap gap-3 sm:gap-4 justify-center animate-fade-up stagger-4">
+          {trustBadges.map((badge) => (
+            <div key={badge} className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 backdrop-blur-sm text-white/90 text-sm border border-white/20">
+              <CheckCircle className="w-4 h-4 text-accent" />
+              {badge}
             </div>
+          ))}
+        </div>
+      </div>
 
-            {/* Headline */}
-            <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground leading-tight animate-fade-up stagger-1">
-              Gebäudereinigung, die{' '}
-              <span className="text-primary">wirklich glänzt.</span>
-            </h1>
+      {/* Scroll indicator */}
+      <button 
+        onClick={scrollToServices}
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 text-white/70 hover:text-white transition-colors animate-bounce cursor-pointer"
+        aria-label="Weiter zu den Leistungen"
+      >
+        <ChevronDown className="w-8 h-8" />
+      </button>
 
-            {/* Subheadline */}
-            <p className="text-lg sm:text-xl text-muted-foreground max-w-lg animate-fade-up stagger-2">
-              Professionelle Reinigungsleistungen für Privat, Gewerbe und Bauprojekte 
-              in Bad Neuenahr-Ahrweiler & Umgebung.
-            </p>
-
-            {/* CTAs */}
-            <div className="flex flex-col sm:flex-row gap-4 animate-fade-up stagger-3">
-              <Button onClick={scrollToQuoteForm} variant="hero" size="xl" className="group">
-                Kostenloses Angebot anfordern
-                <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
-              </Button>
-              <Button asChild variant="outline" size="xl">
-                <a href="tel:+4926413968989">
-                  <Phone className="w-5 h-5" />
-                  Anrufen
-                </a>
-              </Button>
-            </div>
-
-            {/* Trust badges */}
-            <div className="flex flex-wrap gap-4 pt-4 animate-fade-up stagger-4">
-              {trustBadges.map((badge) => (
-                <div key={badge} className="trust-badge">
-                  <CheckCircle className="w-4 h-4 text-primary" />
-                  {badge}
-                </div>
-              ))}
-            </div>
+      {/* Floating badge - repositioned for fullscreen hero */}
+      <div className="absolute bottom-8 right-4 sm:right-8 bg-white/95 backdrop-blur-sm rounded-xl shadow-lg p-3 sm:p-4 animate-fade-up stagger-5 border border-white/50 hidden sm:block">
+        <div className="flex items-center gap-3">
+          <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-success/20 flex items-center justify-center">
+            <CheckCircle className="w-5 h-5 sm:w-6 sm:h-6 text-success" />
           </div>
-
-          {/* Hero Visual */}
-          <div className="relative animate-fade-up stagger-3">
-            <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-              {/* Hero image */}
-              <img 
-                src={heroImage} 
-                alt="Professionelle Gebäudereinigung - Fensterreinigung in einem modernen Bürogebäude"
-                className="w-full aspect-[4/3] object-cover"
-                loading="eager"
-              />
-              
-              {/* Shine overlay */}
-              <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/10 to-white/20 pointer-events-none" />
-            </div>
-            
-            {/* Floating badge */}
-            <div className="absolute -bottom-6 left-4 sm:-left-4 bg-background rounded-xl shadow-lg p-4 animate-fade-up stagger-5 border border-border/50">
-              <div className="flex items-center gap-3">
-                <div className="w-12 h-12 rounded-full bg-success/20 flex items-center justify-center">
-                  <CheckCircle className="w-6 h-6 text-success" />
-                </div>
-                <div>
-                  <p className="font-semibold text-foreground">Lokaler Betrieb</p>
-                  <p className="text-sm text-muted-foreground">Bad Neuenahr-Ahrweiler</p>
-                </div>
-              </div>
-            </div>
+          <div>
+            <p className="font-semibold text-foreground text-sm sm:text-base">Lokaler Betrieb</p>
+            <p className="text-xs sm:text-sm text-muted-foreground">Bad Neuenahr-Ahrweiler</p>
           </div>
         </div>
       </div>
