@@ -1,19 +1,23 @@
 import { useState, useEffect } from 'react';
 import { Menu, X, Phone } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 
 const navItems = [
-  { label: 'Leistungen', href: '#services' },
-  { label: 'Über uns', href: '#why-us' },
-  { label: 'Ablauf', href: '#process' },
-  { label: 'Bewertungen', href: '#reviews' },
-  { label: 'FAQ', href: '#faq' },
-  { label: 'Kontakt', href: '#quote-form' },
+  { label: 'Leistungen', href: '/leistungen' },
+  { label: 'Objekte', href: '/objekte' },
+  { label: 'Über uns', href: '/#why-us' },
+  { label: 'Ablauf', href: '/#process' },
+  { label: 'Bewertungen', href: '/#reviews' },
+  { label: 'FAQ', href: '/#faq' },
+  { label: 'Kontakt', href: '/#quote-form' },
 ];
 
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -23,12 +27,47 @@ export function Header() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const scrollToQuoteForm = () => {
-    const element = document.getElementById('quote-form');
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
+  const handleNavClick = (href: string) => {
     setIsMobileMenuOpen(false);
+    
+    // If it's an anchor on the homepage
+    if (href.startsWith('/#')) {
+      const hash = href.substring(1); // Remove leading /
+      if (location.pathname === '/') {
+        // Already on home, just scroll
+        const element = document.getElementById(hash.substring(1));
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      } else {
+        // Navigate to home, then scroll
+        navigate('/');
+        setTimeout(() => {
+          const element = document.getElementById(hash.substring(1));
+          if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+          }
+        }, 100);
+      }
+    }
+  };
+
+  const scrollToQuoteForm = () => {
+    setIsMobileMenuOpen(false);
+    if (location.pathname === '/') {
+      const element = document.getElementById('quote-form');
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    } else {
+      navigate('/');
+      setTimeout(() => {
+        const element = document.getElementById('quote-form');
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 100);
+    }
   };
 
   // Dynamic text colors based on scroll state
@@ -47,7 +86,7 @@ export function Header() {
       <div className="section-container">
         <nav className="flex items-center justify-between">
           {/* Logo */}
-          <a href="#" className="flex items-center gap-2 group">
+          <Link to="/" className="flex items-center gap-2 group">
             <div className={`w-10 h-10 rounded-lg flex items-center justify-center transition-all group-hover:scale-105 ${
               isScrolled ? 'bg-primary' : 'bg-white/20 backdrop-blur-sm'
             }`}>
@@ -61,23 +100,43 @@ export function Header() {
                 Gebäudereinigung
               </span>
             </div>
-          </a>
+          </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center gap-8">
-            {navItems.map((item) => (
-              <a
-                key={item.label}
-                href={item.href}
-                className={`text-sm font-medium transition-colors relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:transition-all hover:after:w-full ${
-                  isScrolled 
-                    ? 'text-foreground/80 hover:text-primary after:bg-primary' 
-                    : 'text-white/90 hover:text-white after:bg-white'
-                }`}
-              >
-                {item.label}
-              </a>
-            ))}
+            {navItems.map((item) => {
+              const isExternal = item.href.startsWith('/#');
+              
+              if (isExternal) {
+                return (
+                  <button
+                    key={item.label}
+                    onClick={() => handleNavClick(item.href)}
+                    className={`text-sm font-medium transition-colors relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:transition-all hover:after:w-full ${
+                      isScrolled 
+                        ? 'text-foreground/80 hover:text-primary after:bg-primary' 
+                        : 'text-white/90 hover:text-white after:bg-white'
+                    }`}
+                  >
+                    {item.label}
+                  </button>
+                );
+              }
+              
+              return (
+                <Link
+                  key={item.label}
+                  to={item.href}
+                  className={`text-sm font-medium transition-colors relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:transition-all hover:after:w-full ${
+                    isScrolled 
+                      ? 'text-foreground/80 hover:text-primary after:bg-primary' 
+                      : 'text-white/90 hover:text-white after:bg-white'
+                  }`}
+                >
+                  {item.label}
+                </Link>
+              );
+            })}
           </div>
 
           {/* CTA Buttons */}
@@ -110,16 +169,32 @@ export function Header() {
         {isMobileMenuOpen && (
           <div className="lg:hidden absolute top-full left-0 right-0 bg-background shadow-lg border-t animate-fade-in">
             <div className="section-container py-4 space-y-4">
-              {navItems.map((item) => (
-                <a
-                  key={item.label}
-                  href={item.href}
-                  className="block text-foreground/80 hover:text-primary py-2 transition-colors"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  {item.label}
-                </a>
-              ))}
+              {navItems.map((item) => {
+                const isExternal = item.href.startsWith('/#');
+                
+                if (isExternal) {
+                  return (
+                    <button
+                      key={item.label}
+                      onClick={() => handleNavClick(item.href)}
+                      className="block text-foreground/80 hover:text-primary py-2 transition-colors text-left w-full"
+                    >
+                      {item.label}
+                    </button>
+                  );
+                }
+                
+                return (
+                  <Link
+                    key={item.label}
+                    to={item.href}
+                    className="block text-foreground/80 hover:text-primary py-2 transition-colors"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    {item.label}
+                  </Link>
+                );
+              })}
               <div className="pt-4 border-t space-y-3">
                 <a
                   href="tel:+4926413968989"
