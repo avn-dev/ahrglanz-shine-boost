@@ -70,17 +70,22 @@ export function Header() {
     }
   };
 
-  // Dynamic text colors based on scroll state
-  const textColor = isScrolled ? 'text-foreground' : 'text-white';
-  const textColorMuted = isScrolled ? 'text-foreground/80' : 'text-white/90';
-  const logoSubtext = isScrolled ? 'text-muted-foreground' : 'text-white/70';
+  // On homepage, use transparent header with white text until scrolled
+  // On other pages, always use solid header with dark text
+  const isHomepage = location.pathname === '/';
+  const useTransparent = isHomepage && !isScrolled;
+
+  // Dynamic text colors based on scroll state and page
+  const textColor = useTransparent ? 'text-white' : 'text-foreground';
+  const textColorMuted = useTransparent ? 'text-white/90' : 'text-foreground/80';
+  const logoSubtext = useTransparent ? 'text-white/70' : 'text-muted-foreground';
 
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
-          ? 'bg-background/95 backdrop-blur-md shadow-md py-3'
-          : 'bg-transparent py-5'
+        useTransparent
+          ? 'bg-transparent py-5'
+          : 'bg-background/95 backdrop-blur-md shadow-md py-3'
       }`}
     >
       <div className="section-container">
@@ -88,7 +93,7 @@ export function Header() {
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2 group">
             <div className={`w-10 h-10 rounded-lg flex items-center justify-center transition-all group-hover:scale-105 ${
-              isScrolled ? 'bg-primary' : 'bg-white/20 backdrop-blur-sm'
+              useTransparent ? 'bg-white/20 backdrop-blur-sm' : 'bg-primary'
             }`}>
               <span className="text-white font-display font-bold text-xl">A</span>
             </div>
@@ -113,9 +118,9 @@ export function Header() {
                     key={item.label}
                     onClick={() => handleNavClick(item.href)}
                     className={`text-sm font-medium transition-colors relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:transition-all hover:after:w-full ${
-                      isScrolled 
-                        ? 'text-foreground/80 hover:text-primary after:bg-primary' 
-                        : 'text-white/90 hover:text-white after:bg-white'
+                      useTransparent 
+                        ? 'text-white/90 hover:text-white after:bg-white' 
+                        : 'text-foreground/80 hover:text-primary after:bg-primary'
                     }`}
                   >
                     {item.label}
@@ -128,9 +133,9 @@ export function Header() {
                   key={item.label}
                   to={item.href}
                   className={`text-sm font-medium transition-colors relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:transition-all hover:after:w-full ${
-                    isScrolled 
-                      ? 'text-foreground/80 hover:text-primary after:bg-primary' 
-                      : 'text-white/90 hover:text-white after:bg-white'
+                    useTransparent 
+                      ? 'text-white/90 hover:text-white after:bg-white' 
+                      : 'text-foreground/80 hover:text-primary after:bg-primary'
                   }`}
                 >
                   {item.label}
@@ -144,7 +149,7 @@ export function Header() {
             <a 
               href="tel:+4926413968989" 
               className={`flex items-center gap-2 text-sm font-medium transition-colors ${
-                isScrolled ? 'text-foreground/80 hover:text-primary' : 'text-white/90 hover:text-white'
+                useTransparent ? 'text-white/90 hover:text-white' : 'text-foreground/80 hover:text-primary'
               }`}
             >
               <Phone className="w-4 h-4" />
