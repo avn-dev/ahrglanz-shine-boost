@@ -1,13 +1,22 @@
 import { Phone, Mail, MapPin } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const currentYear = new Date().getFullYear();
 
 const services = [
-  { label: 'Unterhaltsreinigung', href: '#services' },
-  { label: 'Grundreinigung', href: '#services' },
-  { label: 'Glasreinigung', href: '#services' },
-  { label: 'Bauendreinigung', href: '#services' },
-  { label: 'Außenanlagenpflege', href: '#services' },
+  { label: 'Unterhaltsreinigung', href: '/leistungen' },
+  { label: 'Grundreinigung', href: '/leistungen' },
+  { label: 'Glasreinigung', href: '/leistungen' },
+  { label: 'Bauendreinigung', href: '/leistungen' },
+  { label: 'Alle Leistungen', href: '/leistungen' },
+];
+
+const objects = [
+  { label: 'Wohnanlage', href: '/objekte' },
+  { label: 'Büro', href: '/objekte' },
+  { label: 'Arztpraxis', href: '/objekte' },
+  { label: 'Kita', href: '/objekte' },
+  { label: 'Alle Objekte', href: '/objekte' },
 ];
 
 const legal = [
@@ -19,10 +28,10 @@ export function Footer() {
   return (
     <footer className="bg-foreground text-background/90">
       <div className="section-container py-16">
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-12">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-12">
           {/* Brand */}
           <div className="sm:col-span-2 lg:col-span-1">
-            <a href="#" className="flex items-center gap-2 mb-4">
+            <Link to="/" className="flex items-center gap-2 mb-4">
               <div className="w-10 h-10 rounded-lg bg-primary flex items-center justify-center">
                 <span className="text-primary-foreground font-display font-bold text-xl">A</span>
               </div>
@@ -34,7 +43,7 @@ export function Footer() {
                   Gebäudereinigung
                 </span>
               </div>
-            </a>
+            </Link>
             <p className="text-background/70 text-sm mb-6">
               Sauber. Glänzend. AhrGlanz.
               <br />
@@ -81,12 +90,29 @@ export function Footer() {
             <ul className="space-y-2 text-sm">
               {services.map((service) => (
                 <li key={service.label}>
-                  <a
-                    href={service.href}
+                  <Link
+                    to={service.href}
                     className="text-background/70 hover:text-primary transition-colors"
                   >
                     {service.label}
-                  </a>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Objects */}
+          <div>
+            <h4 className="font-display font-semibold text-background mb-4">Objekte</h4>
+            <ul className="space-y-2 text-sm">
+              {objects.map((object) => (
+                <li key={object.label}>
+                  <Link
+                    to={object.href}
+                    className="text-background/70 hover:text-primary transition-colors"
+                  >
+                    {object.label}
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -98,12 +124,12 @@ export function Footer() {
             <ul className="space-y-2 text-sm">
               {legal.map((item) => (
                 <li key={item.label}>
-                  <a
-                    href={item.href}
+                  <Link
+                    to={item.href}
                     className="text-background/70 hover:text-primary transition-colors"
                   >
                     {item.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>

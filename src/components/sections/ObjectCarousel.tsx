@@ -24,6 +24,7 @@ export const ObjectCarousel = () => {
     loop: true, 
     align: 'start',
     slidesToScroll: 1,
+    containScroll: false,
   });
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [canScrollPrev, setCanScrollPrev] = useState(false);
@@ -86,11 +87,11 @@ export const ObjectCarousel = () => {
 
           {/* Slides Container */}
           <div className="overflow-hidden mx-8 md:mx-0" ref={emblaRef}>
-            <div className="flex gap-4 md:gap-6">
+            <div className="flex -ml-4 md:-ml-6">
               {objects.map((object) => (
                 <div 
                   key={object.id}
-                  className="flex-none w-[85%] sm:w-[45%] lg:w-[31%]"
+                  className="flex-none w-[85%] sm:w-[45%] lg:w-[31%] pl-4 md:pl-6"
                 >
                   <div className="relative aspect-[3/4] rounded-xl overflow-hidden group cursor-pointer">
                     {/* Image */}
