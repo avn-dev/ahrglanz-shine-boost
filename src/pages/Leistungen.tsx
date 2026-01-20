@@ -140,19 +140,28 @@ const Leistungen = () => {
                     <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
                       <service.icon className="w-7 h-7 text-primary" />
                     </div>
-                    <h2 className="font-display text-2xl font-bold text-foreground">
-                      {service.title}
-                    </h2>
+                    <Link to={`/leistungen/${service.id}`}>
+                      <h2 className="font-display text-2xl font-bold text-foreground hover:text-primary transition-colors">
+                        {service.title}
+                      </h2>
+                    </Link>
                   </div>
                   <p className="text-muted-foreground mb-6">
                     {service.description}
                   </p>
-                  <Link to="/#quote-form">
-                    <Button className="group/btn">
-                      Angebot anfordern
-                      <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover/btn:translate-x-1" />
-                    </Button>
-                  </Link>
+                  <div className="flex flex-wrap gap-3">
+                    <Link to={`/leistungen/${service.id}`}>
+                      <Button variant="outline" className="group/btn">
+                        Mehr erfahren
+                        <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover/btn:translate-x-1" />
+                      </Button>
+                    </Link>
+                    <Link to="/#quote-form">
+                      <Button className="group/btn">
+                        Angebot anfordern
+                      </Button>
+                    </Link>
+                  </div>
                 </div>
 
                 {/* Details Section */}

@@ -2,6 +2,7 @@ import { useState, useCallback, useEffect } from 'react';
 import useEmblaCarousel from 'embla-carousel-react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { Link } from 'react-router-dom';
 
 import wohnanlageBild from '@/assets/object-wohnanlage.jpg';
 import sportclubBild from '@/assets/object-sportclub.jpg';
@@ -11,12 +12,12 @@ import hotelBild from '@/assets/object-hotel.jpg';
 import praxisBild from '@/assets/object-praxis.jpg';
 
 const objects = [
-  { id: 1, title: 'Wohnanlage', image: wohnanlageBild },
-  { id: 2, title: 'Sportclub', image: sportclubBild },
-  { id: 3, title: 'Kita', image: kitaBild },
-  { id: 4, title: 'Bürogebäude', image: bueroBild },
-  { id: 5, title: 'Hotel', image: hotelBild },
-  { id: 6, title: 'Arztpraxis', image: praxisBild },
+  { id: 1, slug: 'wohnanlage', title: 'Wohnanlage', image: wohnanlageBild },
+  { id: 2, slug: 'sportclub', title: 'Sportclub', image: sportclubBild },
+  { id: 3, slug: 'kita', title: 'Kita', image: kitaBild },
+  { id: 4, slug: 'buero', title: 'Bürogebäude', image: bueroBild },
+  { id: 5, slug: 'hotel', title: 'Hotel', image: hotelBild },
+  { id: 6, slug: 'praxis', title: 'Arztpraxis', image: praxisBild },
 ];
 
 export const ObjectCarousel = () => {
@@ -112,12 +113,14 @@ export const ObjectCarousel = () => {
                       >
                         {object.title}
                       </h3>
-                      <Button
-                        variant="secondary"
-                        className="bg-white/95 hover:bg-white text-foreground font-medium shadow-lg"
-                      >
-                        Mehr erfahren
-                      </Button>
+                      <Link to={`/objekte/${object.slug}`}>
+                        <Button
+                          variant="secondary"
+                          className="bg-white/95 hover:bg-white text-foreground font-medium shadow-lg"
+                        >
+                          Mehr erfahren
+                        </Button>
+                      </Link>
                     </div>
                   </div>
                 </div>

@@ -114,20 +114,22 @@ const Objekte = () => {
                 className="group bg-card rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 border border-border/50"
               >
                 {/* Image */}
-                <div className="relative aspect-[4/3] overflow-hidden">
-                  <img
-                    src={object.image}
-                    alt={`${object.title} Reinigung`}
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
-                  <h2 
-                    className="absolute bottom-4 left-4 right-4 font-display text-xl font-bold text-white"
-                    style={{ textShadow: '0 2px 8px rgba(0,0,0,0.5)' }}
-                  >
-                    {object.title}
-                  </h2>
-                </div>
+                <Link to={`/objekte/${object.id}`} className="block">
+                  <div className="relative aspect-[4/3] overflow-hidden">
+                    <img
+                      src={object.image}
+                      alt={`${object.title} Reinigung`}
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
+                    <h2 
+                      className="absolute bottom-4 left-4 right-4 font-display text-xl font-bold text-white"
+                      style={{ textShadow: '0 2px 8px rgba(0,0,0,0.5)' }}
+                    >
+                      {object.title}
+                    </h2>
+                  </div>
+                </Link>
 
                 {/* Content */}
                 <div className="p-6">
@@ -145,12 +147,14 @@ const Objekte = () => {
                     ))}
                   </ul>
 
-                  <Link to="/#quote-form">
-                    <Button variant="outline" className="w-full group/btn">
-                      Angebot anfordern
-                      <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover/btn:translate-x-1" />
-                    </Button>
-                  </Link>
+                  <div className="flex gap-3">
+                    <Link to={`/objekte/${object.id}`} className="flex-1">
+                      <Button variant="outline" className="w-full group/btn">
+                        Mehr erfahren
+                        <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover/btn:translate-x-1" />
+                      </Button>
+                    </Link>
+                  </div>
                 </div>
               </article>
             ))}
