@@ -1,16 +1,27 @@
-FROM node:20-alpine AS build
+FROM node:22-slim AS base
+ENV PNPM_HOME=/pnpm
+ENV PATH=$PNPM_HOME:$PATH
+RUN corepack enable
 
+FROM base AS deps
 WORKDIR /app
+COPY package.json ./
+RUN pnpm install --no-frozen-lockfile
 
-COPY package.json package-lock.json ./
-RUN npm ci
-
+FROM base AS builder
+WORKDIR /app
+COPY --from=deps /app/node_modules ./node_modules
 COPY . .
-RUN npm run build
+RUN pnpm build
 
-FROM nginxinc/nginx-unprivileged:1.27-alpine
+FROM base AS runner
+WORKDIR /app
+ENV NODE_ENV=production
+ENV PORT=3001
 
-COPY --from=build /app/dist /usr/share/nginx/html
+COPY --from=builder /app/dist ./dist
+COPY --from=builder /app/package.json ./package.json
+COPY --from=builder /app/node_modules ./node_modules
 
-EXPOSE 8080
-
+EXPOSE 3001
+CMD ["pnpm", "preview", "--host", "0.0.0.0", "--port", "3001"]

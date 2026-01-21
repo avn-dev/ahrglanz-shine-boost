@@ -33,5 +33,5 @@ Build and run the production container:
 
 ```sh
 docker build -t ahrglanz-shine-boost .
-docker run --rm -p 8080:8080 ahrglanz-shine-boost
+docker run --rm -p 3001:3001 ahrglanz-shine-boost
 ```
