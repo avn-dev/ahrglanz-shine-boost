@@ -2,31 +2,39 @@ import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Sparkles, Building2, Sun, Droplets, Wrench, Footprints, ClipboardCheck, Shield } from 'lucide-react';
+import { ArrowRight, Sparkles, Building2, Sun, Droplets, Wrench, Footprints, ClipboardCheck, Shield, Home, Briefcase, Heart, GraduationCap, Dumbbell, ChevronDown } from 'lucide-react';
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 
 const services = [
   {
     id: 'unterhaltsreinigung',
     icon: ClipboardCheck,
     title: 'Unterhaltsreinigung',
-    description: 'Regelmäßige Reinigung für dauerhaft saubere Räumlichkeiten. Planbar, zuverlässig und nach Ihren Anforderungen.',
+    description: 'Regelmäßige Unterhaltsreinigung für Büros, Praxen & Gewerbe – planbar, zuverlässig und nach festen Qualitätsstandards.',
     details: [
-      'Tägliche, wöchentliche oder monatliche Reinigung',
-      'Büros, Praxen, Kitas und Gewerbeflächen',
-      'Feste Qualitätsstandards',
-      'Flexible Reinigungszeiten'
+      'Regelmäßige Unterhaltsreinigung für Büros, Praxen & Gewerbe',
+      'Individuelle Reinigungspläne nach Objekt & Nutzungsfrequenz',
+      'Zuverlässige Reinigung nach festen Qualitätsstandards',
+      'Geschultes Personal & feste Ansprechpartner',
+      'Planbar, transparent & termintreu umgesetzt'
     ]
   },
   {
     id: 'grundreinigung',
     icon: Sparkles,
     title: 'Grundreinigung',
-    description: 'Intensive Tiefenreinigung für hartnäckige Verschmutzungen und vernachlässigte Flächen.',
+    description: 'Gründliche Grundreinigung für Böden, Oberflächen & Sanitärbereiche – ideal nach Bauarbeiten oder vor Neuvermietung.',
     details: [
-      'Entfernung von Altschmutz',
-      'Bodenversiegelung erneuern',
-      'Intensive Sanitärreinigung',
-      'Ideal vor Neubezug'
+      'Gründliche Grundreinigung für Böden, Oberflächen & Sanitärbereiche',
+      'Entfernung hartnäckiger Verschmutzungen & Rückstände',
+      'Ideal nach Bauarbeiten, vor Neuvermietung oder als Intensivreinigung',
+      'Für Gewerbe, öffentliche Einrichtungen & Privatobjekte',
+      'Sorgfältig, materialschonend & professionell durchgeführt'
     ]
   },
   {
@@ -36,82 +44,116 @@ const services = [
     description: 'Streifenfreie Reinigung von Fenstern, Glasfassaden und Wintergärten für klare Durchsicht.',
     details: [
       'Fensterreinigung innen & außen',
-      'Glasfassaden',
-      'Wintergärten',
-      'Schaufenster'
+      'Glasfassaden & Wintergärten',
+      'Schaufensterreinigung',
+      'Rahmen- und Falzreinigung'
     ]
   },
   {
     id: 'baureinigung',
     icon: Building2,
     title: 'Baureinigung',
-    description: 'Professionelle Bauendreinigung nach Renovierung, Sanierung oder Neubau.',
+    description: 'Baureinigung für Neubau, Umbau & Renovierung – Grob-, Zwischen- und Endreinigung aus einer Hand.',
     details: [
-      'Bauschutt-Entfernung',
-      'Feinreinigung aller Oberflächen',
-      'Fenster- und Rahmenreinigung',
-      'Übergabefertig'
+      'Baureinigung für Neubau, Umbau & Renovierung',
+      'Grob-, Zwischen- und Endreinigung aus einer Hand',
+      'Entfernung von Bauschmutz, Staub & Baumaterialresten',
+      'Termingerechte Reinigung zur Übergabe oder Abnahme',
+      'Zuverlässig, gründlich & objektspezifisch umgesetzt'
     ]
   },
   {
     id: 'desinfektionsreinigung',
     icon: Droplets,
     title: 'Desinfektionsreinigung',
-    description: 'Hygienische Reinigung mit Desinfektionsmitteln für sensible Bereiche.',
+    description: 'Professionelle Desinfektionsreinigung für sensible Bereiche nach geltenden Hygiene- & Sicherheitsstandards.',
     details: [
-      'Medizinische Einrichtungen',
-      'Lebensmittelbetriebe',
-      'Kitas und Schulen',
-      'Zertifizierte Desinfektionsmittel'
+      'Professionelle Desinfektionsreinigung für sensible Bereiche',
+      'Reduzierung von Keimen, Bakterien & Viren',
+      'Geeignet für Praxen, Büros, Schulen & öffentliche Einrichtungen',
+      'Durchführung nach geltenden Hygiene- & Sicherheitsstandards',
+      'Zuverlässig, diskret & fachgerecht umgesetzt'
     ]
   },
   {
     id: 'treppenhausreinigung',
     icon: Footprints,
     title: 'Treppenhausreinigung',
-    description: 'Regelmäßige Reinigung von Treppenhäusern für einen gepflegten ersten Eindruck.',
+    description: 'Zuverlässige Treppenhausreinigung für Wohn- & Gewerbeimmobilien – für einen gepflegten ersten Eindruck.',
     details: [
-      'Böden und Geländer',
-      'Fensterbänke und Fensterbereiche',
-      'Briefkasten- und Klingelanlagen',
-      'Eingangsbereiche'
+      'Zuverlässige Treppenhausreinigung für Wohn- & Gewerbeimmobilien',
+      'Reinigung von Treppen, Podesten, Geländern & Eingangsbereichen',
+      'Gepflegter erster Eindruck für Bewohner, Mieter & Besucher',
+      'Individuelle Reinigungsintervalle nach Objekt & Nutzung',
+      'Sorgfältig, pünktlich & professionell ausgeführt'
     ]
   },
   {
     id: 'photovoltaikreinigung',
     icon: Sun,
     title: 'Photovoltaikreinigung',
-    description: 'Fachgerechte Reinigung von Solarmodulen für maximale Energieausbeute.',
+    description: 'Professionelle Photovoltaikreinigung für private & gewerbliche Anlagen zur Steigerung der Leistungsfähigkeit.',
     details: [
-      'Schonende Reinigungsmethoden',
-      'Entfernung von Verschmutzungen',
-      'Ertragssteigerung',
-      'Regelmäßige Wartung'
+      'Professionelle Photovoltaikreinigung für private & gewerbliche Anlagen',
+      'Schonende Reinigung zur Steigerung der Leistungsfähigkeit',
+      'Entfernung von Schmutz, Staub, Pollen & Umweltrückständen',
+      'Einsatz materialschonender Verfahren & entmineralisiertem Wasser',
+      'Sicher, effizient & fachgerecht durchgeführt'
     ]
   },
   {
     id: 'steinreinigung',
     icon: Wrench,
     title: 'Steinreinigung',
-    description: 'Professionelle Reinigung von Stein-, Pflaster- und Außenflächen.',
+    description: 'Professionelle Steinreinigung für Wege, Terrassen & Außenflächen – für saubere Optik & sichere Begehbarkeit.',
     details: [
-      'Terrassenreinigung',
-      'Einfahrten und Gehwege',
-      'Fassadenreinigung',
-      'Graffiti-Entfernung'
+      'Professionelle Steinreinigung für Wege, Terrassen & Außenflächen',
+      'Entfernung von Moos, Algen, Flechten & starken Verschmutzungen',
+      'Für Beton-, Natur- & Pflastersteine geeignet',
+      'Materialschonende Reinigung für langfristigen Werterhalt',
+      'Saubere Optik & sichere Begehbarkeit'
     ]
   },
   {
     id: 'tatortreinigung',
     icon: Shield,
     title: 'Tatortreinigung',
-    description: 'Diskrete und professionelle Reinigung nach Todesfällen oder traumatischen Ereignissen.',
+    description: 'Diskrete und professionelle Reinigung nach Todesfällen oder traumatischen Ereignissen – 24/7 erreichbar.',
     details: [
       'Reinigung nach Todesfällen',
       'Beseitigung biologischer Spuren',
       'Geruchsneutralisierung',
-      '24/7 Notfall-Erreichbarkeit'
+      '24/7 Notfall-Erreichbarkeit',
+      'Absolute Diskretion'
     ]
+  },
+];
+
+const objekteLinks = [
+  { id: 'wohnanlage', title: 'Wohnanlage', icon: Home },
+  { id: 'buero', title: 'Büro', icon: Briefcase },
+  { id: 'praxis', title: 'Arztpraxis', icon: Heart },
+  { id: 'kita', title: 'Kita & Bildung', icon: GraduationCap },
+  { id: 'sportclub', title: 'Sportclub', icon: Dumbbell },
+  { id: 'hotel', title: 'Hotel & Gastro', icon: Building2 },
+];
+
+const faqs = [
+  {
+    question: 'Wie läuft eine Zusammenarbeit mit AHRglanz ab?',
+    answer: 'Nach einer kostenlosen Besichtigung erstellen wir ein individuelles Angebot. Die Reinigung erfolgt anschließend zuverlässig nach abgestimmten Reinigungsplänen und festen Qualitätsstandards.'
+  },
+  {
+    question: 'Wie flexibel sind Reinigungszeiten und -intervalle?',
+    answer: 'Reinigungszeiten und Intervalle werden individuell auf Ihr Objekt abgestimmt. Ob täglich, wöchentlich oder zu festen Zeiten – wir passen uns Ihrem Betrieb und Ihren Anforderungen flexibel an.'
+  },
+  {
+    question: 'Gibt es feste Ansprechpartner für mein Objekt?',
+    answer: 'Ja. Sie haben feste Ansprechpartner, die Ihr Objekt kennen und für Abstimmungen, Rückfragen oder Anpassungen jederzeit erreichbar sind.'
+  },
+  {
+    question: 'In welchen Regionen ist AHRglanz im Einsatz?',
+    answer: 'Wir sind im Raum Bad Neuenahr-Ahrweiler, Bonn, Koblenz sowie in der umliegenden Region tätig und betreuen Objekte zuverlässig vor Ort.'
   },
 ];
 
@@ -131,7 +173,7 @@ const Leistungen = () => {
             </h1>
             <p className="text-lg text-muted-foreground">
               Von der regelmäßigen Unterhaltsreinigung bis zur spezialisierten Desinfektionsreinigung – 
-              wir bieten maßgeschneiderte Lösungen für Ihre Anforderungen.
+              wir bieten maßgeschneiderte Lösungen für Ihre Anforderungen in Bad Neuenahr-Ahrweiler, Bonn, Koblenz und Umgebung.
             </p>
           </div>
         </section>
@@ -142,34 +184,34 @@ const Leistungen = () => {
             {services.map((service, index) => (
               <article 
                 key={service.id}
-                className={`group flex flex-col lg:flex-row gap-8 p-8 rounded-2xl border border-border/50 bg-card hover:shadow-lg transition-all duration-300 ${
+                className={`group flex flex-col lg:flex-row gap-8 p-6 sm:p-8 rounded-2xl border border-border/50 bg-card hover:shadow-lg transition-all duration-300 ${
                   index % 2 === 1 ? 'lg:flex-row-reverse' : ''
                 }`}
               >
                 {/* Icon & Title Section */}
                 <div className="flex-shrink-0 lg:w-1/3">
                   <div className="flex items-center gap-4 mb-4">
-                    <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
-                      <service.icon className="w-7 h-7 text-primary" />
+                    <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+                      <service.icon className="w-6 h-6 sm:w-7 sm:h-7 text-primary" />
                     </div>
                     <Link to={`/leistungen/${service.id}`}>
-                      <h2 className="font-display text-2xl font-bold text-foreground hover:text-primary transition-colors">
+                      <h2 className="font-display text-xl sm:text-2xl font-bold text-foreground hover:text-primary transition-colors">
                         {service.title}
                       </h2>
                     </Link>
                   </div>
-                  <p className="text-muted-foreground mb-6">
+                  <p className="text-sm sm:text-base text-muted-foreground mb-6">
                     {service.description}
                   </p>
-                  <div className="flex flex-wrap gap-3">
+                  <div className="flex flex-col sm:flex-row gap-3">
                     <Link to={`/leistungen/${service.id}`}>
-                      <Button variant="outline" className="group/btn">
+                      <Button variant="outline" className="group/btn w-full sm:w-auto">
                         Mehr erfahren
                         <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover/btn:translate-x-1" />
                       </Button>
                     </Link>
                     <Link to="/#quote-form">
-                      <Button className="group/btn">
+                      <Button className="group/btn w-full sm:w-auto">
                         Angebot anfordern
                       </Button>
                     </Link>
@@ -178,11 +220,11 @@ const Leistungen = () => {
 
                 {/* Details Section */}
                 <div className="flex-1 lg:pl-8 lg:border-l border-border/50">
-                  <h3 className="font-semibold text-foreground mb-4">Das ist inklusive:</h3>
-                  <ul className="grid sm:grid-cols-2 gap-3">
+                  <h3 className="font-semibold text-foreground mb-4 text-sm sm:text-base">Das ist inklusive:</h3>
+                  <ul className="grid sm:grid-cols-2 gap-2 sm:gap-3">
                     {service.details.map((detail) => (
-                      <li key={detail} className="flex items-start gap-3 text-muted-foreground">
-                        <span className="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0" />
+                      <li key={detail} className="flex items-start gap-2 sm:gap-3 text-sm text-muted-foreground">
+                        <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-primary mt-1.5 sm:mt-2 flex-shrink-0" />
                         {detail}
                       </li>
                     ))}
@@ -193,11 +235,75 @@ const Leistungen = () => {
           </div>
         </section>
 
+        {/* Objekte Section */}
+        <section className="section-container mt-20">
+          <div className="text-center mb-10">
+            <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-4">
+              Objekte, die wir betreuen
+            </h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              Wir reinigen Objekte aller Art – von Wohnanlagen über Büros bis hin zu Gesundheitseinrichtungen.
+            </p>
+          </div>
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
+            {objekteLinks.map((objekt) => (
+              <Link 
+                key={objekt.id}
+                to={`/objekte/${objekt.id}`}
+                className="group flex flex-col items-center gap-3 p-4 sm:p-6 rounded-xl border border-border/50 bg-card hover:shadow-md hover:border-primary/30 transition-all"
+              >
+                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+                  <objekt.icon className="w-6 h-6 text-primary" />
+                </div>
+                <span className="text-sm font-medium text-foreground text-center">{objekt.title}</span>
+              </Link>
+            ))}
+          </div>
+          <div className="text-center mt-6">
+            <Link to="/objekte">
+              <Button variant="outline">
+                Alle Objekte ansehen
+                <ArrowRight className="w-4 h-4 ml-2" />
+              </Button>
+            </Link>
+          </div>
+        </section>
+
+        {/* FAQ Section */}
+        <section className="section-container mt-20">
+          <div className="max-w-3xl mx-auto">
+            <div className="text-center mb-10">
+              <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-4">
+                Häufige Fragen zur <span className="text-primary">Gebäudereinigung</span>
+              </h2>
+              <p className="text-muted-foreground">
+                Hier finden Sie Antworten auf häufige Fragen rund um unsere Reinigungsleistungen, Abläufe und Zusammenarbeit.
+              </p>
+            </div>
+            <Accordion type="single" collapsible className="space-y-4">
+              {faqs.map((faq, index) => (
+                <AccordionItem 
+                  key={index} 
+                  value={`item-${index}`}
+                  className="border border-border/50 rounded-xl px-6 bg-card"
+                >
+                  <AccordionTrigger className="text-left font-medium hover:no-underline py-4">
+                    {faq.question}
+                  </AccordionTrigger>
+                  <AccordionContent className="text-muted-foreground pb-4">
+                    {faq.answer}
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
+          </div>
+        </section>
+
         {/* CTA Section */}
         <section className="section-container mt-20">
           <div className="bg-primary/10 rounded-2xl p-8 md:p-12 text-center">
             <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-4">
-              Individuelle Lösung gesucht?
+              Leistung anfragen oder noch Fragen?
             </h2>
             <p className="text-muted-foreground mb-6 max-w-xl mx-auto">
               Sie haben spezielle Anforderungen? Wir beraten Sie gerne und erstellen ein 
@@ -205,7 +311,7 @@ const Leistungen = () => {
             </p>
             <Link to="/#quote-form">
               <Button size="lg" className="bg-primary hover:bg-primary/90">
-                Kostenlose Beratung anfordern
+                Jetzt kostenlos anfragen
               </Button>
             </Link>
           </div>
