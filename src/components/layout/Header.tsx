@@ -16,13 +16,20 @@ const navItems = [
 
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [scrollProgress, setScrollProgress] = useState(0);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const location = useLocation();
   const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
+      const scrollY = window.scrollY;
+      setIsScrolled(scrollY > 20);
+      
+      // Calculate scroll progress for logo animation (0 to 1)
+      // Logo transition happens between 100px and 300px of scroll
+      const progress = Math.min(Math.max((scrollY - 100) / 200, 0), 1);
+      setScrollProgress(progress);
     };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
@@ -78,8 +85,13 @@ export function Header() {
 
   // Dynamic text colors based on scroll state and page
   const textColor = useTransparent ? 'text-white' : 'text-foreground';
-  const textColorMuted = useTransparent ? 'text-white/90' : 'text-foreground/80';
-  const logoSubtext = useTransparent ? 'text-white/70' : 'text-muted-foreground';
+
+  // Logo size and opacity based on scroll progress (only on homepage)
+  const logoHeight = isHomepage 
+    ? `${12 + scrollProgress * 0}px` // Start invisible, appear as nav logo
+    : '48px';
+  
+  const logoOpacity = isHomepage ? scrollProgress : 1;
 
   return (
     <header
@@ -91,12 +103,19 @@ export function Header() {
     >
       <div className="section-container">
         <nav className="flex items-center justify-between">
-          {/* Logo */}
+          {/* Logo - with animated entrance on homepage */}
           <Link to="/" className="flex items-center gap-3 group">
             <img 
               src={logo} 
               alt="AhrGlanz Logo" 
-              className="h-12 w-auto transition-transform group-hover:scale-105"
+              className="w-auto transition-all duration-300 ease-out group-hover:scale-105"
+              style={{
+                height: isHomepage ? `${32 + scrollProgress * 16}px` : '48px',
+                opacity: isHomepage ? Math.max(scrollProgress, 0.3) : 1,
+                transform: isHomepage 
+                  ? `translateY(${(1 - scrollProgress) * 10}px) scale(${0.9 + scrollProgress * 0.1})`
+                  : 'translateY(0) scale(1)',
+              }}
             />
           </Link>
 
