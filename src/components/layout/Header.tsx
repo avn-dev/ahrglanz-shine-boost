@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { Menu, X, Phone } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
+import ahrglanzLogo from '@/assets/ahrglanz-logo.png';
 
 const navItems = [
   { label: 'Leistungen', href: '/leistungen' },
@@ -74,11 +75,10 @@ export function Header() {
   // On other pages, always use solid header with dark text
   const isHomepage = location.pathname === '/';
   const useTransparent = isHomepage && !isScrolled;
+  const showLogo = !isHomepage || isScrolled;
 
   // Dynamic text colors based on scroll state and page
   const textColor = useTransparent ? 'text-white' : 'text-foreground';
-  const textColorMuted = useTransparent ? 'text-white/90' : 'text-foreground/80';
-  const logoSubtext = useTransparent ? 'text-white/70' : 'text-muted-foreground';
 
   return (
     <header
@@ -90,19 +90,32 @@ export function Header() {
     >
       <div className="section-container">
         <nav className="flex items-center justify-between">
-          {/* Logo */}
-          <Link to="/" className="flex items-center gap-2 group">
-            <div className={`w-10 h-10 rounded-lg flex items-center justify-center transition-all group-hover:scale-105 ${
-              useTransparent ? 'bg-white/20 backdrop-blur-sm' : 'bg-primary'
-            }`}>
-              <span className="text-white font-display font-bold text-xl">A</span>
+          {/* Logo - slides in on scroll */}
+          <Link to="/" className="flex items-center gap-3 group relative overflow-hidden">
+            <div 
+              className={`flex items-center gap-3 transition-all duration-500 ease-out ${
+                showLogo 
+                  ? 'translate-x-0 opacity-100' 
+                  : '-translate-x-full opacity-0'
+              }`}
+            >
+              <img 
+                src={ahrglanzLogo} 
+                alt="AhrGlanz Logo" 
+                className="h-10 w-auto object-contain"
+              />
             </div>
-            <div className="flex flex-col">
-              <span className={`font-display font-bold text-lg leading-tight transition-colors ${textColor}`}>
-                AhrGlanz
-              </span>
-              <span className={`text-xs leading-tight transition-colors ${logoSubtext}`}>
-                Gebäudereinigung
+            
+            {/* Text shown when logo is hidden (homepage, not scrolled) */}
+            <div 
+              className={`transition-all duration-500 ease-out ${
+                showLogo 
+                  ? 'opacity-0 absolute -left-full' 
+                  : 'opacity-100 relative'
+              }`}
+            >
+              <span className="text-white/80 text-xs font-medium tracking-wide uppercase">
+                Professionelle Gebäudereinigung
               </span>
             </div>
           </Link>
