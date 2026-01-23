@@ -307,59 +307,72 @@ const LeistungDetail = () => {
       <Header />
       
       <main className="flex-grow">
-        {/* Hero Section */}
-        <section className="pt-32 pb-16 bg-gradient-to-br from-primary/10 via-background to-secondary/10">
+        {/* Hero Section - Mobile optimized */}
+        <section className="pt-24 md:pt-32 pb-12 md:pb-16 bg-gradient-to-br from-primary/10 via-background to-secondary/10">
           <div className="section-container">
             <Link 
               to="/leistungen" 
-              className="inline-flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors mb-6"
+              className="inline-flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors mb-4 md:mb-6 text-sm md:text-base"
             >
               <ArrowLeft className="w-4 h-4" />
               Alle Leistungen
             </Link>
             
-            <div className="flex items-start gap-6">
-              <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center flex-shrink-0">
-                <IconComponent className="w-8 h-8 text-primary" />
+            <div className="flex flex-col sm:flex-row sm:items-start gap-4 sm:gap-6">
+              <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-xl sm:rounded-2xl bg-primary/10 flex items-center justify-center flex-shrink-0">
+                <IconComponent className="w-6 h-6 sm:w-8 sm:h-8 text-primary" />
               </div>
               <div>
-                <p className="text-primary font-medium mb-2">{leistung.subtitle}</p>
-                <h1 className="text-4xl md:text-5xl font-display font-bold text-foreground mb-4">
+                <p className="text-primary font-medium text-sm sm:text-base mb-1 sm:mb-2">{leistung.subtitle}</p>
+                <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-display font-bold text-foreground mb-3 md:mb-4">
                   {leistung.title}
                 </h1>
-                <p className="text-xl text-muted-foreground max-w-2xl">
+                <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-2xl">
                   {leistung.longDescription}
                 </p>
               </div>
             </div>
+            
+            {/* Mobile CTA buttons in hero */}
+            <div className="flex flex-col sm:hidden gap-3 mt-6">
+              <Button size="lg" onClick={scrollToQuote} className="w-full">
+                Kostenloses Angebot
+              </Button>
+              <Button size="lg" variant="outline" asChild className="w-full">
+                <a href="tel:+4926413968989">
+                  <Phone className="w-4 h-4 mr-2" />
+                  Jetzt anrufen
+                </a>
+              </Button>
+            </div>
           </div>
         </section>
 
-        {/* Features & Benefits */}
-        <section className="py-16">
+        {/* Features & Benefits - Mobile optimized */}
+        <section className="py-10 md:py-16">
           <div className="section-container">
-            <div className="grid md:grid-cols-2 gap-12">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
               {/* Leistungsumfang */}
-              <div>
-                <h2 className="text-2xl font-display font-bold mb-6">Leistungsumfang</h2>
-                <ul className="space-y-3">
+              <div className="bg-card rounded-xl p-5 sm:p-6 border shadow-sm">
+                <h2 className="text-xl sm:text-2xl font-display font-bold mb-4 sm:mb-6">Leistungsumfang</h2>
+                <ul className="space-y-2.5 sm:space-y-3">
                   {leistung.features.map((feature, index) => (
-                    <li key={index} className="flex items-start gap-3">
-                      <Check className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                      <span className="text-foreground/80">{feature}</span>
+                    <li key={index} className="flex items-start gap-2.5 sm:gap-3">
+                      <Check className="w-4 h-4 sm:w-5 sm:h-5 text-primary flex-shrink-0 mt-0.5" />
+                      <span className="text-sm sm:text-base text-foreground/80">{feature}</span>
                     </li>
                   ))}
                 </ul>
               </div>
 
               {/* Ihre Vorteile */}
-              <div>
-                <h2 className="text-2xl font-display font-bold mb-6">Ihre Vorteile</h2>
-                <ul className="space-y-3">
+              <div className="bg-card rounded-xl p-5 sm:p-6 border shadow-sm">
+                <h2 className="text-xl sm:text-2xl font-display font-bold mb-4 sm:mb-6">Ihre Vorteile</h2>
+                <ul className="space-y-2.5 sm:space-y-3">
                   {leistung.benefits.map((benefit, index) => (
-                    <li key={index} className="flex items-start gap-3">
-                      <Check className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
-                      <span className="text-foreground/80">{benefit}</span>
+                    <li key={index} className="flex items-start gap-2.5 sm:gap-3">
+                      <Check className="w-4 h-4 sm:w-5 sm:h-5 text-accent flex-shrink-0 mt-0.5" />
+                      <span className="text-sm sm:text-base text-foreground/80">{benefit}</span>
                     </li>
                   ))}
                 </ul>
@@ -368,39 +381,39 @@ const LeistungDetail = () => {
           </div>
         </section>
 
-        {/* Process */}
-        <section className="py-16 bg-secondary/30">
+        {/* Process - Mobile optimized */}
+        <section className="py-10 md:py-16 bg-secondary/30">
           <div className="section-container">
-            <h2 className="text-2xl font-display font-bold mb-8 text-center">So läuft es ab</h2>
-            <div className="grid md:grid-cols-4 gap-6">
+            <h2 className="text-xl sm:text-2xl font-display font-bold mb-6 md:mb-8 text-center">So läuft es ab</h2>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
               {leistung.process.map((step) => (
-                <div key={step.step} className="text-center">
-                  <div className="w-12 h-12 rounded-full bg-primary text-white font-bold text-xl flex items-center justify-center mx-auto mb-4">
+                <div key={step.step} className="text-center bg-background rounded-xl p-4 md:p-6 shadow-sm">
+                  <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-primary text-primary-foreground font-bold text-lg md:text-xl flex items-center justify-center mx-auto mb-3 md:mb-4">
                     {step.step}
                   </div>
-                  <h3 className="font-semibold mb-2">{step.title}</h3>
-                  <p className="text-sm text-muted-foreground">{step.description}</p>
+                  <h3 className="font-semibold text-sm md:text-base mb-1 md:mb-2">{step.title}</h3>
+                  <p className="text-xs md:text-sm text-muted-foreground">{step.description}</p>
                 </div>
               ))}
             </div>
           </div>
         </section>
 
-        {/* CTA */}
-        <section className="py-16">
+        {/* CTA - Mobile optimized */}
+        <section className="py-10 md:py-16">
           <div className="section-container text-center">
-            <h2 className="text-3xl font-display font-bold mb-4">
+            <h2 className="text-2xl sm:text-3xl font-display font-bold mb-3 md:mb-4">
               Interesse an {leistung.title}?
             </h2>
-            <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
+            <p className="text-base md:text-lg text-muted-foreground mb-6 md:mb-8 max-w-2xl mx-auto">
               Fordern Sie jetzt ein kostenloses und unverbindliches Angebot an. 
               Wir melden uns schnellstmöglich bei Ihnen.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" onClick={scrollToQuote}>
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
+              <Button size="lg" onClick={scrollToQuote} className="w-full sm:w-auto">
                 Kostenloses Angebot anfordern
               </Button>
-              <Button size="lg" variant="outline" asChild>
+              <Button size="lg" variant="outline" asChild className="w-full sm:w-auto">
                 <a href="tel:+4926413968989">
                   <Phone className="w-4 h-4 mr-2" />
                   02641 396 89 89
