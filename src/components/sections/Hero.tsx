@@ -1,7 +1,6 @@
 import { CheckCircle, Phone, ArrowRight, ChevronDown } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import heroImage from '@/assets/hero-building.jpg';
-import logo from '@/assets/logo.png';
 
 const trustBadges = [
   'Schnelle Rückmeldung',
@@ -45,35 +44,26 @@ export function Hero() {
       
       {/* Content */}
       <div className="relative z-10 text-center px-4 sm:px-6 max-w-4xl mx-auto">
-        {/* Hero Logo - Large */}
-        <div className="mb-6 animate-fade-up" id="hero-logo">
-          <img 
-            src={logo} 
-            alt="AhrGlanz Logo" 
-            className="h-32 sm:h-40 md:h-48 w-auto mx-auto drop-shadow-2xl"
-          />
-        </div>
-
         {/* Badge */}
-        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm text-white text-sm font-medium mb-6 animate-fade-up stagger-1 border border-white/20">
+        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm text-white text-sm font-medium mb-6 animate-fade-up border border-white/20">
           <span className="w-2 h-2 rounded-full bg-accent animate-pulse" />
           Professionelle Gebäudereinigung
         </div>
 
         {/* Headline */}
-        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight mb-6 animate-fade-up stagger-2">
+        <h1 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight mb-6 animate-fade-up stagger-1">
           Gebäudereinigung, die{' '}
           <span className="text-accent">wirklich glänzt.</span>
         </h1>
 
         {/* Subheadline */}
-        <p className="text-lg sm:text-xl md:text-2xl text-white/90 max-w-2xl mx-auto mb-8 animate-fade-up stagger-3">
+        <p className="text-lg sm:text-xl md:text-2xl text-white/90 max-w-2xl mx-auto mb-8 animate-fade-up stagger-2">
           Professionelle Reinigungsleistungen für Privat, Gewerbe und Bauprojekte 
           in Bad Neuenahr-Ahrweiler & Umgebung.
         </p>
 
         {/* CTAs */}
-        <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8 animate-fade-up stagger-4">
+        <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8 animate-fade-up stagger-3">
           <Button onClick={scrollToQuoteForm} variant="hero" size="xl" className="group">
             Kostenloses Angebot anfordern
             <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
@@ -86,23 +76,12 @@ export function Hero() {
           </Button>
         </div>
 
-        {/* Trust badges - Enhanced Liquid Glass Look */}
-        <div className="flex flex-wrap gap-3 sm:gap-4 justify-center animate-fade-up stagger-5">
+        {/* Trust badges */}
+        <div className="flex flex-wrap gap-3 sm:gap-4 justify-center animate-fade-up stagger-4">
           {trustBadges.map((badge) => (
-            <div 
-              key={badge} 
-              className="group relative flex items-center gap-2 px-5 py-2.5 rounded-full text-white text-sm font-medium
-                         bg-gradient-to-br from-white/20 via-white/10 to-white/5
-                         backdrop-blur-xl border border-white/30
-                         shadow-[0_8px_32px_rgba(0,0,0,0.12),inset_0_1px_0_rgba(255,255,255,0.3),inset_0_-1px_0_rgba(255,255,255,0.1)]
-                         hover:shadow-[0_8px_32px_rgba(0,0,0,0.2),inset_0_1px_0_rgba(255,255,255,0.4),inset_0_-1px_0_rgba(255,255,255,0.15)]
-                         hover:bg-gradient-to-br hover:from-white/25 hover:via-white/15 hover:to-white/10
-                         hover:border-white/40 hover:scale-105
-                         transition-all duration-300 ease-out cursor-default
-                         before:absolute before:inset-0 before:rounded-full before:bg-gradient-to-b before:from-white/20 before:to-transparent before:opacity-60"
-            >
-              <CheckCircle className="w-4 h-4 text-accent drop-shadow-sm relative z-10" />
-              <span className="relative z-10">{badge}</span>
+            <div key={badge} className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 backdrop-blur-sm text-white/90 text-sm border border-white/20">
+              <CheckCircle className="w-4 h-4 text-accent" />
+              {badge}
             </div>
           ))}
         </div>
