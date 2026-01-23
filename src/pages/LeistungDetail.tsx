@@ -107,29 +107,28 @@ const leistungenData: Record<string, {
   },
   baureinigung: {
     title: "Baureinigung",
-    subtitle: "Nach dem Bau, vor dem Einzug",
-    description: "Professionelle Reinigung nach Bau- oder Renovierungsarbeiten.",
-    longDescription: "Nach Bau- oder Renovierungsarbeiten hinterlassen Handwerker oft Staub, Schmutz und Reste. Unsere Baureinigung sorgt dafür, dass Ihre neuen Räume bezugsfertig und sauber übergeben werden – gründlich und termingerecht.",
+    subtitle: "Neubau, Umbau & Renovierung",
+    description: "Professionelle Baureinigung für Neubau, Umbau und Renovierung – von der Grobreinigung bis zur bezugsfertigen Endreinigung.",
+    longDescription: "Ob Neubau, Umbau oder Renovierung – Bauarbeiten hinterlassen Staub, Schmutz und Rückstände. Unsere professionelle Baureinigung begleitet Sie von der Grobreinigung während der Bauphase bis zur gründlichen Endreinigung vor der Übergabe. Wir kümmern uns zuverlässig um saubere Baustellen und eine termingerechte Abnahme – für private, gewerbliche und öffentliche Bauherren.",
     icon: Construction,
     features: [
-      "Grobreinigung nach Bauarbeiten",
-      "Feinreinigung vor Übergabe",
-      "Entfernung von Baustaub",
-      "Fenster- und Rahmenreinigung",
-      "Sanitäreinrichtungen säubern",
-      "Bodenbeläge reinigen und pflegen"
+      "Grobreinigung: Entfernung von Bauschutt, grobem Schmutz und Restmaterialien",
+      "Zwischenreinigung: Regelmäßige Reinigung während der Bauarbeiten",
+      "Endreinigung: Gründliche Feinreinigung vor Übergabe oder Abnahme",
+      "Reinigung von Böden, Türen, Fenstern und Sanitärbereichen",
+      "Materialschonende Behandlung empfindlicher Oberflächen",
+      "Für Neubau, Umbau und Renovierungsprojekte geeignet"
     ],
     benefits: [
-      "Bezugsfertiger Zustand",
-      "Termingerechte Fertigstellung",
-      "Professionelle Übergabe",
-      "Schutz vor Folgeschäden"
+      "Bezugsfertige, saubere Räume ohne Baurückstände",
+      "Termingerechte Fertigstellung zur Übergabe",
+      "Ordnung und Sicherheit auf der Baustelle",
+      "Professionelle Abnahme mit Qualitätskontrolle"
     ],
     process: [
-      { step: 1, title: "Baustellenbegehung", description: "Erfassung des Reinigungsumfangs" },
-      { step: 2, title: "Grobreinigung", description: "Entfernung grober Verschmutzungen" },
-      { step: 3, title: "Feinreinigung", description: "Detaillierte Endreinigung" },
-      { step: 4, title: "Übergabe", description: "Abnahme mit Bauherr/Auftraggeber" }
+      { step: 1, title: "Kostenlose Besichtigung", description: "Vor-Ort-Begehung zur Klärung von Reinigungsbedarf, Bauphase und Zeitplan" },
+      { step: 2, title: "Individuelles Angebot", description: "Transparentes, objektspezifisches Angebot mit klar definierten Leistungen" },
+      { step: 3, title: "Zuverlässige Durchführung", description: "Termingerechte Reinigung nach abgestimmtem Plan mit Qualitätskontrolle" }
     ]
   },
   photovoltaikreinigung: {
