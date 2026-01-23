@@ -59,20 +59,22 @@ export function Hero() {
         className={`fixed z-[60] transition-all duration-700 ease-out ${
           isScrolled 
             ? 'top-2 left-4 md:left-8 scale-[0.35] origin-top-left opacity-0' 
-            : 'top-20 left-1/2 -translate-x-1/2 scale-100 opacity-100'
+            : 'top-24 sm:top-20 left-1/2 -translate-x-1/2 scale-100 opacity-100'
         }`}
       >
+        {/* White glow backdrop for better visibility */}
+        <div className="absolute inset-0 bg-white/30 blur-2xl rounded-full scale-125" />
         <img 
           src={ahrglanzLogo} 
           alt="AhrGlanz Logo" 
-          className="h-28 sm:h-36 md:h-44 w-auto object-contain drop-shadow-2xl"
+          className="relative h-20 sm:h-32 md:h-40 w-auto object-contain drop-shadow-[0_0_30px_rgba(255,255,255,0.5)]"
         />
       </div>
       
-      {/* Content */}
-      <div className="relative z-10 text-center px-4 sm:px-6 max-w-4xl mx-auto mt-32 sm:mt-40">
+      {/* Content - adjusted spacing for mobile */}
+      <div className="relative z-10 text-center px-4 sm:px-6 max-w-4xl mx-auto mt-40 sm:mt-48 md:mt-52">
         {/* Badge */}
-        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm text-white text-sm font-medium mb-6 animate-fade-up border border-white/20">
+        <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-white/10 backdrop-blur-sm text-white text-xs sm:text-sm font-medium mb-4 sm:mb-6 animate-fade-up border border-white/20">
           <span className="w-2 h-2 rounded-full bg-accent animate-pulse" />
           Professionelle Gebäudereinigung
         </div>
