@@ -24,24 +24,24 @@ const objekteData: Record<string, {
   wohnanlage: {
     title: "Wohnanlage",
     subtitle: "Treppenhäuser & Gemeinschaftsflächen",
-    description: "Regelmäßige Reinigung von Treppenhäusern, Fluren und Gemeinschaftsflächen.",
+    description: "Reinigung von Treppenhäusern und gemeinschaftlich genutzten Flächen.",
     longDescription: "Für Wohnanlagen und Mehrfamilienhäuser bieten wir eine zuverlässige Reinigung aller Gemeinschaftsflächen. Saubere Treppenhäuser und gepflegte Eingangsbereiche sorgen für zufriedene Bewohner und eine werterhaltende Gebäudepflege.",
     image: wohnanlageImg,
     features: [
-      "Treppenhausreinigung",
-      "Eingangsbereiche & Flure",
-      "Aufzüge & Spiegel",
-      "Briefkastenanlagen",
-      "Müllräume",
-      "Tiefgaragen & Kellerflure"
+      "Reinigung von Treppenhäusern und gemeinschaftlich genutzten Flächen",
+      "Pflege von Eingangsbereichen, Fluren und Podesten",
+      "Reinigung von Müllräumen, Tiefgaragen und Außenanlagen",
+      "Individuelle Reinigungsintervalle nach Objektgröße",
+      "Zuverlässige Unterhaltsreinigung für Wohnanlagen und Mehrfamilienhäuser"
     ],
     services: [
       "Unterhaltsreinigung",
+      "Treppenhausreinigung",
       "Glasreinigung",
       "Grundreinigung"
     ],
     benefits: [
-      "Zufriedene Mieter",
+      "Zufriedene Mieter & Bewohner",
       "Werterhaltung der Immobilie",
       "Feste Reinigungsintervalle",
       "Dokumentierte Qualität"
@@ -50,16 +50,15 @@ const objekteData: Record<string, {
   buero: {
     title: "Bürogebäude",
     subtitle: "Professionelle Büroreinigung",
-    description: "Saubere Arbeitsplätze für produktive Mitarbeiter und professionelle Außenwirkung.",
+    description: "Regelmäßige Büroreinigung für saubere und gepflegte Arbeitsplätze.",
     longDescription: "Ein sauberes Büro fördert die Produktivität und hinterlässt bei Kunden und Mitarbeitern einen professionellen Eindruck. Wir reinigen Büroräume, Konferenzräume, Sanitäranlagen und Gemeinschaftsbereiche nach Ihren Vorgaben.",
     image: bueroImg,
     features: [
-      "Arbeitsplatz- & Schreibtischreinigung",
-      "Konferenz- & Besprechungsräume",
-      "Empfang & Wartebereiche",
-      "Teeküchen & Sozialräume",
-      "Sanitäranlagen",
-      "Böden & Teppiche"
+      "Regelmäßige Büroreinigung für saubere und gepflegte Arbeitsplätze",
+      "Gründliche Sanitärreinigung für Mitarbeiter- und Besucherbereiche",
+      "Reinigung häufig genutzter Kontakt- und Arbeitsflächen",
+      "Flexible Reinigungszeiten außerhalb der Bürozeiten möglich",
+      "Zuverlässige Unterhaltsreinigung für Unternehmen und Verwaltungen"
     ],
     services: [
       "Unterhaltsreinigung",
@@ -104,16 +103,15 @@ const objekteData: Record<string, {
   kita: {
     title: "Kita & Bildungseinrichtung",
     subtitle: "Kindertagesstätten & Schulen",
-    description: "Kindgerechte Hygiene für sichere Lern- und Spielumgebungen.",
+    description: "Hygienische Reinigung von Gruppen-, Spiel- und Schlafräumen.",
     longDescription: "In Kindertagesstätten und Bildungseinrichtungen ist Hygiene besonders wichtig. Wir reinigen mit kindersicheren Mitteln und sorgen für saubere, gesunde Räume, in denen Kinder sicher lernen und spielen können.",
     image: kitaImg,
     features: [
-      "Gruppenräume & Spielbereiche",
-      "Schlafräume",
-      "Sanitäranlagen (kindgerecht)",
-      "Küchen & Essräume",
-      "Flure & Garderoben",
-      "Außenspielgeräte"
+      "Hygienische Reinigung von Gruppen-, Spiel- und Schlafräumen",
+      "Sorgfältige Sanitärreinigung für Kinder- und Personalbereiche",
+      "Reinigung sensibler Kontakt- und Spieloberflächen",
+      "Einsatz material- und kindgerechter Reinigungsmittel",
+      "Zuverlässige Unterhaltsreinigung für Kitas und Betreuungseinrichtungen"
     ],
     services: [
       "Unterhaltsreinigung",
@@ -125,22 +123,47 @@ const objekteData: Record<string, {
       "Kindersichere Reinigungsmittel",
       "Reduzierte Krankheitsübertragung",
       "Hygienisch einwandfreie Räume",
-      "Regelmäßige Desinfektion"
+      "Flexible Planung nach Betreuungszeiten"
+    ]
+  },
+  bildungseinrichtung: {
+    title: "Bildungseinrichtung",
+    subtitle: "Schulen & Bildungsträger",
+    description: "Hygienische Reinigung von Klassen-, Gruppen- und Aufenthaltsräumen.",
+    longDescription: "Schulen und Bildungseinrichtungen erfordern besondere Hygiene. Wir sorgen für saubere Klassenzimmer, Flure und Sanitäranlagen – mit flexibler Planung nach Lern- und Betreuungszeiten.",
+    image: kitaImg,
+    features: [
+      "Hygienische Reinigung von Klassen-, Gruppen- und Aufenthaltsräumen",
+      "Sorgfältige Sanitärreinigung nach aktuellen Hygienevorgaben",
+      "Reinigung stark frequentierter Kontakt- und Gemeinschaftsflächen",
+      "Rücksicht auf Lern- und Betreuungszeiten durch flexible Einsatzplanung",
+      "Zuverlässige Unterhaltsreinigung für Schulen, Kitas & Bildungsträger"
+    ],
+    services: [
+      "Unterhaltsreinigung",
+      "Desinfektionsreinigung",
+      "Grundreinigung",
+      "Glasreinigung"
+    ],
+    benefits: [
+      "Hygienisch saubere Lernumgebung",
+      "Flexible Einsatzzeiten",
+      "Geprüfte Reinigungsmittel",
+      "Zuverlässige Qualität"
     ]
   },
   praxis: {
     title: "Praxis & Gesundheitswesen",
     subtitle: "Arztpraxen & Gesundheitseinrichtungen",
-    description: "Medizinische Hygienestandards für Praxen und Gesundheitseinrichtungen.",
+    description: "Hygienische Reinigung von Arztpraxen und medizinischen Einrichtungen.",
     longDescription: "Arztpraxen und Gesundheitseinrichtungen erfordern höchste Hygienestandards. Unsere geschulten Teams reinigen nach medizinischen Vorgaben und sorgen für eine keimfreie, vertrauenswürdige Umgebung für Patienten und Personal.",
     image: praxisImg,
     features: [
-      "Wartezimmer & Empfang",
-      "Behandlungsräume",
-      "Sanitäranlagen",
-      "Laborbereiche",
-      "Sozialräume",
-      "Böden & Oberflächen"
+      "Hygienische Reinigung von Arztpraxen und medizinischen Einrichtungen",
+      "Sorgfältige Sanitärreinigung nach erhöhten Hygieneanforderungen",
+      "Reinigung sensibler Kontakt-, Behandlungs- und Wartebereiche",
+      "Einhaltung hoher Hygiene- und Qualitätsstandards",
+      "Zuverlässige Unterhaltsreinigung für Gesundheits- und Pflegeeinrichtungen"
     ],
     services: [
       "Unterhaltsreinigung",
@@ -155,19 +178,43 @@ const objekteData: Record<string, {
       "Patientenvertrauen stärken"
     ]
   },
+  gesundheitseinrichtung: {
+    title: "Gesundheitseinrichtung",
+    subtitle: "Praxen & Pflegeeinrichtungen",
+    description: "Hygienische Reinigung von Arztpraxen und medizinischen Einrichtungen.",
+    longDescription: "Gesundheitseinrichtungen erfordern höchste Hygienestandards. Unsere geschulten Teams reinigen nach medizinischen Vorgaben und sorgen für eine keimfreie Umgebung für Patienten und Personal.",
+    image: praxisImg,
+    features: [
+      "Hygienische Reinigung von Arztpraxen und medizinischen Einrichtungen",
+      "Sorgfältige Sanitärreinigung nach erhöhten Hygieneanforderungen",
+      "Reinigung sensibler Kontakt-, Behandlungs- und Wartebereiche",
+      "Einhaltung hoher Hygiene- und Qualitätsstandards",
+      "Zuverlässige Unterhaltsreinigung für Gesundheits- und Pflegeeinrichtungen"
+    ],
+    services: [
+      "Unterhaltsreinigung",
+      "Desinfektionsreinigung",
+      "Grundreinigung"
+    ],
+    benefits: [
+      "Medizinische Hygienestandards",
+      "Geschultes Fachpersonal",
+      "Dokumentierte Reinigung",
+      "Patientenvertrauen stärken"
+    ]
+  },
   sportclub: {
     title: "Sportclub & Fitnessstudio",
     subtitle: "Sportstätten & Fitnesseinrichtungen",
-    description: "Hygienische Trainingsumgebung für gesunde und zufriedene Mitglieder.",
+    description: "Reinigung von Trainings-, Kurs- und Sportbereichen.",
     longDescription: "Sportstätten und Fitnessstudios erfordern intensive Reinigung und regelmäßige Desinfektion. Wir sorgen für hygienische Trainingsgeräte, saubere Umkleiden und gepflegte Sanitäranlagen – für zufriedene Mitglieder.",
     image: sportclubImg,
     features: [
-      "Trainingsflächen & Geräte",
-      "Umkleiden & Duschen",
-      "Sanitäranlagen",
-      "Empfang & Lounge",
-      "Kurssäle",
-      "Saunabereiche"
+      "Reinigung von Trainings-, Kurs- und Sportbereichen",
+      "Gründliche Sanitärreinigung von Umkleiden und Duschen",
+      "Desinfizierende Reinigung stark genutzter Kontaktflächen",
+      "Hygienische Sauberkeit für Mitglieder und Personal",
+      "Flexible Unterhaltsreinigung angepasst an Trainingszeiten"
     ],
     services: [
       "Unterhaltsreinigung",
@@ -185,16 +232,15 @@ const objekteData: Record<string, {
   industrie: {
     title: "Industrie & Produktion",
     subtitle: "Produktionsstätten & Lagerhallen",
-    description: "Industrielle Reinigung für sichere und effiziente Produktionsumgebungen.",
+    description: "Reinigung von Industriehallen, Produktions- und Arbeitsbereichen.",
     longDescription: "Industriebetriebe stellen besondere Anforderungen an die Reinigung. Wir bieten professionelle Industriereinigung für Produktionshallen, Lagerflächen und Sozialräume – für Sicherheit, Effizienz und Sauberkeit am Arbeitsplatz.",
     image: bueroImg,
     features: [
-      "Produktionshallen",
-      "Lagerflächen",
-      "Sozialräume & Kantinen",
-      "Sanitäranlagen",
-      "Verwaltungsbereiche",
-      "Außenflächen"
+      "Reinigung von Industriehallen, Produktions- und Arbeitsbereichen",
+      "Entfernung von Staub, Schmutz und produktionsbedingten Rückständen",
+      "Reinigung von Verkehrs-, Lager- und Nutzflächen",
+      "Berücksichtigung betrieblicher Sicherheits- und Hygienevorgaben",
+      "Zuverlässige Unterhaltsreinigung für Industrie- und Gewerbebetriebe"
     ],
     services: [
       "Unterhaltsreinigung",
@@ -212,16 +258,15 @@ const objekteData: Record<string, {
   geschaeft: {
     title: "Einzelhandel & Geschäft",
     subtitle: "Ladenflächen & Verkaufsräume",
-    description: "Einladende Verkaufsflächen für positive Kundenerlebnisse.",
+    description: "Saubere Reinigung von Verkaufs-, Ausstellungs- und Kundenflächen.",
     longDescription: "Im Einzelhandel zählt der erste Eindruck. Saubere Verkaufsräume, gepflegte Schaufenster und hygienische Sanitäranlagen sorgen für ein positives Einkaufserlebnis und zufriedene Kunden.",
     image: bueroImg,
     features: [
-      "Verkaufsflächen",
-      "Schaufenster",
-      "Kassenbereich",
-      "Lager & Nebenräume",
-      "Sanitäranlagen",
-      "Eingangsbereiche"
+      "Saubere Reinigung von Verkaufs-, Ausstellungs- und Kundenflächen",
+      "Gründliche Sanitärreinigung für Kunden- und Personalbereiche",
+      "Reinigung stark frequentierter Lauf- und Kontaktzonen",
+      "Flexible Reinigung angepasst an Öffnungszeiten",
+      "Zuverlässige Unterhaltsreinigung für Einzelhandel und Shops"
     ],
     services: [
       "Unterhaltsreinigung",
@@ -238,16 +283,41 @@ const objekteData: Record<string, {
   gastronomiebetrieb: {
     title: "Gastronomiebetrieb",
     subtitle: "Restaurants & Cafés",
-    description: "Hygienische Gastronomie für zufriedene Gäste und beste Bewertungen.",
+    description: "Hygienische Reinigung von Restaurants, Cafés und Gasträumen.",
     longDescription: "In der Gastronomie entscheidet Sauberkeit über den Erfolg. Wir reinigen Gaststätten, Restaurants und Cafés nach höchsten Hygienestandards – für zufriedene Gäste, positive Bewertungen und erfolgreiche Betriebsprüfungen.",
     image: hotelImg,
     features: [
-      "Gastraum & Sitzbereich",
-      "Theke & Bar",
-      "Küche & Nebenräume",
-      "Sanitäranlagen",
-      "Außenbereiche & Terrassen",
-      "Lagerflächen"
+      "Hygienische Reinigung von Restaurants, Cafés und Gasträumen",
+      "Sorgfältige Sanitärreinigung nach gesetzlichen Hygienevorgaben",
+      "Reinigung stark beanspruchter Kontakt- und Nutzflächen",
+      "Anpassung der Reinigung an Öffnungs- und Betriebszeiten",
+      "Zuverlässige Unterhaltsreinigung für gastronomische Betriebe"
+    ],
+    services: [
+      "Unterhaltsreinigung",
+      "Grundreinigung",
+      "Glasreinigung",
+      "Sonderreinigung"
+    ],
+    benefits: [
+      "HACCP-konforme Reinigung",
+      "Positive Gästebewertungen",
+      "Erfolgreiche Kontrollen",
+      "Flexible Einsatzzeiten"
+    ]
+  },
+  gastronomie: {
+    title: "Gastronomiebetrieb",
+    subtitle: "Restaurants & Cafés",
+    description: "Hygienische Reinigung von Restaurants, Cafés und Gasträumen.",
+    longDescription: "In der Gastronomie entscheidet Sauberkeit über den Erfolg. Wir reinigen Gaststätten, Restaurants und Cafés nach höchsten Hygienestandards – für zufriedene Gäste, positive Bewertungen und erfolgreiche Betriebsprüfungen.",
+    image: hotelImg,
+    features: [
+      "Hygienische Reinigung von Restaurants, Cafés und Gasträumen",
+      "Sorgfältige Sanitärreinigung nach gesetzlichen Hygienevorgaben",
+      "Reinigung stark beanspruchter Kontakt- und Nutzflächen",
+      "Anpassung der Reinigung an Öffnungs- und Betriebszeiten",
+      "Zuverlässige Unterhaltsreinigung für gastronomische Betriebe"
     ],
     services: [
       "Unterhaltsreinigung",
@@ -300,7 +370,7 @@ const ObjektDetail = () => {
       <Header />
       
       <main className="flex-grow">
-        {/* Hero Section - Redesigned for better readability */}
+        {/* Hero Section */}
         <section className="pt-32 pb-16 bg-gradient-to-br from-primary/10 via-background to-secondary/10">
           <div className="section-container">
             <Link 
@@ -383,7 +453,7 @@ const ObjektDetail = () => {
                   {objekt.services.map((service, index) => (
                     <li key={index}>
                       <Link 
-                        to={`/leistungen/${service.toLowerCase().replace(/\s+/g, '')}`}
+                        to={`/leistungen/${service.toLowerCase().replace(/\s+/g, '').replace('ä', 'a').replace('ö', 'o').replace('ü', 'u')}`}
                         className="flex items-center gap-3 text-primary hover:text-primary/80 hover:underline transition-colors"
                       >
                         <ArrowLeft className="w-4 h-4 rotate-180" />
@@ -422,6 +492,7 @@ const ObjektDetail = () => {
             <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
               Fordern Sie jetzt ein kostenloses und unverbindliches Angebot an. 
               Wir besichtigen Ihr Objekt und erstellen ein maßgeschneidertes Reinigungskonzept.
+              Im Raum Bad Neuenahr-Ahrweiler, Bonn & Umgebung.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" onClick={scrollToQuote}>
