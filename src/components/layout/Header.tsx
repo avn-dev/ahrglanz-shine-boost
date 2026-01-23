@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { Menu, X, Phone } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
+import logo from '@/assets/logo.png';
 
 const navItems = [
   { label: 'Leistungen', href: '/leistungen' },
@@ -91,20 +92,12 @@ export function Header() {
       <div className="section-container">
         <nav className="flex items-center justify-between">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-2 group">
-            <div className={`w-10 h-10 rounded-lg flex items-center justify-center transition-all group-hover:scale-105 ${
-              useTransparent ? 'bg-white/20 backdrop-blur-sm' : 'bg-primary'
-            }`}>
-              <span className="text-white font-display font-bold text-xl">A</span>
-            </div>
-            <div className="flex flex-col">
-              <span className={`font-display font-bold text-lg leading-tight transition-colors ${textColor}`}>
-                AhrGlanz
-              </span>
-              <span className={`text-xs leading-tight transition-colors ${logoSubtext}`}>
-                Gebäudereinigung
-              </span>
-            </div>
+          <Link to="/" className="flex items-center gap-3 group">
+            <img 
+              src={logo} 
+              alt="AhrGlanz Logo" 
+              className="h-12 w-auto transition-transform group-hover:scale-105"
+            />
           </Link>
 
           {/* Desktop Navigation */}

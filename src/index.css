@@ -126,13 +126,12 @@
   }
 
   body {
-    @apply bg-background text-foreground font-sans antialiased;
-    font-family: 'Barlow', system-ui, sans-serif;
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Barlow', system-ui, sans-serif !important;
   }
 
-  h1, h2, h3, h4, h5, h6 {
-    font-family: 'Barlow', system-ui, sans-serif;
-    @apply font-semibold tracking-tight;
+  h1, h2, h3, h4, h5, h6, p, span, a, button, input, textarea, label, li, td, th, div {
+    font-family: 'Barlow', system-ui, sans-serif !important;
   }
 }
 
