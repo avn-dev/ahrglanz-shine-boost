@@ -2,7 +2,7 @@ import { useParams, Link, useNavigate } from "react-router-dom";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { Button } from "@/components/ui/button";
-import { ArrowLeft, Check, Phone } from "lucide-react";
+import { ArrowLeft, Check, Phone, Sparkles } from "lucide-react";
 
 import wohnanlageImg from "@/assets/object-wohnanlage.jpg";
 import bueroImg from "@/assets/object-buero.jpg";
@@ -300,64 +300,93 @@ const ObjektDetail = () => {
       <Header />
       
       <main className="flex-grow">
-        {/* Hero Section */}
-        <section className="relative pt-24 pb-16">
-          <div className="absolute inset-0 h-80">
-            <img 
-              src={objekt.image} 
-              alt={objekt.title}
-              className="w-full h-full object-cover"
-            />
-            <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-background" />
-          </div>
-          
-          <div className="section-container relative z-10 pt-8">
+        {/* Hero Section - Redesigned for better readability */}
+        <section className="pt-32 pb-16 bg-gradient-to-br from-primary/10 via-background to-secondary/10">
+          <div className="section-container">
             <Link 
               to="/objekte" 
-              className="inline-flex items-center gap-2 text-white/80 hover:text-white transition-colors mb-6"
+              className="inline-flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors mb-6"
             >
               <ArrowLeft className="w-4 h-4" />
               Alle Objekte
             </Link>
             
-            <p className="text-primary-foreground/80 font-medium mb-2">{objekt.subtitle}</p>
-            <h1 className="text-4xl md:text-5xl font-display font-bold text-white mb-4">
-              {objekt.title}
-            </h1>
-            <p className="text-xl text-white/80 max-w-2xl">
-              {objekt.longDescription}
-            </p>
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              {/* Text Content */}
+              <div>
+                <p className="text-primary font-medium mb-2">{objekt.subtitle}</p>
+                <h1 className="text-4xl md:text-5xl font-display font-bold text-foreground mb-6">
+                  {objekt.title}
+                </h1>
+                <p className="text-lg text-muted-foreground mb-8">
+                  {objekt.longDescription}
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <Button size="lg" onClick={scrollToQuote}>
+                    Kostenloses Angebot anfordern
+                  </Button>
+                  <Button size="lg" variant="outline" asChild>
+                    <a href="tel:+4926413968989">
+                      <Phone className="w-4 h-4 mr-2" />
+                      02641 396 89 89
+                    </a>
+                  </Button>
+                </div>
+              </div>
+              
+              {/* Image */}
+              <div className="relative">
+                <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
+                  <img 
+                    src={objekt.image} 
+                    alt={objekt.title}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-primary/10 rounded-full -z-10" />
+                <div className="absolute -top-4 -left-4 w-16 h-16 bg-accent/20 rounded-full -z-10" />
+              </div>
+            </div>
           </div>
         </section>
 
         {/* Services & Features */}
-        <section className="py-16 mt-16">
+        <section className="py-20">
           <div className="section-container">
+            <h2 className="text-2xl md:text-3xl font-display font-bold text-center mb-12">
+              Unsere Leistungen für Ihr {objekt.title}
+            </h2>
             <div className="grid md:grid-cols-3 gap-8">
               {/* Reinigungsbereiche */}
-              <div className="bg-card rounded-xl p-6 shadow-sm border">
-                <h2 className="text-xl font-display font-bold mb-4">Reinigungsbereiche</h2>
-                <ul className="space-y-2">
+              <div className="bg-card rounded-2xl p-8 shadow-sm border hover:shadow-md transition-shadow">
+                <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-6">
+                  <Check className="w-6 h-6 text-primary" />
+                </div>
+                <h3 className="text-xl font-display font-bold mb-4">Reinigungsbereiche</h3>
+                <ul className="space-y-3">
                   {objekt.features.map((feature, index) => (
-                    <li key={index} className="flex items-start gap-2">
+                    <li key={index} className="flex items-start gap-3">
                       <Check className="w-4 h-4 text-primary flex-shrink-0 mt-1" />
-                      <span className="text-sm text-foreground/80">{feature}</span>
+                      <span className="text-muted-foreground">{feature}</span>
                     </li>
                   ))}
                 </ul>
               </div>
 
               {/* Passende Leistungen */}
-              <div className="bg-card rounded-xl p-6 shadow-sm border">
-                <h2 className="text-xl font-display font-bold mb-4">Passende Leistungen</h2>
-                <ul className="space-y-2">
+              <div className="bg-card rounded-2xl p-8 shadow-sm border hover:shadow-md transition-shadow">
+                <div className="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center mb-6">
+                  <Sparkles className="w-6 h-6 text-accent" />
+                </div>
+                <h3 className="text-xl font-display font-bold mb-4">Passende Leistungen</h3>
+                <ul className="space-y-3">
                   {objekt.services.map((service, index) => (
                     <li key={index}>
                       <Link 
                         to={`/leistungen/${service.toLowerCase().replace(/\s+/g, '')}`}
-                        className="flex items-center gap-2 text-sm text-primary hover:underline"
+                        className="flex items-center gap-3 text-primary hover:text-primary/80 hover:underline transition-colors"
                       >
-                        <Check className="w-4 h-4" />
+                        <ArrowLeft className="w-4 h-4 rotate-180" />
                         {service}
                       </Link>
                     </li>
@@ -366,13 +395,16 @@ const ObjektDetail = () => {
               </div>
 
               {/* Ihre Vorteile */}
-              <div className="bg-card rounded-xl p-6 shadow-sm border">
-                <h2 className="text-xl font-display font-bold mb-4">Ihre Vorteile</h2>
-                <ul className="space-y-2">
+              <div className="bg-card rounded-2xl p-8 shadow-sm border hover:shadow-md transition-shadow">
+                <div className="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center mb-6">
+                  <Check className="w-6 h-6 text-accent" />
+                </div>
+                <h3 className="text-xl font-display font-bold mb-4">Ihre Vorteile</h3>
+                <ul className="space-y-3">
                   {objekt.benefits.map((benefit, index) => (
-                    <li key={index} className="flex items-start gap-2">
+                    <li key={index} className="flex items-start gap-3">
                       <Check className="w-4 h-4 text-accent flex-shrink-0 mt-1" />
-                      <span className="text-sm text-foreground/80">{benefit}</span>
+                      <span className="text-muted-foreground">{benefit}</span>
                     </li>
                   ))}
                 </ul>
@@ -382,10 +414,10 @@ const ObjektDetail = () => {
         </section>
 
         {/* CTA */}
-        <section className="py-16 bg-primary/5">
+        <section className="py-20 bg-primary/5">
           <div className="section-container text-center">
             <h2 className="text-3xl font-display font-bold mb-4">
-              Reinigung für Ihr {objekt.title}
+              Professionelle Reinigung für Ihr {objekt.title}
             </h2>
             <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
               Fordern Sie jetzt ein kostenloses und unverbindliches Angebot an. 
