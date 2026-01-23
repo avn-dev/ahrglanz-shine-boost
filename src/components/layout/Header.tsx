@@ -90,33 +90,34 @@ export function Header() {
     >
       <div className="section-container">
         <nav className="flex items-center justify-between">
-          {/* Logo - slides in on scroll */}
-          <Link to="/" className="flex items-center gap-3 group relative">
-            {/* Logo image - visible when scrolled or not on homepage */}
+          {/* Logo + Text - Logo slides in from left on scroll */}
+          <Link to="/" className="flex items-center gap-3 group">
+            {/* Logo image - slides in when scrolled or not on homepage */}
             <div 
-              className={`flex items-center gap-3 transition-all duration-500 ease-out ${
+              className={`transition-all duration-500 ease-out overflow-hidden ${
                 showLogo 
-                  ? 'translate-x-0 opacity-100' 
-                  : '-translate-x-8 opacity-0 pointer-events-none'
+                  ? 'w-10 opacity-100' 
+                  : 'w-0 opacity-0'
               }`}
             >
               <img 
                 src={ahrglanzLogo} 
                 alt="AhrGlanz Logo" 
-                className="h-10 w-auto object-contain"
+                className="h-10 w-10 object-contain flex-shrink-0"
               />
             </div>
             
-            {/* AHRGLANZ text shown when logo is hidden (homepage, not scrolled) */}
-            <div 
-              className={`absolute left-0 transition-all duration-500 ease-out whitespace-nowrap ${
-                showLogo 
-                  ? 'opacity-0 -translate-x-8 pointer-events-none' 
-                  : 'opacity-100 translate-x-0'
-              }`}
-            >
-              <span className="font-display font-bold text-xl text-white tracking-wide">
-                AHRGLANZ
+            {/* Text - always visible */}
+            <div className="flex flex-col">
+              <span className={`font-display font-bold text-lg leading-tight transition-colors ${
+                useTransparent ? 'text-white' : 'text-foreground'
+              }`}>
+                AhrGlanz
+              </span>
+              <span className={`text-xs leading-tight transition-colors ${
+                useTransparent ? 'text-white/70' : 'text-muted-foreground'
+              }`}>
+                Gebäudereinigung
               </span>
             </div>
           </Link>
