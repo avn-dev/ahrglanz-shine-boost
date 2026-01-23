@@ -10,6 +10,9 @@ import kitaBild from '@/assets/object-kita.jpg';
 import bueroBild from '@/assets/object-buero.jpg';
 import hotelBild from '@/assets/object-hotel.jpg';
 import praxisBild from '@/assets/object-praxis.jpg';
+import industrieBild from '@/assets/object-industrie.jpg';
+import geschaeftBild from '@/assets/object-geschaeft.jpg';
+import gastronomieBild from '@/assets/object-gastronomie.jpg';
 
 const objects = [
   { 
@@ -57,21 +60,21 @@ const objects = [
   { 
     id: 'geschaeft', 
     title: 'Geschäft & Einzelhandel', 
-    image: bueroBild,
+    image: geschaeftBild,
     description: 'Saubere Verkaufsflächen für ein einladendes Einkaufserlebnis.',
     features: ['Verkaufsflächenreinigung', 'Schaufenster', 'Lagerräume', 'Sanitäranlagen']
   },
   { 
     id: 'industrie', 
     title: 'Industrie & Produktion', 
-    image: hotelBild,
+    image: industrieBild,
     description: 'Industriereinigung für Produktionshallen, Lager und Fertigungsbereiche.',
     features: ['Hallenreinigung', 'Maschinenreinigung', 'Bodenreinigung', 'Entsorgung']
   },
   { 
     id: 'gastronomie', 
     title: 'Gastronomiebetrieb', 
-    image: sportclubBild,
+    image: gastronomieBild,
     description: 'HACCP-konforme Reinigung für Restaurants, Cafés und Catering.',
     features: ['Küchenreinigung', 'Gastraum', 'Sanitäranlagen', 'Außenbereiche']
   },

@@ -10,6 +10,11 @@ import hotelImg from "@/assets/object-hotel.jpg";
 import kitaImg from "@/assets/object-kita.jpg";
 import praxisImg from "@/assets/object-praxis.jpg";
 import sportclubImg from "@/assets/object-sportclub.jpg";
+import industrieImg from "@/assets/object-industrie.jpg";
+import geschaeftImg from "@/assets/object-geschaeft.jpg";
+import gastronomieImg from "@/assets/object-gastronomie.jpg";
+import bildungImg from "@/assets/object-bildung.jpg";
+import gesundheitImg from "@/assets/object-gesundheit.jpg";
 
 const objekteData: Record<string, {
   title: string;
@@ -131,7 +136,7 @@ const objekteData: Record<string, {
     subtitle: "Schulen & Bildungsträger",
     description: "Hygienische Reinigung von Klassen-, Gruppen- und Aufenthaltsräumen.",
     longDescription: "Schulen und Bildungseinrichtungen erfordern besondere Hygiene. Wir sorgen für saubere Klassenzimmer, Flure und Sanitäranlagen – mit flexibler Planung nach Lern- und Betreuungszeiten.",
-    image: kitaImg,
+    image: bildungImg,
     features: [
       "Hygienische Reinigung von Klassen-, Gruppen- und Aufenthaltsräumen",
       "Sorgfältige Sanitärreinigung nach aktuellen Hygienevorgaben",
@@ -157,7 +162,7 @@ const objekteData: Record<string, {
     subtitle: "Arztpraxen & Gesundheitseinrichtungen",
     description: "Hygienische Reinigung von Arztpraxen und medizinischen Einrichtungen.",
     longDescription: "Arztpraxen und Gesundheitseinrichtungen erfordern höchste Hygienestandards. Unsere geschulten Teams reinigen nach medizinischen Vorgaben und sorgen für eine keimfreie, vertrauenswürdige Umgebung für Patienten und Personal.",
-    image: praxisImg,
+    image: gesundheitImg,
     features: [
       "Hygienische Reinigung von Arztpraxen und medizinischen Einrichtungen",
       "Sorgfältige Sanitärreinigung nach erhöhten Hygieneanforderungen",
@@ -183,7 +188,7 @@ const objekteData: Record<string, {
     subtitle: "Praxen & Pflegeeinrichtungen",
     description: "Hygienische Reinigung von Arztpraxen und medizinischen Einrichtungen.",
     longDescription: "Gesundheitseinrichtungen erfordern höchste Hygienestandards. Unsere geschulten Teams reinigen nach medizinischen Vorgaben und sorgen für eine keimfreie Umgebung für Patienten und Personal.",
-    image: praxisImg,
+    image: gesundheitImg,
     features: [
       "Hygienische Reinigung von Arztpraxen und medizinischen Einrichtungen",
       "Sorgfältige Sanitärreinigung nach erhöhten Hygieneanforderungen",
@@ -234,7 +239,7 @@ const objekteData: Record<string, {
     subtitle: "Produktionsstätten & Lagerhallen",
     description: "Reinigung von Industriehallen, Produktions- und Arbeitsbereichen.",
     longDescription: "Industriebetriebe stellen besondere Anforderungen an die Reinigung. Wir bieten professionelle Industriereinigung für Produktionshallen, Lagerflächen und Sozialräume – für Sicherheit, Effizienz und Sauberkeit am Arbeitsplatz.",
-    image: bueroImg,
+    image: industrieImg,
     features: [
       "Reinigung von Industriehallen, Produktions- und Arbeitsbereichen",
       "Entfernung von Staub, Schmutz und produktionsbedingten Rückständen",
@@ -260,7 +265,7 @@ const objekteData: Record<string, {
     subtitle: "Ladenflächen & Verkaufsräume",
     description: "Saubere Reinigung von Verkaufs-, Ausstellungs- und Kundenflächen.",
     longDescription: "Im Einzelhandel zählt der erste Eindruck. Saubere Verkaufsräume, gepflegte Schaufenster und hygienische Sanitäranlagen sorgen für ein positives Einkaufserlebnis und zufriedene Kunden.",
-    image: bueroImg,
+    image: geschaeftImg,
     features: [
       "Saubere Reinigung von Verkaufs-, Ausstellungs- und Kundenflächen",
       "Gründliche Sanitärreinigung für Kunden- und Personalbereiche",
@@ -285,7 +290,7 @@ const objekteData: Record<string, {
     subtitle: "Restaurants & Cafés",
     description: "Hygienische Reinigung von Restaurants, Cafés und Gasträumen.",
     longDescription: "In der Gastronomie entscheidet Sauberkeit über den Erfolg. Wir reinigen Gaststätten, Restaurants und Cafés nach höchsten Hygienestandards – für zufriedene Gäste, positive Bewertungen und erfolgreiche Betriebsprüfungen.",
-    image: hotelImg,
+    image: gastronomieImg,
     features: [
       "Hygienische Reinigung von Restaurants, Cafés und Gasträumen",
       "Sorgfältige Sanitärreinigung nach gesetzlichen Hygienevorgaben",
@@ -311,7 +316,7 @@ const objekteData: Record<string, {
     subtitle: "Restaurants & Cafés",
     description: "Hygienische Reinigung von Restaurants, Cafés und Gasträumen.",
     longDescription: "In der Gastronomie entscheidet Sauberkeit über den Erfolg. Wir reinigen Gaststätten, Restaurants und Cafés nach höchsten Hygienestandards – für zufriedene Gäste, positive Bewertungen und erfolgreiche Betriebsprüfungen.",
-    image: hotelImg,
+    image: gastronomieImg,
     features: [
       "Hygienische Reinigung von Restaurants, Cafés und Gasträumen",
       "Sorgfältige Sanitärreinigung nach gesetzlichen Hygienevorgaben",
