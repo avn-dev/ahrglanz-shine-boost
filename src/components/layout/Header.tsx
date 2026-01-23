@@ -91,12 +91,13 @@ export function Header() {
       <div className="section-container">
         <nav className="flex items-center justify-between">
           {/* Logo - slides in on scroll */}
-          <Link to="/" className="flex items-center gap-3 group relative overflow-hidden">
+          <Link to="/" className="flex items-center gap-3 group relative">
+            {/* Logo image - visible when scrolled or not on homepage */}
             <div 
               className={`flex items-center gap-3 transition-all duration-500 ease-out ${
                 showLogo 
                   ? 'translate-x-0 opacity-100' 
-                  : '-translate-x-full opacity-0'
+                  : '-translate-x-8 opacity-0 pointer-events-none'
               }`}
             >
               <img 
@@ -106,16 +107,16 @@ export function Header() {
               />
             </div>
             
-            {/* Text shown when logo is hidden (homepage, not scrolled) */}
+            {/* AHRGLANZ text shown when logo is hidden (homepage, not scrolled) */}
             <div 
-              className={`transition-all duration-500 ease-out ${
+              className={`absolute left-0 transition-all duration-500 ease-out whitespace-nowrap ${
                 showLogo 
-                  ? 'opacity-0 absolute -left-full' 
-                  : 'opacity-100 relative'
+                  ? 'opacity-0 -translate-x-8 pointer-events-none' 
+                  : 'opacity-100 translate-x-0'
               }`}
             >
-              <span className="text-white/80 text-xs font-medium tracking-wide uppercase">
-                Professionelle Gebäudereinigung
+              <span className="font-display font-bold text-xl text-white tracking-wide">
+                AHRGLANZ
               </span>
             </div>
           </Link>

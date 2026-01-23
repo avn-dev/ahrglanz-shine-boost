@@ -1,6 +1,8 @@
+import { useState, useEffect } from 'react';
 import { CheckCircle, Phone, ArrowRight, ChevronDown } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import heroImage from '@/assets/hero-building.jpg';
+import ahrglanzLogo from '@/assets/ahrglanz-logo.png';
 
 const trustBadges = [
   'Schnelle Rückmeldung',
@@ -9,6 +11,16 @@ const trustBadges = [
 ];
 
 export function Hero() {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 100);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   const scrollToQuoteForm = () => {
     const element = document.getElementById('quote-form');
     if (element) {
@@ -41,9 +53,24 @@ export function Hero() {
           aria-hidden="true"
         />
       </div>
+
+      {/* Large Logo that animates to nav */}
+      <div 
+        className={`fixed z-[60] transition-all duration-700 ease-out ${
+          isScrolled 
+            ? 'top-2 left-4 md:left-8 scale-[0.35] origin-top-left opacity-0' 
+            : 'top-20 left-1/2 -translate-x-1/2 scale-100 opacity-100'
+        }`}
+      >
+        <img 
+          src={ahrglanzLogo} 
+          alt="AhrGlanz Logo" 
+          className="h-28 sm:h-36 md:h-44 w-auto object-contain drop-shadow-2xl"
+        />
+      </div>
       
       {/* Content */}
-      <div className="relative z-10 text-center px-4 sm:px-6 max-w-4xl mx-auto">
+      <div className="relative z-10 text-center px-4 sm:px-6 max-w-4xl mx-auto mt-32 sm:mt-40">
         {/* Badge */}
         <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm text-white text-sm font-medium mb-6 animate-fade-up border border-white/20">
           <span className="w-2 h-2 rounded-full bg-accent animate-pulse" />
