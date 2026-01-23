@@ -4,18 +4,18 @@ import { Link } from 'react-router-dom';
 const currentYear = new Date().getFullYear();
 
 const services = [
-  { label: 'Unterhaltsreinigung', href: '/leistungen' },
-  { label: 'Grundreinigung', href: '/leistungen' },
-  { label: 'Glasreinigung', href: '/leistungen' },
-  { label: 'Bauendreinigung', href: '/leistungen' },
+  { label: 'Unterhaltsreinigung', href: '/leistungen/unterhaltsreinigung' },
+  { label: 'Grundreinigung', href: '/leistungen/grundreinigung' },
+  { label: 'Glasreinigung', href: '/leistungen/glasreinigung' },
+  { label: 'Baureinigung', href: '/leistungen/baureinigung' },
   { label: 'Alle Leistungen', href: '/leistungen' },
 ];
 
 const objects = [
-  { label: 'Wohnanlage', href: '/objekte' },
-  { label: 'Büro', href: '/objekte' },
-  { label: 'Arztpraxis', href: '/objekte' },
-  { label: 'Kita', href: '/objekte' },
+  { label: 'Wohnanlage', href: '/objekte/wohnanlage' },
+  { label: 'Büro', href: '/objekte/buero' },
+  { label: 'Arztpraxis', href: '/objekte/praxis' },
+  { label: 'Kita', href: '/objekte/kita' },
   { label: 'Alle Objekte', href: '/objekte' },
 ];
 
