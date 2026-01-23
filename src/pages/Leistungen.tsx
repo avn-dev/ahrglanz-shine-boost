@@ -2,7 +2,7 @@ import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Sparkles, Building2, Home, Sun, Droplets, Wrench, Footprints, ClipboardCheck } from 'lucide-react';
+import { ArrowRight, Sparkles, Building2, Sun, Droplets, Wrench, Footprints, ClipboardCheck, Shield } from 'lucide-react';
 
 const services = [
   {
@@ -99,6 +99,18 @@ const services = [
       'Einfahrten und Gehwege',
       'Fassadenreinigung',
       'Graffiti-Entfernung'
+    ]
+  },
+  {
+    id: 'tatortreinigung',
+    icon: Shield,
+    title: 'Tatortreinigung',
+    description: 'Diskrete und professionelle Reinigung nach Todesfällen oder traumatischen Ereignissen.',
+    details: [
+      'Reinigung nach Todesfällen',
+      'Beseitigung biologischer Spuren',
+      'Geruchsneutralisierung',
+      '24/7 Notfall-Erreichbarkeit'
     ]
   },
 ];

@@ -221,7 +221,6 @@ const leistungenData: Record<string, {
     icon: Brush,
     features: [
       "Desinfektionsreinigung",
-      "Tatortreinigung",
       "Entrümpelung mit Reinigung",
       "Graffitientfernung",
       "Geruchsneutralisierung",
@@ -238,6 +237,34 @@ const leistungenData: Record<string, {
       { step: 2, title: "Beratung", description: "Individuelle Lösungsfindung" },
       { step: 3, title: "Umsetzung", description: "Professionelle Durchführung" },
       { step: 4, title: "Nachbereitung", description: "Abschlusskontrolle" }
+    ]
+  },
+  tatortreinigung: {
+    title: "Tatortreinigung",
+    subtitle: "Diskrete Spezialreinigung",
+    description: "Professionelle und diskrete Reinigung nach Todesfällen oder traumatischen Ereignissen.",
+    longDescription: "Nach Todesfällen, Unfällen oder anderen traumatischen Ereignissen ist eine professionelle Reinigung unerlässlich. Wir bieten diskrete, einfühlsame und fachgerechte Tatortreinigung – schnell verfügbar und absolut vertraulich.",
+    icon: Brush,
+    features: [
+      "Reinigung nach Todesfällen",
+      "Beseitigung biologischer Spuren",
+      "Geruchsneutralisierung",
+      "Desinfektion aller Oberflächen",
+      "Entsorgung kontaminierter Materialien",
+      "Wiederherstellung der Bewohnbarkeit"
+    ],
+    benefits: [
+      "Absolute Diskretion",
+      "24/7 Notfall-Erreichbarkeit",
+      "Geschultes Fachpersonal",
+      "Einfühlsame Abwicklung",
+      "Zusammenarbeit mit Behörden"
+    ],
+    process: [
+      { step: 1, title: "Erstkontakt", description: "Vertrauliche Anfrage 24/7" },
+      { step: 2, title: "Begutachtung", description: "Vor-Ort-Analyse nach Freigabe" },
+      { step: 3, title: "Spezialreinigung", description: "Professionelle Durchführung" },
+      { step: 4, title: "Abschluss", description: "Dokumentation und Übergabe" }
     ]
   }
 };
