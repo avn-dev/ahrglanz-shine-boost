@@ -1,5 +1,6 @@
 import { Phone, Mail, MapPin } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import ahrglanzLogo from '@/assets/ahrglanz-logo.png';
 
 const currentYear = new Date().getFullYear();
 
@@ -32,8 +33,12 @@ export function Footer() {
           {/* Brand */}
           <div className="sm:col-span-2 lg:col-span-1">
             <Link to="/" className="flex items-center gap-2 mb-4">
-              <div className="w-10 h-10 rounded-lg bg-primary flex items-center justify-center">
-                <span className="text-primary-foreground font-display font-bold text-xl">A</span>
+              <div className=" w-10 h-10 rounded-lg bg-white overflow-hidden w-10 opacity-100">
+                <img
+                  src={ahrglanzLogo}
+                  alt="AhrGlanz Logo"
+                  className="h-10 w-10 object-contain flex-shrink-0"
+                />
               </div>
               <div className="flex flex-col">
                 <span className="font-display font-bold text-lg text-background leading-tight">

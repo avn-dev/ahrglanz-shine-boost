@@ -130,12 +130,12 @@ const Datenschutz = () => {
                 </p>
               </section>
 
-              <p className="mt-12 text-sm border-t pt-8">
+              {/* <p className="mt-12 text-sm border-t pt-8">
                 <strong>Hinweis:</strong> Diese Datenschutzerklärung ist ein Muster und muss 
                 an Ihre spezifischen Datenverarbeitungsvorgänge angepasst werden. Für eine 
                 rechtssichere Datenschutzerklärung konsultieren Sie bitte einen Rechtsanwalt 
                 oder Datenschutzbeauftragten.
-              </p>
+              </p> */}
             </div>
           </div>
         </div>

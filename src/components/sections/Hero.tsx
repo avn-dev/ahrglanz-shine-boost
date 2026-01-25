@@ -76,10 +76,10 @@ export function Hero() {
       {/* Content - more spacing on mobile to avoid logo overlap */}
       <div className="relative z-10 text-center px-4 sm:px-6 max-w-4xl mx-auto mt-52 sm:mt-56 md:mt-60">
         {/* Badge */}
-        <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-white/10 backdrop-blur-sm text-white text-xs sm:text-sm font-medium mb-4 sm:mb-6 animate-fade-up border border-white/20">
+        {/* <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-white/10 backdrop-blur-sm text-white text-xs sm:text-sm font-medium mb-4 sm:mb-6 animate-fade-up border border-white/20">
           <span className="w-2 h-2 rounded-full bg-accent animate-pulse" />
           Professionelle Gebäudereinigung
-        </div>
+        </div> */}
 
         {/* Headline */}
         <h1 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight mb-6 animate-fade-up stagger-1">
