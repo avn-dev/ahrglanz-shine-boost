@@ -13,10 +13,9 @@ const Impressum = () => {
             </h1>
 
             <div className="prose prose-lg max-w-none text-muted-foreground">
-              <h2 className="font-display text-xl font-semibold text-foreground mt-8 mb-4">
-                Angaben gemäß § 5 TMG
-              </h2>
               <p>
+                Serkan Sel
+                <br />
                 AhrGlanz Gebäudereinigung
                 <br />
                 Ehlinger Str. 74
@@ -28,51 +27,47 @@ const Impressum = () => {
                 Kontakt
               </h2>
               <p>
-                Telefon: +49 2641 3968989
+                Telefon: <a href="tel:+4926413968989">+49 2641 3968989</a>
                 <br />
-                E-Mail: info@ahrglanz.de
+                E-Mail: <a href="mailto:info@ahrglanz.de">info@ahrglanz.de</a>
               </p>
 
               <h2 className="font-display text-xl font-semibold text-foreground mt-8 mb-4">
-                Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV
+                Umsatzsteuer-ID
               </h2>
               <p>
-                AhrGlanz Gebäudereinigung
+                Umsatzsteuer-Identifikationsnummer gemäß § 27 a Umsatzsteuergesetz:
                 <br />
-                Ehlinger Str. 74
-                <br />
-                53474 Bad Neuenahr-Ahrweiler
+                DE368671469
               </p>
 
               <h2 className="font-display text-xl font-semibold text-foreground mt-8 mb-4">
-                EU-Streitschlichtung
+                Berufsbezeichnung und berufsrechtliche Regelungen
               </h2>
               <p>
-                Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit:{' '}
-                <a
-                  href="https://ec.europa.eu/consumers/odr"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-primary hover:underline"
-                >
-                  https://ec.europa.eu/consumers/odr
-                </a>
+                Berufsbezeichnung:
                 <br />
-                Unsere E-Mail-Adresse finden Sie oben im Impressum.
+                Gebäudereinigung
+                <br />
+                <br />
+                Zuständige Kammer:
+                <br />
+                HWK
+                <br />
+                IHK
               </p>
 
               <h2 className="font-display text-xl font-semibold text-foreground mt-8 mb-4">
-                Verbraucherstreitbeilegung / Universalschlichtungsstelle
+                Angaben zur Berufshaftplfichtverischerung
               </h2>
-              <p>
-                Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor 
-                einer Verbraucherschlichtungsstelle teilzunehmen.
-              </p>
-
-              <p className="mt-8 text-sm">
-                <strong>Hinweis:</strong> Bitte ergänzen Sie dieses Impressum mit Ihren vollständigen 
-                Angaben (Inhaber, Handelsregister-Nr., USt-ID falls vorhanden, etc.).
-              </p>
+              <p><strong>Name und Sitz des Versicherers:</strong><br />
+                Allianz Vertretung<br />
+                <br />
+                Gr&uuml;ber und Gr&uuml;ber GbR<br />
+                Marktplatz 16<br />
+                53474 Bad Neuenahr-Ahrweiler</p>
+              <h2>Verbraucher&shy;streit&shy;beilegung/Universal&shy;schlichtungs&shy;stelle</h2>
+              <p>Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.</p>
             </div>
           </div>
         </div>
