@@ -119,13 +119,13 @@ export function Hero() {
       </div>
 
       {/* Scroll indicator */}
-      <button 
+      {/* <button 
         onClick={scrollToServices}
         className="absolute bottom-8 left-1/2 -translate-x-1/2 text-white/70 hover:text-white transition-colors animate-bounce cursor-pointer"
         aria-label="Weiter zu den Leistungen"
       >
         <ChevronDown className="w-8 h-8" />
-      </button>
+      </button> */}
 
       {/* Floating badge - repositioned for fullscreen hero */}
       <div className="absolute bottom-8 right-4 sm:right-8 bg-white/95 backdrop-blur-sm rounded-xl shadow-lg p-3 sm:p-4 animate-fade-up stagger-5 border border-white/50 hidden sm:block">
