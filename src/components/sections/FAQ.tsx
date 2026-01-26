@@ -5,7 +5,14 @@ import {
   AccordionTrigger,
 } from '@/components/ui/accordion';
 
-const faqs = [
+import { ReactNode } from 'react';
+
+interface FAQ {
+  question: string;
+  answer: ReactNode;
+}
+
+const faqs: FAQ[] = [
   {
     question: 'In welchem Gebiet sind Sie tätig?',
     answer: 'Wir sind in Bad Neuenahr-Ahrweiler, Bonn, Koblenz und der gesamten Region tätig – inklusive Ahrtal, Sinzig, Remagen und Umgebung. Der genaue Radius hängt vom Auftrag ab – sprechen Sie uns gern an, wir finden eine Lösung.',
@@ -28,7 +35,15 @@ const faqs = [
   },
   {
     question: 'Wie kann ich Sie am besten erreichen?',
-    answer: 'Sie erreichen uns telefonisch unter +49 2641 3968989, per E-Mail an info@ahrglanz.de oder direkt über das Kontaktformular auf dieser Seite. Wir melden uns schnellstmöglich bei Ihnen.',
+    answer: (
+      <>
+        Sie erreichen uns telefonisch unter{' '}
+        <a href="tel:+4926413968989" className="text-primary hover:underline">+49 2641 3968989</a>, 
+        per E-Mail an{' '}
+        <a href="mailto:info@ahrglanz.de" className="text-primary hover:underline">info@ahrglanz.de</a>{' '}
+        oder direkt über das Kontaktformular auf dieser Seite. Wir melden uns schnellstmöglich bei Ihnen.
+      </>
+    ),
   },
 ];
 

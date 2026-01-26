@@ -37,14 +37,21 @@ const Datenschutz = () => {
                 <p>
                   AhrGlanz Gebäudereinigung
                   <br />
-                  Ehlinger Str. 74
+                  <a 
+                    href="https://maps.google.com/?q=Ehlinger+Str.+74,+53474+Bad+Neuenahr-Ahrweiler"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-primary transition-colors"
+                  >
+                    Ehlinger Str. 74
+                    <br />
+                    53474 Bad Neuenahr-Ahrweiler
+                  </a>
                   <br />
-                  53474 Bad Neuenahr-Ahrweiler
                   <br />
+                  Telefon: <a href="tel:+4926413968989" className="hover:text-primary transition-colors">+49 2641 3968989</a>
                   <br />
-                  Telefon: +49 2641 3968989
-                  <br />
-                  E-Mail: info@ahrglanz.de
+                  E-Mail: <a href="mailto:info@ahrglanz.de" className="hover:text-primary transition-colors">info@ahrglanz.de</a>
                 </p>
               </section>
 
