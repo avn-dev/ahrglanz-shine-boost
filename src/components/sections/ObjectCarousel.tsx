@@ -109,6 +109,10 @@ export const ObjectCarousel = () => {
                     <img
                       src={object.image}
                       alt={object.title}
+                      width={600}
+                      height={800}
+                      loading="lazy"
+                      decoding="async"
                       className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                     />
                     

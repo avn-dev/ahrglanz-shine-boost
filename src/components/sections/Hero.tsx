@@ -42,8 +42,11 @@ export function Hero() {
         <img 
           src={heroImage} 
           alt="Moderne Glasfassaden - Professionelle Gebäudereinigung"
+          width={1818}
+          height={1280}
           className="w-full h-full object-cover"
           loading="eager"
+          fetchPriority="high"
         />
         {/* Dark overlay for text readability */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/70" />
@@ -68,6 +71,9 @@ export function Hero() {
         <img 
           src={ahrglanzLogo} 
           alt="AhrGlanz Logo" 
+          width={500}
+          height={500}
+          fetchPriority="high"
           className="relative h-28 sm:h-36 md:h-44 w-auto object-contain"
           style={{ filter: 'drop-shadow(0 0 20px rgba(255,255,255,0.8)) drop-shadow(0 0 40px rgba(255,255,255,0.5))' }}
         />
