@@ -81,20 +81,20 @@ export function Header() {
           <Link
             to="/"
             onClick={() => window.scrollTo({ top: 0, left: 0, behavior: 'instant' })}
-            className="flex items-center gap-3 group"
+            className="flex items-center gap-3 group relative z-10"
           >
             {/* Logo image - slides in when scrolled or not on homepage */}
             <div 
-              className={`transition-all duration-500 ease-out overflow-hidden ${
+              className={`transition-all duration-500 ease-out ${
                 showLogo 
                   ? 'w-10 opacity-100' 
-                  : 'w-0 opacity-0'
+                  : 'w-0 opacity-0 overflow-hidden'
               }`}
             >
               <img 
                 src={ahrglanzLogo} 
                 alt="AhrGlanz Logo" 
-                className="h-10 w-10 object-contain flex-shrink-0"
+                className="h-10 w-10 object-contain flex-shrink-0 pointer-events-none"
               />
             </div>
             
