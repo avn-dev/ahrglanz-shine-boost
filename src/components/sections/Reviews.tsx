@@ -7,6 +7,7 @@ const reviews = [
     author: 'Pascal',
     role: 'Kunde',
     rating: 5,
+    featured: true,
   },
   {
     quote: 'Super schnell, unkompliziert und fairer Preis. Jederzeit wieder.',
@@ -83,42 +84,81 @@ export function Reviews() {
           </p>
         </div>
 
-        {/* Reviews Grid */}
-        <div className="grid md:grid-cols-3 gap-8">
-          {reviews.map((review, index) => (
+        {/* Reviews Grid - Featured Layout */}
+        <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+          {/* Featured Review - Full Width on Mobile, Left Side on Desktop */}
+          {reviews.filter(r => 'featured' in r && r.featured).map((review, index) => (
             <article
               key={index}
-              className="relative bg-background rounded-2xl p-8 shadow-sm border border-border/50 card-hover"
+              className="relative bg-background rounded-2xl p-8 lg:p-10 shadow-sm border border-border/50 card-hover md:row-span-2 flex flex-col justify-center"
             >
               {/* Quote Icon */}
               <div className="absolute top-6 right-6 text-primary/10">
-                <Quote className="w-12 h-12" />
+                <Quote className="w-16 h-16" />
               </div>
 
               {/* Rating */}
-              <div className="mb-4">
+              <div className="mb-6">
                 <StarRating rating={review.rating} />
               </div>
 
               {/* Quote */}
-              <blockquote className="text-foreground mb-6 relative z-10">
+              <blockquote className="text-lg lg:text-xl text-foreground mb-8 relative z-10 leading-relaxed">
                 "{review.quote}"
               </blockquote>
 
               {/* Author */}
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
-                  <span className="text-primary font-semibold text-sm">
+              <div className="flex items-center gap-4">
+                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
+                  <span className="text-primary font-semibold">
                     {review.author.charAt(0)}
                   </span>
                 </div>
                 <div>
-                  <p className="font-semibold text-foreground">{review.author}</p>
+                  <p className="font-semibold text-lg text-foreground">{review.author}</p>
                   <p className="text-sm text-muted-foreground">{review.role}</p>
                 </div>
               </div>
             </article>
           ))}
+
+          {/* Right Column - Stacked Reviews */}
+          <div className="flex flex-col gap-8">
+            {reviews.filter(r => !('featured' in r && r.featured)).map((review, index) => (
+              <article
+                key={index}
+                className="relative bg-background rounded-2xl p-8 shadow-sm border border-border/50 card-hover flex-1 flex flex-col justify-center"
+              >
+                {/* Quote Icon */}
+                <div className="absolute top-6 right-6 text-primary/10">
+                  <Quote className="w-10 h-10" />
+                </div>
+
+                {/* Rating */}
+                <div className="mb-4">
+                  <StarRating rating={review.rating} />
+                </div>
+
+                {/* Quote */}
+                <blockquote className="text-foreground mb-6 relative z-10">
+                  "{review.quote}"
+                </blockquote>
+
+                {/* Author */}
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
+                    <span className="text-primary font-semibold text-sm">
+                      {review.author.charAt(0)}
+                    </span>
+                  </div>
+                  <div>
+                    <p className="font-semibold text-foreground">{review.author}</p>
+                    <p className="text-sm text-muted-foreground">{review.role}</p>
+                  </div>
+                </div>
+              </article>
+            ))}
+          </div>
         </div>
 
         {/* CTA to Google */}
