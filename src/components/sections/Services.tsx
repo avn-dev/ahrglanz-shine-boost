@@ -28,9 +28,9 @@ const services = [
   },
   {
     icon: Home,
-    title: 'Treppenhausreinigung',
-    slug: 'treppenhausreinigung',
-    description: 'Gepflegte Treppenhäuser und Eingangsbereiche für Wohnanlagen – regelmäßig und zuverlässig.',
+    title: 'Tatortreinigung',
+    slug: 'tatortreinigung',
+    description: 'Diskrete und professionelle Reinigung nach Unglücksfällen – 24/7 erreichbar.',
   },
   {
     icon: Leaf,
