@@ -1,8 +1,9 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
 import { Send, CheckCircle, Phone, MessageCircle } from 'lucide-react';
+import HCaptcha from '@hcaptcha/react-hcaptcha';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
@@ -56,6 +57,8 @@ const services = [
 export function QuoteForm() {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [captchaToken, setCaptchaToken] = useState<string | null>(null);
+  const captchaRef = useRef<HCaptcha>(null);
   const { toast } = useToast();
 
   const form = useForm<FormData>({
@@ -78,6 +81,16 @@ export function QuoteForm() {
       return;
     }
 
+    // hCaptcha validation
+    if (!captchaToken) {
+      toast({
+        title: "Captcha erforderlich",
+        description: "Bitte bestätigen Sie, dass Sie kein Roboter sind.",
+        variant: "destructive",
+      });
+      return;
+    }
+
     setIsSubmitting(true);
 
     try {
@@ -88,6 +101,7 @@ export function QuoteForm() {
         },
         body: JSON.stringify({
           access_key: 'bf1d5833-a9cf-470c-9573-8b1d990ed833',
+          'h-captcha-response': captchaToken,
           subject: `Neue Anfrage: ${data.service} - ${data.name}`,
           from_name: data.name,
           name: data.name,
@@ -103,6 +117,8 @@ export function QuoteForm() {
 
       if (result.success) {
         setIsSubmitted(true);
+        setCaptchaToken(null);
+        captchaRef.current?.resetCaptcha();
         toast({
           title: "Anfrage gesendet!",
           description: "Vielen Dank für Ihre Anfrage. Wir melden uns in Kürze bei Ihnen.",
@@ -344,6 +360,16 @@ export function QuoteForm() {
                     </FormItem>
                   )}
                 />
+
+                {/* hCaptcha */}
+                <div className="flex justify-center">
+                  <HCaptcha
+                    ref={captchaRef}
+                    sitekey="50b2fe65-b00b-4b9e-ad62-3ba471098be2"
+                    onVerify={(token) => setCaptchaToken(token)}
+                    onExpire={() => setCaptchaToken(null)}
+                  />
+                </div>
 
                 <Button
                   type="submit"
