@@ -78,7 +78,17 @@ export function Header() {
       <div className="section-container">
         <nav className="flex items-center justify-between">
           {/* Logo + Text - Logo slides in from left on scroll */}
-          <Link to="/" className="flex items-center gap-3 group">
+          <button
+            onClick={() => {
+              if (location.pathname === '/') {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+              } else {
+                navigate('/');
+                setTimeout(() => window.scrollTo({ top: 0, behavior: 'smooth' }), 50);
+              }
+            }}
+            className="flex items-center gap-3 group cursor-pointer"
+          >
             {/* Logo image - slides in when scrolled or not on homepage */}
             <div 
               className={`transition-all duration-500 ease-out overflow-hidden ${
@@ -95,7 +105,7 @@ export function Header() {
             </div>
             
             {/* Text - always visible */}
-            <div className="flex flex-col">
+            <div className="flex flex-col text-left">
               <span className={`font-display font-bold text-lg leading-tight transition-colors ${
                 useTransparent ? 'text-white' : 'text-foreground'
               }`}>
@@ -107,7 +117,7 @@ export function Header() {
                 Gebäudereinigung
               </span>
             </div>
-          </Link>
+          </button>
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center gap-8">
