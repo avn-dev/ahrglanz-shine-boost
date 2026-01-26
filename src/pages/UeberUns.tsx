@@ -4,13 +4,14 @@ import { Users, Award, Heart, MapPin, Phone, Mail } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 import { useSEO, SEO_CONFIGS } from '@/hooks/useSEO';
+import serkanImage from '@/assets/team-serkan.png';
 
 const teamMembers = [
   {
     name: 'Serkan Sel',
     role: 'Geschäftsführer',
     description: 'Gründer und Inhaber von AhrGlanz. Mit langjähriger Erfahrung in der Gebäudereinigung sorgt er für höchste Qualitätsstandards.',
-    initial: 'S',
+    image: serkanImage,
   },
   {
     name: 'Adnan Sel',
@@ -171,11 +172,19 @@ const UeberUns = () => {
             <div className="grid sm:grid-cols-3 gap-8 max-w-4xl mx-auto">
               {teamMembers.map((member) => (
                 <div key={member.name} className="bg-background rounded-2xl p-8 shadow-sm border border-border/50 text-center">
-                  <div className="w-24 h-24 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
-                    <span className="text-3xl font-display font-bold text-primary">
-                      {member.initial}
-                    </span>
-                  </div>
+                  {'image' in member && member.image ? (
+                    <img 
+                      src={member.image} 
+                      alt={member.name}
+                      className="w-24 h-24 rounded-full object-cover object-top mx-auto mb-4"
+                    />
+                  ) : (
+                    <div className="w-24 h-24 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+                      <span className="text-3xl font-display font-bold text-primary">
+                        {'initial' in member ? member.initial : member.name[0]}
+                      </span>
+                    </div>
+                  )}
                   <h3 className="font-display font-semibold text-xl text-foreground mb-1">
                     {member.name}
                   </h3>
