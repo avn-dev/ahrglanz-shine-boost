@@ -83,8 +83,8 @@ export function Hero() {
 
         {/* Headline */}
         <h1 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight mb-6 animate-fade-up stagger-1">
-          Gebäudereinigung, die{' '}
-          <span className="text-accent">wirklich glänzt.</span>
+          Ihr Gebäude{' '}
+          <span className="text-accent">nachhaltig sauber.</span>
         </h1>
 
         {/* Subheadline */}

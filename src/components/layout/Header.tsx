@@ -7,11 +7,10 @@ import ahrglanzLogo from '@/assets/ahrglanz-logo.png';
 const navItems = [
   { label: 'Leistungen', href: '/leistungen' },
   { label: 'Objekte', href: '/objekte' },
-  { label: 'Über uns', href: '/#why-us' },
+  { label: 'Über uns', href: '/ueber-uns' },
   { label: 'Ablauf', href: '/#process' },
-  { label: 'Bewertungen', href: '/#reviews' },
   { label: 'FAQ', href: '/#faq' },
-  { label: 'Kontakt', href: '/#quote-form' },
+  { label: 'Kontakt', href: '/kontakt' },
 ];
 
 export function Header() {
@@ -55,20 +54,8 @@ export function Header() {
 
   const scrollToQuoteForm = () => {
     setIsMobileMenuOpen(false);
-    if (location.pathname === '/') {
-      const element = document.getElementById('quote-form');
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
-      }
-    } else {
-      navigate('/');
-      setTimeout(() => {
-        const element = document.getElementById('quote-form');
-        if (element) {
-          element.scrollIntoView({ behavior: 'smooth' });
-        }
-      }, 100);
-    }
+    // Navigate to contact page
+    navigate('/kontakt');
   };
 
   // On homepage, use transparent header with white text until scrolled
