@@ -1,7 +1,9 @@
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
+import { useSEO, SEO_CONFIGS } from '@/hooks/useSEO';
 
 const Datenschutz = () => {
+  useSEO(SEO_CONFIGS.datenschutz);
   return (
     <div className="min-h-screen">
       <Header />

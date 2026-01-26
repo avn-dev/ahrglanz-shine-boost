@@ -1,7 +1,9 @@
 import { useLocation } from "react-router-dom";
 import { useEffect } from "react";
+import { useSEO, SEO_CONFIGS } from '@/hooks/useSEO';
 
 const NotFound = () => {
+  useSEO(SEO_CONFIGS.notFound);
   const location = useLocation();
 
   useEffect(() => {

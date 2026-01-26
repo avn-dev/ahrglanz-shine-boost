@@ -3,6 +3,7 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, Check, Phone, Sparkles, Building2, Users, Shield, Clock } from "lucide-react";
+import { useSEO, getObjektSEO } from '@/hooks/useSEO';
 
 import wohnanlageImg from "@/assets/object-wohnanlage.jpg";
 import bueroImg from "@/assets/object-buero.jpg";
@@ -462,6 +463,13 @@ const ObjektDetail = () => {
   const navigate = useNavigate();
   
   const objekt = slug ? objekteData[slug] : null;
+  
+  // SEO for the current object
+  useSEO(
+    objekt 
+      ? getObjektSEO(objekt.title, slug!) 
+      : { title: 'Objekt nicht gefunden | AhrGlanz', description: 'Das angeforderte Objekt wurde nicht gefunden.' }
+  );
 
   if (!objekt) {
     return (

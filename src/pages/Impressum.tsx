@@ -1,7 +1,9 @@
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
+import { useSEO, SEO_CONFIGS } from '@/hooks/useSEO';
 
 const Impressum = () => {
+  useSEO(SEO_CONFIGS.impressum);
   return (
     <div className="min-h-screen">
       <Header />

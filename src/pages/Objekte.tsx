@@ -3,6 +3,7 @@ import { Footer } from '@/components/layout/Footer';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
+import { useSEO, SEO_CONFIGS } from '@/hooks/useSEO';
 
 import wohnanlageBild from '@/assets/object-wohnanlage.jpg';
 import sportclubBild from '@/assets/object-sportclub.jpg';
@@ -81,6 +82,8 @@ const objects = [
 ];
 
 const Objekte = () => {
+  useSEO(SEO_CONFIGS.objekte);
+  
   const scrollToQuote = () => {
     const element = document.getElementById('quote-form');
     if (element) {
