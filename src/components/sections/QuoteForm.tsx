@@ -80,16 +80,45 @@ export function QuoteForm() {
 
     setIsSubmitting(true);
 
-    // Simulate form submission (replace with actual backend call)
-    await new Promise((resolve) => setTimeout(resolve, 1500));
+    try {
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          access_key: 'bf1d5833-a9cf-470c-9573-8b1d990ed833',
+          subject: `Neue Anfrage: ${data.service} - ${data.name}`,
+          from_name: data.name,
+          name: data.name,
+          email: data.email,
+          phone: data.phone || 'Nicht angegeben',
+          service: data.service,
+          location: data.location,
+          message: data.message,
+        }),
+      });
 
-    setIsSubmitting(false);
-    setIsSubmitted(true);
-    
-    toast({
-      title: "Anfrage gesendet!",
-      description: "Vielen Dank für Ihre Anfrage. Wir melden uns in Kürze bei Ihnen.",
-    });
+      const result = await response.json();
+
+      if (result.success) {
+        setIsSubmitted(true);
+        toast({
+          title: "Anfrage gesendet!",
+          description: "Vielen Dank für Ihre Anfrage. Wir melden uns in Kürze bei Ihnen.",
+        });
+      } else {
+        throw new Error(result.message || 'Fehler beim Senden');
+      }
+    } catch (error) {
+      toast({
+        title: "Fehler",
+        description: "Die Anfrage konnte nicht gesendet werden. Bitte versuchen Sie es erneut.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   if (isSubmitted) {
