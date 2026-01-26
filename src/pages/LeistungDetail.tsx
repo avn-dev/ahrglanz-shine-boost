@@ -58,7 +58,7 @@ const leistungenData: Record<string, LeistungData> = {
     title: "Unterhaltsreinigung",
     heroTitle: "Unterhaltsreinigung",
     subtitle: "Dauerhaft saubere & gepflegte Objekte",
-    heroDescription: "Unsere Unterhaltsreinigung sorgt für dauerhaft saubere und hygienische Räumlichkeiten. Mit festen Reinigungsplänen und geschultem Personal gewährleisten wir gleichbleibend hohe Qualität – ob täglich, wöchentlich oder nach individuellem Bedarf. Mit unserer Unterhaltsreinigung sorgt AHRglanz Gebäudereinigung für zuverlässige Sauberkeit, feste Abläufe und gepflegte Räume – individuell abgestimmt auf Ihr Objekt.",
+    heroDescription: "Unsere Unterhaltsreinigung sorgt für dauerhaft saubere und hygienische Räumlichkeiten. Mit festen Reinigungsplänen und geschultem Personal gewährleisten wir gleichbleibend hohe Qualität – ob täglich, wöchentlich oder nach individuellem Bedarf. Mit unserer Unterhaltsreinigung sorgt AhrGlanz Gebäudereinigung für zuverlässige Sauberkeit, feste Abläufe und gepflegte Räume – individuell abgestimmt auf Ihr Objekt.",
     sectionTitle: "Unterhaltsreinigung von Anfang bis Ende",
     sectionDescription: "Eine regelmäßige Unterhaltsreinigung sorgt für Sauberkeit, Hygiene und den Werterhalt Ihrer Immobilie. Wir erstellen individuelle Reinigungspläne und setzen diese zuverlässig und planbar um – abgestimmt auf Ihr Objekt und Ihren Bedarf.",
     icon: Sparkles,

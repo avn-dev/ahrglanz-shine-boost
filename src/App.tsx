@@ -11,6 +11,8 @@ import Objekte from "./pages/Objekte";
 import ObjektDetail from "./pages/ObjektDetail";
 import Leistungen from "./pages/Leistungen";
 import LeistungDetail from "./pages/LeistungDetail";
+import UeberUns from "./pages/UeberUns";
+import Kontakt from "./pages/Kontakt";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -20,7 +22,7 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-<BrowserRouter>
+      <BrowserRouter>
         <ScrollToTop />
         <Routes>
           <Route path="/" element={<Index />} />
@@ -30,6 +32,8 @@ const App = () => (
           <Route path="/objekte/:slug" element={<ObjektDetail />} />
           <Route path="/leistungen" element={<Leistungen />} />
           <Route path="/leistungen/:slug" element={<LeistungDetail />} />
+          <Route path="/ueber-uns" element={<UeberUns />} />
+          <Route path="/kontakt" element={<Kontakt />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

@@ -8,7 +8,11 @@ import {
 const faqs = [
   {
     question: 'In welchem Gebiet sind Sie tätig?',
-    answer: 'Wir sind in Bad Neuenahr-Ahrweiler und der näheren Umgebung tätig. Der genaue Radius hängt vom Auftrag ab – sprechen Sie uns gern an, wir finden eine Lösung.',
+    answer: 'Wir sind in Bad Neuenahr-Ahrweiler, Bonn, Koblenz und der gesamten Region tätig – inklusive Ahrtal, Sinzig, Remagen und Umgebung. Der genaue Radius hängt vom Auftrag ab – sprechen Sie uns gern an, wir finden eine Lösung.',
+  },
+  {
+    question: 'Welche Reinigungen bieten Sie an?',
+    answer: 'Wir bieten ein umfassendes Leistungsspektrum: Unterhaltsreinigung, Grundreinigung, Glasreinigung, Bauendreinigung, Treppenhausreinigung, Photovoltaikreinigung, Steinreinigung und Desinfektionsreinigung. Ob Büro, Praxis, Wohnanlage oder Gewerbe – wir haben die passende Lösung.',
   },
   {
     question: 'Wie schnell bekomme ich ein Angebot?',
@@ -17,10 +21,6 @@ const faqs = [
   {
     question: 'Bieten Sie regelmäßige Reinigung an?',
     answer: 'Ja, unsere Unterhaltsreinigung kann im passenden Turnus erfolgen – wöchentlich, 14-tägig, monatlich oder nach individueller Vereinbarung. So bleibt Ihr Objekt dauerhaft gepflegt.',
-  },
-  {
-    question: 'Reinigen Sie auch nach Bauarbeiten?',
-    answer: 'Ja, wir bieten professionelle Bauendreinigung an. Das umfasst die Entfernung von Bauschmutz, Staub und Rückständen sowie die gründliche Reinigung aller Oberflächen – so wird Ihr Objekt bezugsfertig.',
   },
   {
     question: 'Welche Reinigungsmittel verwenden Sie?',

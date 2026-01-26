@@ -49,10 +49,11 @@ export function Footer() {
                 </span>
               </div>
             </Link>
-            <p className="text-background/70 text-sm mb-6">
-              Sauber. Glänzend. AhrGlanz.
-              <br />
+            <p className="text-background/70 text-sm mb-2">
               Professionelle Gebäudereinigung in Bad Neuenahr-Ahrweiler & Umgebung.
+            </p>
+            <p className="font-display text-2xl italic text-background/90 mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
+              „Wir machen sauber."
             </p>
           </div>
 

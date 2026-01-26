@@ -10,14 +10,24 @@ import kitaBild from '@/assets/object-kita.jpg';
 import bueroBild from '@/assets/object-buero.jpg';
 import hotelBild from '@/assets/object-hotel.jpg';
 import praxisBild from '@/assets/object-praxis.jpg';
+import bildungBild from '@/assets/object-bildung.jpg';
+import gastronomieBild from '@/assets/object-gastronomie.jpg';
+import industrieBild from '@/assets/object-industrie.jpg';
+import geschaeftBild from '@/assets/object-geschaeft.jpg';
+import gesundheitBild from '@/assets/object-gesundheit.jpg';
 
 const objects = [
   { id: 1, slug: 'wohnanlage', title: 'Wohnanlage', image: wohnanlageBild },
-  { id: 2, slug: 'sportclub', title: 'Sportclub', image: sportclubBild },
-  { id: 3, slug: 'kita', title: 'Kita', image: kitaBild },
-  { id: 4, slug: 'buero', title: 'Bürogebäude', image: bueroBild },
+  { id: 2, slug: 'buero', title: 'Bürogebäude', image: bueroBild },
+  { id: 3, slug: 'praxis', title: 'Arztpraxis', image: praxisBild },
+  { id: 4, slug: 'kita', title: 'Kita', image: kitaBild },
   { id: 5, slug: 'hotel', title: 'Hotel', image: hotelBild },
-  { id: 6, slug: 'praxis', title: 'Arztpraxis', image: praxisBild },
+  { id: 6, slug: 'sportclub', title: 'Sportclub', image: sportclubBild },
+  { id: 7, slug: 'bildungseinrichtung', title: 'Bildungseinrichtung', image: bildungBild },
+  { id: 8, slug: 'gastronomie', title: 'Gastronomie', image: gastronomieBild },
+  { id: 9, slug: 'industrie', title: 'Industrie', image: industrieBild },
+  { id: 10, slug: 'geschaeft', title: 'Geschäft & Einzelhandel', image: geschaeftBild },
+  { id: 11, slug: 'gesundheit', title: 'Gesundheitseinrichtung', image: gesundheitBild },
 ];
 
 export const ObjectCarousel = () => {
