@@ -78,16 +78,10 @@ export function Header() {
       <div className="section-container">
         <nav className="flex items-center justify-between">
           {/* Logo + Text - Logo slides in from left on scroll */}
-          <button
-            onClick={() => {
-              if (location.pathname === '/') {
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-              } else {
-                navigate('/');
-                setTimeout(() => window.scrollTo({ top: 0, behavior: 'smooth' }), 50);
-              }
-            }}
-            className="flex items-center gap-3 group cursor-pointer"
+          <Link
+            to="/"
+            onClick={() => window.scrollTo({ top: 0, left: 0, behavior: 'instant' })}
+            className="flex items-center gap-3 group"
           >
             {/* Logo image - slides in when scrolled or not on homepage */}
             <div 
@@ -117,7 +111,7 @@ export function Header() {
                 Gebäudereinigung
               </span>
             </div>
-          </button>
+          </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center gap-8">
