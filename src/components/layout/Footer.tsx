@@ -32,8 +32,12 @@ export function Footer() {
         <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-12">
           {/* Brand */}
           <div className="sm:col-span-2 lg:col-span-1">
-            <Link to="/" className="flex items-center gap-2 mb-4">
-              <div className=" w-10 h-10 rounded-lg bg-white overflow-hidden w-10 opacity-100">
+            <Link 
+              to="/" 
+              className="flex items-center gap-2 mb-4"
+              onClick={() => window.scrollTo({ top: 0, left: 0, behavior: 'instant' })}
+            >
+              <div className="w-10 h-10 rounded-lg bg-white overflow-hidden opacity-100">
                 <img
                   src={ahrglanzLogo}
                   alt="AhrGlanz Logo"
@@ -79,13 +83,20 @@ export function Footer() {
                   info@ahrglanz.de
                 </a>
               </li>
-              <li className="flex items-start gap-2 text-background/70">
-                <MapPin className="w-4 h-4 mt-0.5 flex-shrink-0" />
-                <span>
-                  Ehlinger Str. 74
-                  <br />
-                  53474 Bad Neuenahr-Ahrweiler
-                </span>
+              <li>
+                <a
+                  href="https://maps.google.com/?q=Ehlinger+Str.+74,+53474+Bad+Neuenahr-Ahrweiler"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-start gap-2 text-background/70 hover:text-primary transition-colors"
+                >
+                  <MapPin className="w-4 h-4 mt-0.5 flex-shrink-0" />
+                  <span>
+                    Ehlinger Str. 74
+                    <br />
+                    53474 Bad Neuenahr-Ahrweiler
+                  </span>
+                </a>
               </li>
             </ul>
           </div>
