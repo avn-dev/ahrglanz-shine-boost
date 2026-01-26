@@ -92,17 +92,22 @@ const Kontakt = () => {
                   <Clock className="w-6 h-6 text-primary" />
                 </div>
                 <h3 className="font-display font-semibold text-xl text-foreground">
-                  Erreichbarkeit
+                  Erreichbarkeit – 24/7
                 </h3>
               </div>
+              <p className="text-sm text-muted-foreground mb-4">
+                Wir sind rund um die Uhr für Sie da. Sollten wir einmal nicht persönlich erreichbar sein, 
+                filtert unsere intelligente Mailbox Ihre Nachricht – bei Notfällen werden Sie umgehend 
+                zurückgerufen, egal zu welcher Uhrzeit.
+              </p>
               <div className="grid sm:grid-cols-2 gap-4 text-sm">
                 <div>
-                  <p className="font-medium text-foreground">Montag – Freitag</p>
-                  <p className="text-muted-foreground">08:00 – 18:00 Uhr</p>
+                  <p className="font-medium text-foreground">Bürozeiten</p>
+                  <p className="text-muted-foreground">Mo–Fr: 08:00 – 18:00 Uhr</p>
                 </div>
                 <div>
-                  <p className="font-medium text-foreground">Samstag</p>
-                  <p className="text-muted-foreground">Nach Vereinbarung</p>
+                  <p className="font-medium text-foreground">Notfälle</p>
+                  <p className="text-muted-foreground">24/7 erreichbar</p>
                 </div>
               </div>
             </div>
