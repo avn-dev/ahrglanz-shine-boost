@@ -27,7 +27,7 @@ const faqs: FAQ[] = [
   },
   {
     question: 'Bieten Sie regelmäßige Reinigung an?',
-    answer: 'Ja, unsere Unterhaltsreinigung kann im passenden Turnus erfolgen – wöchentlich, 14-tägig, monatlich oder nach individueller Vereinbarung. So bleibt Ihr Objekt dauerhaft gepflegt.',
+    answer: 'Ja, unsere Unterhaltsreinigung kann im passenden Turnus erfolgen – täglich, wöchentlich, 14-tägig, monatlich oder nach individueller Vereinbarung. So bleibt Ihr Objekt dauerhaft gepflegt.',
   },
   {
     question: 'Welche Reinigungsmittel verwenden Sie?',
