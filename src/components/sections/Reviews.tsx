@@ -3,14 +3,14 @@ import { Button } from '@/components/ui/button';
 
 const reviews = [
   {
-    quote: 'Die Unterhaltsreinigungen sind stets pünktlich, zuverlässig & einwandfrei. Wir von KöWi-Mobile können AhrGlanz absolut empfehlen.',
-    author: 'A. Mehmeti',
-    role: 'KöWi-Mobile',
+    quote: 'Hervorragende Arbeit! Die Baureinigung wurde absolut zuverlässig und gründlich durchgeführt. Selbst schwer erreichbare Glasdächer wurden perfekt gereinigt. Sehr flexibel in der Terminabsprache, dazu ein fairer Preis. Rundum ein professioneller Service – nur zu empfehlen!',
+    author: 'Pascal',
+    role: 'Kunde',
     rating: 5,
   },
   {
-    quote: 'Ich kann AhrGlanz gern weiterempfehlen! Alles blitzblank, auch die Rahmen.',
-    author: 'D. Czaja',
+    quote: 'Super schnell, unkompliziert und fairer Preis. Jederzeit wieder.',
+    author: 'N. Bräunig',
     role: 'Kunde',
     rating: 5,
   },
