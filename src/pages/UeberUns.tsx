@@ -13,10 +13,16 @@ const teamMembers = [
     initial: 'S',
   },
   {
+    name: 'Adnan Sel',
+    role: 'Vorarbeiter',
+    description: 'Als erfahrener Vorarbeiter koordiniert er unsere Teams vor Ort und garantiert eine reibungslose Umsetzung aller Reinigungsaufträge.',
+    initial: 'A',
+  },
+  {
     name: 'Team AhrGlanz',
     role: 'Reinigungsfachkräfte',
     description: 'Unser geschultes Team arbeitet zuverlässig, gründlich und mit Liebe zum Detail – für Ihre Zufriedenheit.',
-    initial: 'A',
+    initial: 'T',
   },
 ];
 
@@ -162,7 +168,7 @@ const UeberUns = () => {
                 Ein eingespieltes Team mit Erfahrung, Engagement und dem Blick fürs Detail.
               </p>
             </div>
-            <div className="grid sm:grid-cols-2 gap-8 max-w-2xl mx-auto">
+            <div className="grid sm:grid-cols-3 gap-8 max-w-4xl mx-auto">
               {teamMembers.map((member) => (
                 <div key={member.name} className="bg-background rounded-2xl p-8 shadow-sm border border-border/50 text-center">
                   <div className="w-24 h-24 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
