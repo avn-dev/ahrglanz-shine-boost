@@ -176,7 +176,8 @@ const UeberUns = () => {
                     <img 
                       src={member.image} 
                       alt={member.name}
-                      className="w-24 h-24 rounded-full object-cover object-top mx-auto mb-4"
+                      className="w-24 h-24 rounded-full object-cover mx-auto mb-4"
+                      style={{ objectPosition: 'center 20%' }}
                     />
                   ) : (
                     <div className="w-24 h-24 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
