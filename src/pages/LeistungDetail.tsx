@@ -3,6 +3,7 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, Check, Phone, Building2, Clock, Shield, Sparkles, Users } from "lucide-react";
+import { useSEO, getLeistungSEO } from '@/hooks/useSEO';
 import { 
   Droplets, 
   Construction, 
@@ -413,6 +414,13 @@ const LeistungDetail = () => {
   const navigate = useNavigate();
   
   const leistung = slug ? leistungenData[slug] : null;
+  
+  // SEO for the current service
+  useSEO(
+    leistung 
+      ? getLeistungSEO(leistung.title, slug!) 
+      : { title: 'Leistung nicht gefunden | AhrGlanz', description: 'Die angeforderte Leistung wurde nicht gefunden.' }
+  );
 
   if (!leistung) {
     return (

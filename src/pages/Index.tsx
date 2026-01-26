@@ -8,8 +8,10 @@ import { Reviews } from '@/components/sections/Reviews';
 import { FAQ } from '@/components/sections/FAQ';
 import { QuoteForm } from '@/components/sections/QuoteForm';
 import { Footer } from '@/components/layout/Footer';
+import { useSEO, SEO_CONFIGS } from '@/hooks/useSEO';
 
 const Index = () => {
+  useSEO(SEO_CONFIGS.home);
   return (
     <div className="min-h-screen">
       <Header />

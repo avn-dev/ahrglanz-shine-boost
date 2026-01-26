@@ -2,6 +2,7 @@ import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 import { QuoteForm } from '@/components/sections/QuoteForm';
 import { Phone, Mail, MapPin, Clock, MessageCircle } from 'lucide-react';
+import { useSEO, SEO_CONFIGS } from '@/hooks/useSEO';
 
 const contactInfo = [
   {
@@ -31,6 +32,8 @@ const contactInfo = [
 ];
 
 const Kontakt = () => {
+  useSEO(SEO_CONFIGS.kontakt);
+  
   return (
     <div className="min-h-screen">
       <Header />

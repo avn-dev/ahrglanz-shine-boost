@@ -3,6 +3,7 @@ import { Footer } from '@/components/layout/Footer';
 import { Users, Award, Heart, MapPin, Phone, Mail } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
+import { useSEO, SEO_CONFIGS } from '@/hooks/useSEO';
 
 const teamMembers = [
   {
@@ -43,6 +44,8 @@ const values = [
 ];
 
 const UeberUns = () => {
+  useSEO(SEO_CONFIGS.ueberUns);
+  
   return (
     <div className="min-h-screen">
       <Header />

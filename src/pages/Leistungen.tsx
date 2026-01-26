@@ -9,6 +9,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { useSEO, SEO_CONFIGS } from '@/hooks/useSEO';
 
 const services = [
   {
@@ -158,6 +159,8 @@ const faqs = [
 ];
 
 const Leistungen = () => {
+  useSEO(SEO_CONFIGS.leistungen);
+  
   return (
     <div className="min-h-screen">
       <Header />
