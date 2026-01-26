@@ -45,7 +45,11 @@ const services = [
   'Grundreinigung',
   'Glasreinigung',
   'Bauendreinigung',
-  'Außenanlagenpflege',
+  'Treppenhausreinigung',
+  'Photovoltaikreinigung',
+  'Steinreinigung',
+  'Desinfektionsreinigung',
+  'Tatortreinigung',
   'Sonstiges',
 ];
 

@@ -3,21 +3,21 @@ import { Button } from '@/components/ui/button';
 
 const reviews = [
   {
-    quote: 'Sehr gute Arbeit, zuverlässig und freundlich. Unsere Büroräume waren noch nie so sauber!',
-    author: 'M. Schmidt',
-    role: 'Geschäftsführer',
+    quote: 'Die Unterhaltsreinigungen sind stets pünktlich, zuverlässig & einwandfrei. Wir von KöWi-Mobile können AhrGlanz absolut empfehlen.',
+    author: 'A. Mehmeti',
+    role: 'KöWi-Mobile',
     rating: 5,
   },
   {
-    quote: 'Pünktlich, gründlich und faire Preise. Kann AhrGlanz nur weiterempfehlen.',
-    author: 'S. Müller',
-    role: 'Privathaushalt',
+    quote: 'Ich kann AhrGlanz gern weiterempfehlen! Alles blitzblank, auch die Rahmen.',
+    author: 'D. Czaja',
+    role: 'Kunde',
     rating: 5,
   },
   {
-    quote: 'Die Bauendreinigung war top. Alles bezugsfertig und streifenfrei. Danke!',
-    author: 'K. Weber',
-    role: 'Bauträger',
+    quote: 'Die Firma AhrGlanz ist hervorragend. Blitzblank saubere Unterhaltsreinigung und der zugebuchte Hausmeisterservice ist extrem verlässlich. Ich freue mich sehr auf die weitere Zusammenarbeit.',
+    author: 'P. Schmitt',
+    role: 'Kunde',
     rating: 5,
   },
 ];

@@ -1,29 +1,41 @@
-import { Sparkles, Layers, GlassWater, HardHat, Leaf } from 'lucide-react';
+import { Sparkles, Layers, GlassWater, HardHat, Leaf, Home } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const services = [
   {
     icon: Sparkles,
     title: 'Unterhaltsreinigung',
+    slug: 'unterhaltsreinigung',
     description: 'Regelmäßige Reinigung für Büros, Treppenhäuser, Praxen oder Privathaushalte – abgestimmt auf Ihren Turnus.',
   },
   {
     icon: Layers,
     title: 'Grundreinigung',
+    slug: 'grundreinigung',
     description: 'Intensive Reinigung für Böden, Sanitär, Küche & stark beanspruchte Bereiche – gründlich bis in die Ecken.',
   },
   {
     icon: GlassWater,
     title: 'Glas- & Fensterreinigung',
+    slug: 'glasreinigung',
     description: 'Streifenfreier Durchblick für Fenster, Glasfassaden und Wintergärten – schonend und professionell.',
   },
   {
     icon: HardHat,
     title: 'Bauendreinigung',
+    slug: 'baureinigung',
     description: 'Saubere Übergabe nach Bau/Umzug: Bauschmutz entfernen, Oberflächen veredeln, bezugsfertig reinigen.',
+  },
+  {
+    icon: Home,
+    title: 'Treppenhausreinigung',
+    slug: 'treppenhausreinigung',
+    description: 'Gepflegte Treppenhäuser und Eingangsbereiche für Wohnanlagen – regelmäßig und zuverlässig.',
   },
   {
     icon: Leaf,
     title: 'Außenanlagenpflege',
+    slug: 'steinreinigung',
     description: 'Saubere Außenbereiche: Wege, Eingänge und Außenflächen gepflegt – der erste Eindruck zählt.',
   },
 ];
@@ -49,9 +61,10 @@ export function Services() {
         {/* Services Grid */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
           {services.map((service, index) => (
-            <article
+            <Link
+              to={`/leistungen/${service.slug}`}
               key={service.title}
-              className="group relative bg-background rounded-2xl p-8 shadow-sm card-hover border border-border/50"
+              className="group relative bg-background rounded-2xl p-8 shadow-sm card-hover border border-border/50 block"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               {/* Icon */}
@@ -69,7 +82,7 @@ export function Services() {
 
               {/* Hover accent */}
               <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-primary to-primary/50 rounded-b-2xl scale-x-0 transition-transform origin-left group-hover:scale-x-100" />
-            </article>
+            </Link>
           ))}
         </div>
       </div>
