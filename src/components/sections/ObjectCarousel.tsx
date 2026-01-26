@@ -2,7 +2,7 @@ import { useState, useCallback, useEffect } from 'react';
 import useEmblaCarousel from 'embla-carousel-react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 import wohnanlageBild from '@/assets/object-wohnanlage.jpg';
 import sportclubBild from '@/assets/object-sportclub.jpg';
@@ -160,12 +160,14 @@ export const ObjectCarousel = () => {
           <p className="text-lg text-muted-foreground mb-6">
             Ihr Objekt ist nicht dabei? Kein Problem, wir finden die passende Lösung!
           </p>
-          <Button 
-            size="lg" 
-            className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold px-8"
-          >
-            Lösung finden
-          </Button>
+          <Link to="/#quote-form">
+            <Button 
+              size="lg" 
+              className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold px-8"
+            >
+              Lösung finden
+            </Button>
+          </Link>
         </div>
       </div>
     </section>
