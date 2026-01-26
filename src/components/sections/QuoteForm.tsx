@@ -26,6 +26,7 @@ import {
 import { useToast } from '@/hooks/use-toast';
 
 const formSchema = z.object({
+  company: z.string().max(100).optional(),
   name: z.string().min(2, 'Bitte geben Sie Ihren Namen ein.').max(100),
   email: z.string().email('Bitte geben Sie eine gültige E-Mail-Adresse ein.').max(255),
   phone: z.string().optional(),
@@ -64,6 +65,7 @@ export function QuoteForm() {
   const form = useForm<FormData>({
     resolver: zodResolver(formSchema),
     defaultValues: {
+      company: '',
       name: '',
       email: '',
       phone: '',
@@ -104,6 +106,7 @@ export function QuoteForm() {
           'h-captcha-response': captchaToken,
           subject: `Neue Anfrage: ${data.service} - ${data.name}`,
           from_name: data.name,
+          company: data.company || 'Nicht angegeben',
           name: data.name,
           email: data.email,
           phone: data.phone || 'Nicht angegeben',
@@ -230,6 +233,20 @@ export function QuoteForm() {
                   tabIndex={-1}
                   autoComplete="off"
                   {...form.register('website')}
+                />
+
+                <FormField
+                  control={form.control}
+                  name="company"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel>Unternehmen (optional)</FormLabel>
+                      <FormControl>
+                        <Input placeholder="Firmenname" {...field} />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
                 />
 
                 <div className="grid sm:grid-cols-2 gap-6">
