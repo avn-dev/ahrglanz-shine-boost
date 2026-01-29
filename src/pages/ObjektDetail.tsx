@@ -504,7 +504,7 @@ const ObjektDetail = () => {
   }
   
   const dynamicHeroTitle = city 
-    ? `${objekt.heroTitle.replace('Gebäudereinigung für', 'Gebäudereinigung für')} in ${city.name}`
+    ? `${objekt.heroTitle} in ${city.name}`
     : objekt.heroTitle;
   
   const dynamicSubtitle = city 
@@ -514,23 +514,18 @@ const ObjektDetail = () => {
   // Get localized SEO content
   const seoContent = getObjektSEOContent(slug!, objekt.title, city);
   
+  // Subtile Lokalisierung: Nur Ortsnamen in bestehenden Texten ersetzen
   const dynamicHeroDescription = city 
-    ? seoContent.heroDescriptionLocalized
+    ? objekt.heroDescription.replace(/Bad Neuenahr-Ahrweiler/g, city.name).replace(/Bonn & Umgebung/g, city.region || '')
     : objekt.heroDescription;
   
   const dynamicSectionDescription = city
-    ? seoContent.sectionDescriptionLocalized
+    ? objekt.sectionDescription.replace(/Bad Neuenahr-Ahrweiler/g, city.name)
     : objekt.sectionDescription;
-  
-  const dynamicBulletIntro = city
-    ? seoContent.bulletIntroLocalized
-    : 'Unsere Gebäudereinigung umfasst alle relevanten Reinigungsleistungen – fachgerecht, zuverlässig und transparent. Mit festen Ansprechpartnern, klaren Reinigungsplänen und geschultem Personal gewährleisten wir eine gleichbleibend hohe Reinigungsqualität.';
   
   const dynamicClosingText = city 
     ? seoContent.closingTextLocalized
     : objekt.closingText;
-  
-  const localSEOParagraph = city ? seoContent.localSEOParagraph : null;
 
   const scrollToQuote = () => {
     navigate('/#quote-form');
@@ -605,11 +600,6 @@ const ObjektDetail = () => {
               <p className="text-muted-foreground text-lg">
                 {dynamicSectionDescription}
               </p>
-              {localSEOParagraph && (
-                <p className="text-muted-foreground text-base mt-4 italic">
-                  {localSEOParagraph}
-                </p>
-              )}
             </div>
           </div>
         </section>
@@ -647,7 +637,7 @@ const ObjektDetail = () => {
                   {objekt.bulletSubtitle}
                 </h2>
                 <p className="text-muted-foreground mb-8">
-                  {dynamicBulletIntro}
+                  Unsere Gebäudereinigung umfasst alle relevanten Reinigungsleistungen – fachgerecht, zuverlässig und transparent. Mit festen Ansprechpartnern, klaren Reinigungsplänen und geschultem Personal gewährleisten wir eine gleichbleibend hohe Reinigungsqualität.
                 </p>
                 <ul className="space-y-4">
                   {objekt.bulletPoints.map((point, index) => (
