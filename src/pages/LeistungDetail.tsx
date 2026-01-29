@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowLeft, Check, Phone, Building2, Clock, Shield, Sparkles, Users } from "lucide-react";
 import { useSEO, getLeistungSEO } from '@/hooks/useSEO';
 import { getCityBySlug, DEFAULT_CITY, isValidCity, type City } from '@/config/cities';
+import { getLeistungSEOContent } from '@/config/seoContent';
 import { 
   Droplets, 
   Construction, 
@@ -464,9 +465,26 @@ const LeistungDetail = () => {
     ? `${leistung.subtitle} – Ihr Partner in ${city.name}` 
     : leistung.subtitle;
   
+  // Get localized SEO content
+  const seoContent = getLeistungSEOContent(slug!, leistung.title, city);
+  
+  const dynamicHeroDescription = city 
+    ? seoContent.heroDescriptionLocalized
+    : leistung.heroDescription;
+  
+  const dynamicSectionDescription = city
+    ? seoContent.sectionDescriptionLocalized
+    : leistung.sectionDescription;
+  
+  const dynamicBulletIntro = city
+    ? seoContent.bulletIntroLocalized
+    : 'Mit geschultem Personal, professionellen Reinigungsmitteln und festen Qualitätsstandards erzielen wir nachhaltige Ergebnisse – zuverlässig und gründlich.';
+  
   const dynamicClosingText = city 
-    ? leistung.closingText.replace('Bad Neuenahr-Ahrweiler, Bonn & Umgebung', city.name + (city.region ? ` ${city.region}` : ''))
+    ? seoContent.closingTextLocalized
     : leistung.closingText;
+  
+  const localSEOParagraph = city ? seoContent.localSEOParagraph : null;
 
   const scrollToQuote = () => {
     navigate('/#quote-form');
@@ -504,7 +522,7 @@ const LeistungDetail = () => {
                 </h1>
                 <p className="text-xl text-primary font-semibold mb-6">{dynamicSubtitle}</p>
                 <p className="text-lg text-muted-foreground mb-8">
-                  {leistung.heroDescription}
+                  {dynamicHeroDescription}
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Button size="lg" onClick={scrollToQuote}>
@@ -544,8 +562,13 @@ const LeistungDetail = () => {
                 {leistung.sectionTitle}
               </h2>
               <p className="text-muted-foreground text-lg">
-                {leistung.sectionDescription}
+                {dynamicSectionDescription}
               </p>
+              {localSEOParagraph && (
+                <p className="text-muted-foreground text-base mt-4 italic">
+                  {localSEOParagraph}
+                </p>
+              )}
             </div>
           </div>
         </section>
@@ -583,7 +606,7 @@ const LeistungDetail = () => {
                   {leistung.bulletSubtitle}
                 </h2>
                 <p className="text-muted-foreground mb-8">
-                  Mit geschultem Personal, professionellen Reinigungsmitteln und festen Qualitätsstandards erzielen wir nachhaltige Ergebnisse – zuverlässig und gründlich.
+                  {dynamicBulletIntro}
                 </p>
                 <ul className="space-y-4">
                   {leistung.bulletPoints.map((point, index) => (

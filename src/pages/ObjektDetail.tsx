@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowLeft, Check, Phone, Sparkles, Building2, Users, Shield, Clock } from "lucide-react";
 import { useSEO, getObjektSEO } from '@/hooks/useSEO';
 import { getCityBySlug, DEFAULT_CITY, isValidCity, type City } from '@/config/cities';
+import { getObjektSEOContent } from '@/config/seoContent';
 
 import wohnanlageImg from "@/assets/object-wohnanlage.jpg";
 import bueroImg from "@/assets/object-buero.jpg";
@@ -502,18 +503,34 @@ const ObjektDetail = () => {
     );
   }
   
-  // Generate dynamic content based on city
   const dynamicHeroTitle = city 
-    ? objekt.heroTitle.replace('Gebäudereinigung für', `Gebäudereinigung für ${objekt.title} in ${city.name}`)
+    ? `${objekt.heroTitle.replace('Gebäudereinigung für', 'Gebäudereinigung für')} in ${city.name}`
     : objekt.heroTitle;
   
   const dynamicSubtitle = city 
     ? `${objekt.subtitle} – Ihr Partner in ${city.name}` 
     : objekt.subtitle;
   
+  // Get localized SEO content
+  const seoContent = getObjektSEOContent(slug!, objekt.title, city);
+  
+  const dynamicHeroDescription = city 
+    ? seoContent.heroDescriptionLocalized
+    : objekt.heroDescription;
+  
+  const dynamicSectionDescription = city
+    ? seoContent.sectionDescriptionLocalized
+    : objekt.sectionDescription;
+  
+  const dynamicBulletIntro = city
+    ? seoContent.bulletIntroLocalized
+    : 'Unsere Gebäudereinigung umfasst alle relevanten Reinigungsleistungen – fachgerecht, zuverlässig und transparent. Mit festen Ansprechpartnern, klaren Reinigungsplänen und geschultem Personal gewährleisten wir eine gleichbleibend hohe Reinigungsqualität.';
+  
   const dynamicClosingText = city 
-    ? objekt.closingText.replace('Bad Neuenahr-Ahrweiler, Bonn & Umgebung', city.name + (city.region ? ` ${city.region}` : ''))
+    ? seoContent.closingTextLocalized
     : objekt.closingText;
+  
+  const localSEOParagraph = city ? seoContent.localSEOParagraph : null;
 
   const scrollToQuote = () => {
     navigate('/#quote-form');
@@ -546,7 +563,7 @@ const ObjektDetail = () => {
                 </h1>
                 <p className="text-xl text-primary font-semibold mb-6">{dynamicSubtitle}</p>
                 <p className="text-lg text-muted-foreground mb-8">
-                  {objekt.heroDescription}
+                  {dynamicHeroDescription}
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Button size="lg" onClick={scrollToQuote}>
@@ -586,8 +603,13 @@ const ObjektDetail = () => {
                 {objekt.sectionTitle}
               </h2>
               <p className="text-muted-foreground text-lg">
-                {objekt.sectionDescription}
+                {dynamicSectionDescription}
               </p>
+              {localSEOParagraph && (
+                <p className="text-muted-foreground text-base mt-4 italic">
+                  {localSEOParagraph}
+                </p>
+              )}
             </div>
           </div>
         </section>
@@ -625,7 +647,7 @@ const ObjektDetail = () => {
                   {objekt.bulletSubtitle}
                 </h2>
                 <p className="text-muted-foreground mb-8">
-                  Unsere Gebäudereinigung umfasst alle relevanten Reinigungsleistungen – fachgerecht, zuverlässig und transparent. Mit festen Ansprechpartnern, klaren Reinigungsplänen und geschultem Personal gewährleisten wir eine gleichbleibend hohe Reinigungsqualität.
+                  {dynamicBulletIntro}
                 </p>
                 <ul className="space-y-4">
                   {objekt.bulletPoints.map((point, index) => (
