@@ -93,20 +93,30 @@ export const SEO_CONFIGS = {
   },
 } as const;
 
-// Helper to generate service page SEO
-export function getLeistungSEO(serviceName: string, slug: string) {
+// Helper to generate service page SEO with optional city
+export function getLeistungSEO(serviceName: string, slug: string, cityName?: string) {
+  const location = cityName || 'Bad Neuenahr-Ahrweiler';
+  const canonical = cityName 
+    ? `https://ahrglanz.de/leistungen/${slug}/${cityName.toLowerCase().replace(/\s+/g, '-').replace(/ä/g, 'a').replace(/ö/g, 'o').replace(/ü/g, 'u')}`
+    : `https://ahrglanz.de/leistungen/${slug}`;
+  
   return {
-    title: `${serviceName} | Gebäudereinigung Bad Neuenahr-Ahrweiler | AhrGlanz`,
-    description: `Professionelle ${serviceName} in Bad Neuenahr-Ahrweiler, Bonn & Koblenz. AhrGlanz Gebäudereinigung – zuverlässig, gründlich & fair. Jetzt kostenloses Angebot anfordern!`,
-    canonical: `https://ahrglanz.de/leistungen/${slug}`,
+    title: `${serviceName} ${location} | Gebäudereinigung | AhrGlanz`,
+    description: `Professionelle ${serviceName} in ${location}. AhrGlanz Gebäudereinigung – zuverlässig, gründlich & fair. Jetzt kostenloses Angebot anfordern!`,
+    canonical,
   };
 }
 
-// Helper to generate object page SEO
-export function getObjektSEO(objectName: string, slug: string) {
+// Helper to generate object page SEO with optional city
+export function getObjektSEO(objectName: string, slug: string, cityName?: string) {
+  const location = cityName || 'Bad Neuenahr-Ahrweiler';
+  const canonical = cityName 
+    ? `https://ahrglanz.de/objekte/${slug}/${cityName.toLowerCase().replace(/\s+/g, '-').replace(/ä/g, 'a').replace(/ö/g, 'o').replace(/ü/g, 'u')}`
+    : `https://ahrglanz.de/objekte/${slug}`;
+  
   return {
-    title: `${objectName} Reinigung | Gebäudereinigung | AhrGlanz`,
-    description: `Professionelle Gebäudereinigung für ${objectName} in Bad Neuenahr-Ahrweiler, Bonn & Koblenz. AhrGlanz – Ihr Partner für saubere ${objectName}. Kostenloses Angebot!`,
-    canonical: `https://ahrglanz.de/objekte/${slug}`,
+    title: `${objectName} Reinigung ${location} | Gebäudereinigung | AhrGlanz`,
+    description: `Professionelle Gebäudereinigung für ${objectName} in ${location}. AhrGlanz – Ihr Partner für saubere ${objectName}. Kostenloses Angebot!`,
+    canonical,
   };
 }

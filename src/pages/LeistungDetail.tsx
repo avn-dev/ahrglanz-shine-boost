@@ -4,6 +4,7 @@ import { Footer } from "@/components/layout/Footer";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, Check, Phone, Building2, Clock, Shield, Sparkles, Users } from "lucide-react";
 import { useSEO, getLeistungSEO } from '@/hooks/useSEO';
+import { getCityBySlug, DEFAULT_CITY, isValidCity, type City } from '@/config/cities';
 import { 
   Droplets, 
   Construction, 
@@ -410,17 +411,29 @@ const getIcon = (iconType: string) => {
 };
 
 const LeistungDetail = () => {
-  const { slug } = useParams<{ slug: string }>();
+  const { slug, stadt } = useParams<{ slug: string; stadt?: string }>();
   const navigate = useNavigate();
   
   const leistung = slug ? leistungenData[slug] : null;
   
-  // SEO for the current service
+  // City handling
+  const city: City | null = getCityBySlug(stadt);
+  const isValidCityParam = isValidCity(stadt);
+  const cityName = city?.name || (stadt ? null : DEFAULT_CITY.name);
+  const cityDisplayName = city?.name || DEFAULT_CITY.name + ' ' + DEFAULT_CITY.region;
+  
+  // SEO for the current service with city
   useSEO(
     leistung 
-      ? getLeistungSEO(leistung.title, slug!) 
+      ? getLeistungSEO(leistung.title, slug!, city?.name) 
       : { title: 'Leistung nicht gefunden | AhrGlanz', description: 'Die angeforderte Leistung wurde nicht gefunden.' }
   );
+
+  // Redirect invalid city slugs to base URL
+  if (stadt && !isValidCityParam) {
+    navigate(`/leistungen/${slug}`, { replace: true });
+    return null;
+  }
 
   if (!leistung) {
     return (
@@ -441,6 +454,19 @@ const LeistungDetail = () => {
   }
 
   const IconComponent = leistung.icon;
+  
+  // Generate dynamic content based on city
+  const dynamicHeroTitle = city 
+    ? `${leistung.heroTitle} in ${city.name}` 
+    : leistung.heroTitle;
+  
+  const dynamicSubtitle = city 
+    ? `${leistung.subtitle} – Ihr Partner in ${city.name}` 
+    : leistung.subtitle;
+  
+  const dynamicClosingText = city 
+    ? leistung.closingText.replace('Bad Neuenahr-Ahrweiler, Bonn & Umgebung', city.name + (city.region ? ` ${city.region}` : ''))
+    : leistung.closingText;
 
   const scrollToQuote = () => {
     navigate('/#quote-form');
@@ -474,9 +500,9 @@ const LeistungDetail = () => {
                   </div>
                 </div>
                 <h1 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-foreground mb-4">
-                  {leistung.heroTitle}
+                  {dynamicHeroTitle}
                 </h1>
-                <p className="text-xl text-primary font-semibold mb-6">{leistung.subtitle}</p>
+                <p className="text-xl text-primary font-semibold mb-6">{dynamicSubtitle}</p>
                 <p className="text-lg text-muted-foreground mb-8">
                   {leistung.heroDescription}
                 </p>
@@ -633,7 +659,7 @@ const LeistungDetail = () => {
               {leistung.closingQuestion}
             </h2>
             <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-              {leistung.closingText}
+              {dynamicClosingText}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" onClick={scrollToQuote}>

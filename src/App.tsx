@@ -30,8 +30,10 @@ const App = () => (
           <Route path="/datenschutz" element={<Datenschutz />} />
           <Route path="/objekte" element={<Objekte />} />
           <Route path="/objekte/:slug" element={<ObjektDetail />} />
+          <Route path="/objekte/:slug/:stadt" element={<ObjektDetail />} />
           <Route path="/leistungen" element={<Leistungen />} />
           <Route path="/leistungen/:slug" element={<LeistungDetail />} />
+          <Route path="/leistungen/:slug/:stadt" element={<LeistungDetail />} />
           <Route path="/ueber-uns" element={<UeberUns />} />
           <Route path="/kontakt" element={<Kontakt />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
