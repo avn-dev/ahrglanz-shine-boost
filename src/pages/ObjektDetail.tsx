@@ -4,6 +4,7 @@ import { Footer } from "@/components/layout/Footer";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, Check, Phone, Sparkles, Building2, Users, Shield, Clock } from "lucide-react";
 import { useSEO, getObjektSEO } from '@/hooks/useSEO';
+import { getCityBySlug, DEFAULT_CITY, isValidCity, type City } from '@/config/cities';
 
 import wohnanlageImg from "@/assets/object-wohnanlage.jpg";
 import bueroImg from "@/assets/object-buero.jpg";
@@ -459,17 +460,29 @@ const getIcon = (iconType: string) => {
 };
 
 const ObjektDetail = () => {
-  const { slug } = useParams<{ slug: string }>();
+  const { slug, stadt } = useParams<{ slug: string; stadt?: string }>();
   const navigate = useNavigate();
   
   const objekt = slug ? objekteData[slug] : null;
   
-  // SEO for the current object
+  // City handling
+  const city: City | null = getCityBySlug(stadt);
+  const isValidCityParam = isValidCity(stadt);
+  const cityName = city?.name || (stadt ? null : DEFAULT_CITY.name);
+  const cityDisplayName = city?.name || DEFAULT_CITY.name + ' ' + DEFAULT_CITY.region;
+  
+  // SEO for the current object with city
   useSEO(
     objekt 
-      ? getObjektSEO(objekt.title, slug!) 
+      ? getObjektSEO(objekt.title, slug!, city?.name) 
       : { title: 'Objekt nicht gefunden | AhrGlanz', description: 'Das angeforderte Objekt wurde nicht gefunden.' }
   );
+
+  // Redirect invalid city slugs to base URL
+  if (stadt && !isValidCityParam) {
+    navigate(`/objekte/${slug}`, { replace: true });
+    return null;
+  }
 
   if (!objekt) {
     return (
@@ -488,6 +501,19 @@ const ObjektDetail = () => {
       </div>
     );
   }
+  
+  // Generate dynamic content based on city
+  const dynamicHeroTitle = city 
+    ? objekt.heroTitle.replace('Gebäudereinigung für', `Gebäudereinigung für ${objekt.title} in ${city.name}`)
+    : objekt.heroTitle;
+  
+  const dynamicSubtitle = city 
+    ? `${objekt.subtitle} – Ihr Partner in ${city.name}` 
+    : objekt.subtitle;
+  
+  const dynamicClosingText = city 
+    ? objekt.closingText.replace('Bad Neuenahr-Ahrweiler, Bonn & Umgebung', city.name + (city.region ? ` ${city.region}` : ''))
+    : objekt.closingText;
 
   const scrollToQuote = () => {
     navigate('/#quote-form');
@@ -516,9 +542,9 @@ const ObjektDetail = () => {
               {/* Text Content */}
               <div>
                 <h1 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-foreground mb-4">
-                  {objekt.heroTitle}
+                  {dynamicHeroTitle}
                 </h1>
-                <p className="text-xl text-primary font-semibold mb-6">{objekt.subtitle}</p>
+                <p className="text-xl text-primary font-semibold mb-6">{dynamicSubtitle}</p>
                 <p className="text-lg text-muted-foreground mb-8">
                   {objekt.heroDescription}
                 </p>
@@ -675,7 +701,7 @@ const ObjektDetail = () => {
               {objekt.closingQuestion}
             </h2>
             <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-              {objekt.closingText}
+              {dynamicClosingText}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" onClick={scrollToQuote}>
