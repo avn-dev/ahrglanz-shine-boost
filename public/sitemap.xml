@@ -1,177 +1,443 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <!-- Hauptseiten -->
+  <!-- ========================================== -->
+  <!-- HAUPTSEITEN -->
+  <!-- ========================================== -->
   <url>
     <loc>https://ahrglanz.de/</loc>
-    <lastmod>2025-01-26</lastmod>
+    <lastmod>2025-01-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://ahrglanz.de/leistungen</loc>
-    <lastmod>2025-01-26</lastmod>
+    <lastmod>2025-01-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://ahrglanz.de/objekte</loc>
-    <lastmod>2025-01-26</lastmod>
+    <lastmod>2025-01-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://ahrglanz.de/ueber-uns</loc>
-    <lastmod>2025-01-26</lastmod>
+    <lastmod>2025-01-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ahrglanz.de/kontakt</loc>
-    <lastmod>2025-01-26</lastmod>
+    <lastmod>2025-01-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
-  <!-- Leistungen (Services) -->
+  <!-- ========================================== -->
+  <!-- LEISTUNGEN - Basis-URLs -->
+  <!-- ========================================== -->
   <url>
     <loc>https://ahrglanz.de/leistungen/unterhaltsreinigung</loc>
-    <lastmod>2025-01-26</lastmod>
+    <lastmod>2025-01-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ahrglanz.de/leistungen/grundreinigung</loc>
-    <lastmod>2025-01-26</lastmod>
+    <lastmod>2025-01-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ahrglanz.de/leistungen/glasreinigung</loc>
-    <lastmod>2025-01-26</lastmod>
+    <lastmod>2025-01-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ahrglanz.de/leistungen/baureinigung</loc>
-    <lastmod>2025-01-26</lastmod>
+    <lastmod>2025-01-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ahrglanz.de/leistungen/desinfektionsreinigung</loc>
-    <lastmod>2025-01-26</lastmod>
+    <lastmod>2025-01-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://ahrglanz.de/leistungen/photovoltaikreinigung</loc>
-    <lastmod>2025-01-26</lastmod>
+    <lastmod>2025-01-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://ahrglanz.de/leistungen/steinreinigung</loc>
-    <lastmod>2025-01-26</lastmod>
+    <lastmod>2025-01-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://ahrglanz.de/leistungen/treppenhausreinigung</loc>
-    <lastmod>2025-01-26</lastmod>
+    <lastmod>2025-01-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://ahrglanz.de/leistungen/sonderreinigung</loc>
-    <lastmod>2025-01-26</lastmod>
+    <lastmod>2025-01-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://ahrglanz.de/leistungen/tatortreinigung</loc>
-    <lastmod>2025-01-26</lastmod>
+    <lastmod>2025-01-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
-  <!-- Objekte (Object Types) -->
+  <!-- ========================================== -->
+  <!-- OBJEKTE - Basis-URLs -->
+  <!-- ========================================== -->
   <url>
     <loc>https://ahrglanz.de/objekte/wohnanlage</loc>
-    <lastmod>2025-01-26</lastmod>
+    <lastmod>2025-01-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ahrglanz.de/objekte/buero</loc>
-    <lastmod>2025-01-26</lastmod>
+    <lastmod>2025-01-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ahrglanz.de/objekte/hotel</loc>
-    <lastmod>2025-01-26</lastmod>
+    <lastmod>2025-01-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://ahrglanz.de/objekte/kita</loc>
-    <lastmod>2025-01-26</lastmod>
+    <lastmod>2025-01-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ahrglanz.de/objekte/bildungseinrichtung</loc>
-    <lastmod>2025-01-26</lastmod>
+    <lastmod>2025-01-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://ahrglanz.de/objekte/praxis</loc>
-    <lastmod>2025-01-26</lastmod>
+    <lastmod>2025-01-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ahrglanz.de/objekte/gesundheitseinrichtung</loc>
-    <lastmod>2025-01-26</lastmod>
+    <loc>https://ahrglanz.de/objekte/gesundheit</loc>
+    <lastmod>2025-01-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://ahrglanz.de/objekte/sportclub</loc>
-    <lastmod>2025-01-26</lastmod>
+    <lastmod>2025-01-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://ahrglanz.de/objekte/industrie</loc>
-    <lastmod>2025-01-26</lastmod>
+    <lastmod>2025-01-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://ahrglanz.de/objekte/geschaeft</loc>
-    <lastmod>2025-01-26</lastmod>
+    <lastmod>2025-01-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://ahrglanz.de/objekte/gastronomie</loc>
-    <lastmod>2025-01-26</lastmod>
+    <lastmod>2025-01-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
-  <!-- Rechtliches -->
+  <!-- ========================================== -->
+  <!-- LEISTUNGEN - Städte-spezifische URLs -->
+  <!-- Hauptstädte (höhere Priorität) -->
+  <!-- ========================================== -->
+  
+  <!-- Bad Neuenahr-Ahrweiler -->
+  <url><loc>https://ahrglanz.de/leistungen/unterhaltsreinigung/bad-neuenahr-ahrweiler</loc><lastmod>2025-01-29</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://ahrglanz.de/leistungen/grundreinigung/bad-neuenahr-ahrweiler</loc><lastmod>2025-01-29</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://ahrglanz.de/leistungen/glasreinigung/bad-neuenahr-ahrweiler</loc><lastmod>2025-01-29</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://ahrglanz.de/leistungen/baureinigung/bad-neuenahr-ahrweiler</loc><lastmod>2025-01-29</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://ahrglanz.de/leistungen/desinfektionsreinigung/bad-neuenahr-ahrweiler</loc><lastmod>2025-01-29</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://ahrglanz.de/leistungen/photovoltaikreinigung/bad-neuenahr-ahrweiler</loc><lastmod>2025-01-29</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://ahrglanz.de/leistungen/steinreinigung/bad-neuenahr-ahrweiler</loc><lastmod>2025-01-29</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://ahrglanz.de/leistungen/treppenhausreinigung/bad-neuenahr-ahrweiler</loc><lastmod>2025-01-29</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://ahrglanz.de/leistungen/sonderreinigung/bad-neuenahr-ahrweiler</loc><lastmod>2025-01-29</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://ahrglanz.de/leistungen/tatortreinigung/bad-neuenahr-ahrweiler</loc><lastmod>2025-01-29</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+
+  <!-- Bonn -->
+  <url><loc>https://ahrglanz.de/leistungen/unterhaltsreinigung/bonn</loc><lastmod>2025-01-29</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://ahrglanz.de/leistungen/grundreinigung/bonn</loc><lastmod>2025-01-29</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://ahrglanz.de/leistungen/glasreinigung/bonn</loc><lastmod>2025-01-29</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://ahrglanz.de/leistungen/baureinigung/bonn</loc><lastmod>2025-01-29</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://ahrglanz.de/leistungen/desinfektionsreinigung/bonn</loc><lastmod>2025-01-29</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://ahrglanz.de/leistungen/photovoltaikreinigung/bonn</loc><lastmod>2025-01-29</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://ahrglanz.de/leistungen/steinreinigung/bonn</loc><lastmod>2025-01-29</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://ahrglanz.de/leistungen/treppenhausreinigung/bonn</loc><lastmod>2025-01-29</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://ahrglanz.de/leistungen/sonderreinigung/bonn</loc><lastmod>2025-01-29</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://ahrglanz.de/leistungen/tatortreinigung/bonn</loc><lastmod>2025-01-29</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+
+  <!-- Koblenz -->
+  <url><loc>https://ahrglanz.de/leistungen/unterhaltsreinigung/koblenz</loc><lastmod>2025-01-29</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://ahrglanz.de/leistungen/grundreinigung/koblenz</loc><lastmod>2025-01-29</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://ahrglanz.de/leistungen/glasreinigung/koblenz</loc><lastmod>2025-01-29</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://ahrglanz.de/leistungen/baureinigung/koblenz</loc><lastmod>2025-01-29</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://ahrglanz.de/leistungen/desinfektionsreinigung/koblenz</loc><lastmod>2025-01-29</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://ahrglanz.de/leistungen/photovoltaikreinigung/koblenz</loc><lastmod>2025-01-29</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://ahrglanz.de/leistungen/steinreinigung/koblenz</loc><lastmod>2025-01-29</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://ahrglanz.de/leistungen/treppenhausreinigung/koblenz</loc><lastmod>2025-01-29</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://ahrglanz.de/leistungen/sonderreinigung/koblenz</loc><lastmod>2025-01-29</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://ahrglanz.de/leistungen/tatortreinigung/koblenz</loc><lastmod>2025-01-29</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+
+  <!-- Sinzig -->
+  <url><loc>https://ahrglanz.de/leistungen/unterhaltsreinigung/sinzig</loc><lastmod>2025-01-29</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://ahrglanz.de/leistungen/grundreinigung/sinzig</loc><lastmod>2025-01-29</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://ahrglanz.de/leistungen/glasreinigung/sinzig</loc><lastmod>2025-01-29</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://ahrglanz.de/leistungen/baureinigung/sinzig</loc><lastmod>2025-01-29</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://ahrglanz.de/leistungen/treppenhausreinigung/sinzig</loc><lastmod>2025-01-29</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+
+  <!-- Remagen -->
+  <url><loc>https://ahrglanz.de/leistungen/unterhaltsreinigung/remagen</loc><lastmod>2025-01-29</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://ahrglanz.de/leistungen/grundreinigung/remagen</loc><lastmod>2025-01-29</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://ahrglanz.de/leistungen/glasreinigung/remagen</loc><lastmod>2025-01-29</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://ahrglanz.de/leistungen/baureinigung/remagen</loc><lastmod>2025-01-29</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://ahrglanz.de/leistungen/treppenhausreinigung/remagen</loc><lastmod>2025-01-29</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+
+  <!-- Andernach -->
+  <url><loc>https://ahrglanz.de/leistungen/unterhaltsreinigung/andernach</loc><lastmod>2025-01-29</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://ahrglanz.de/leistungen/grundreinigung/andernach</loc><lastmod>2025-01-29</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://ahrglanz.de/leistungen/glasreinigung/andernach</loc><lastmod>2025-01-29</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://ahrglanz.de/leistungen/baureinigung/andernach</loc><lastmod>2025-01-29</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://ahrglanz.de/leistungen/treppenhausreinigung/andernach</loc><lastmod>2025-01-29</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+
+  <!-- Neuwied -->
+  <url><loc>https://ahrglanz.de/leistungen/unterhaltsreinigung/neuwied</loc><lastmod>2025-01-29</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://ahrglanz.de/leistungen/grundreinigung/neuwied</loc><lastmod>2025-01-29</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://ahrglanz.de/leistungen/glasreinigung/neuwied</loc><lastmod>2025-01-29</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://ahrglanz.de/leistungen/baureinigung/neuwied</loc><lastmod>2025-01-29</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://ahrglanz.de/leistungen/treppenhausreinigung/neuwied</loc><lastmod>2025-01-29</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+
+  <!-- Bad Breisig -->
+  <url><loc>https://ahrglanz.de/leistungen/unterhaltsreinigung/bad-breisig</loc><lastmod>2025-01-29</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://ahrglanz.de/leistungen/grundreinigung/bad-breisig</loc><lastmod>2025-01-29</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://ahrglanz.de/leistungen/glasreinigung/bad-breisig</loc><lastmod>2025-01-29</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://ahrglanz.de/leistungen/baureinigung/bad-breisig</loc><lastmod>2025-01-29</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+
+  <!-- Grafschaft -->
+  <url><loc>https://ahrglanz.de/leistungen/unterhaltsreinigung/grafschaft</loc><lastmod>2025-01-29</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://ahrglanz.de/leistungen/grundreinigung/grafschaft</loc><lastmod>2025-01-29</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://ahrglanz.de/leistungen/glasreinigung/grafschaft</loc><lastmod>2025-01-29</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://ahrglanz.de/leistungen/baureinigung/grafschaft</loc><lastmod>2025-01-29</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+
+  <!-- Ahrweiler -->
+  <url><loc>https://ahrglanz.de/leistungen/unterhaltsreinigung/ahrweiler</loc><lastmod>2025-01-29</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://ahrglanz.de/leistungen/grundreinigung/ahrweiler</loc><lastmod>2025-01-29</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://ahrglanz.de/leistungen/glasreinigung/ahrweiler</loc><lastmod>2025-01-29</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://ahrglanz.de/leistungen/baureinigung/ahrweiler</loc><lastmod>2025-01-29</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+
+  <!-- Ortsteile Bad Neuenahr-Ahrweiler -->
+  <url><loc>https://ahrglanz.de/leistungen/unterhaltsreinigung/loehndorf</loc><lastmod>2025-01-29</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://ahrglanz.de/leistungen/unterhaltsreinigung/koisdorf</loc><lastmod>2025-01-29</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://ahrglanz.de/leistungen/unterhaltsreinigung/westum</loc><lastmod>2025-01-29</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://ahrglanz.de/leistungen/unterhaltsreinigung/bad-bodendorf</loc><lastmod>2025-01-29</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://ahrglanz.de/leistungen/unterhaltsreinigung/heimersheim</loc><lastmod>2025-01-29</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://ahrglanz.de/leistungen/unterhaltsreinigung/heppingen</loc><lastmod>2025-01-29</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://ahrglanz.de/leistungen/unterhaltsreinigung/bachem</loc><lastmod>2025-01-29</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://ahrglanz.de/leistungen/unterhaltsreinigung/walporzheim</loc><lastmod>2025-01-29</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://ahrglanz.de/leistungen/unterhaltsreinigung/marienthal</loc><lastmod>2025-01-29</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+
+  <!-- Rhein-Region -->
+  <url><loc>https://ahrglanz.de/leistungen/unterhaltsreinigung/bad-honnef</loc><lastmod>2025-01-29</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://ahrglanz.de/leistungen/grundreinigung/bad-honnef</loc><lastmod>2025-01-29</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://ahrglanz.de/leistungen/glasreinigung/bad-honnef</loc><lastmod>2025-01-29</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://ahrglanz.de/leistungen/baureinigung/bad-honnef</loc><lastmod>2025-01-29</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+
+  <url><loc>https://ahrglanz.de/leistungen/unterhaltsreinigung/koenigswinter</loc><lastmod>2025-01-29</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://ahrglanz.de/leistungen/grundreinigung/koenigswinter</loc><lastmod>2025-01-29</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://ahrglanz.de/leistungen/glasreinigung/koenigswinter</loc><lastmod>2025-01-29</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+
+  <url><loc>https://ahrglanz.de/leistungen/unterhaltsreinigung/unkel</loc><lastmod>2025-01-29</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://ahrglanz.de/leistungen/unterhaltsreinigung/linz</loc><lastmod>2025-01-29</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://ahrglanz.de/leistungen/unterhaltsreinigung/bad-hoenningen</loc><lastmod>2025-01-29</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+
+  <!-- Eifel & Ahrtal -->
+  <url><loc>https://ahrglanz.de/leistungen/unterhaltsreinigung/adenau</loc><lastmod>2025-01-29</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://ahrglanz.de/leistungen/unterhaltsreinigung/altenahr</loc><lastmod>2025-01-29</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://ahrglanz.de/leistungen/baureinigung/altenahr</loc><lastmod>2025-01-29</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://ahrglanz.de/leistungen/unterhaltsreinigung/dernau</loc><lastmod>2025-01-29</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://ahrglanz.de/leistungen/baureinigung/dernau</loc><lastmod>2025-01-29</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://ahrglanz.de/leistungen/unterhaltsreinigung/rech</loc><lastmod>2025-01-29</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+
+  <!-- Mayen-Koblenz -->
+  <url><loc>https://ahrglanz.de/leistungen/unterhaltsreinigung/mayen</loc><lastmod>2025-01-29</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://ahrglanz.de/leistungen/grundreinigung/mayen</loc><lastmod>2025-01-29</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://ahrglanz.de/leistungen/glasreinigung/mayen</loc><lastmod>2025-01-29</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://ahrglanz.de/leistungen/baureinigung/mayen</loc><lastmod>2025-01-29</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+
+  <url><loc>https://ahrglanz.de/leistungen/unterhaltsreinigung/mendig</loc><lastmod>2025-01-29</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://ahrglanz.de/leistungen/unterhaltsreinigung/plaidt</loc><lastmod>2025-01-29</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+
+  <!-- Rhein-Sieg -->
+  <url><loc>https://ahrglanz.de/leistungen/unterhaltsreinigung/meckenheim</loc><lastmod>2025-01-29</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://ahrglanz.de/leistungen/grundreinigung/meckenheim</loc><lastmod>2025-01-29</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://ahrglanz.de/leistungen/glasreinigung/meckenheim</loc><lastmod>2025-01-29</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+
+  <url><loc>https://ahrglanz.de/leistungen/unterhaltsreinigung/rheinbach</loc><lastmod>2025-01-29</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://ahrglanz.de/leistungen/grundreinigung/rheinbach</loc><lastmod>2025-01-29</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://ahrglanz.de/leistungen/glasreinigung/rheinbach</loc><lastmod>2025-01-29</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+
+  <url><loc>https://ahrglanz.de/leistungen/unterhaltsreinigung/bad-godesberg</loc><lastmod>2025-01-29</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://ahrglanz.de/leistungen/grundreinigung/bad-godesberg</loc><lastmod>2025-01-29</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://ahrglanz.de/leistungen/glasreinigung/bad-godesberg</loc><lastmod>2025-01-29</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+
+  <url><loc>https://ahrglanz.de/leistungen/unterhaltsreinigung/beuel</loc><lastmod>2025-01-29</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://ahrglanz.de/leistungen/grundreinigung/beuel</loc><lastmod>2025-01-29</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+
+  <!-- ========================================== -->
+  <!-- OBJEKTE - Städte-spezifische URLs -->
+  <!-- Hauptstädte (höhere Priorität) -->
+  <!-- ========================================== -->
+  
+  <!-- Bad Neuenahr-Ahrweiler -->
+  <url><loc>https://ahrglanz.de/objekte/wohnanlage/bad-neuenahr-ahrweiler</loc><lastmod>2025-01-29</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://ahrglanz.de/objekte/buero/bad-neuenahr-ahrweiler</loc><lastmod>2025-01-29</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://ahrglanz.de/objekte/hotel/bad-neuenahr-ahrweiler</loc><lastmod>2025-01-29</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://ahrglanz.de/objekte/kita/bad-neuenahr-ahrweiler</loc><lastmod>2025-01-29</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://ahrglanz.de/objekte/praxis/bad-neuenahr-ahrweiler</loc><lastmod>2025-01-29</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://ahrglanz.de/objekte/bildungseinrichtung/bad-neuenahr-ahrweiler</loc><lastmod>2025-01-29</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://ahrglanz.de/objekte/gesundheit/bad-neuenahr-ahrweiler</loc><lastmod>2025-01-29</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://ahrglanz.de/objekte/sportclub/bad-neuenahr-ahrweiler</loc><lastmod>2025-01-29</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://ahrglanz.de/objekte/industrie/bad-neuenahr-ahrweiler</loc><lastmod>2025-01-29</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://ahrglanz.de/objekte/geschaeft/bad-neuenahr-ahrweiler</loc><lastmod>2025-01-29</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://ahrglanz.de/objekte/gastronomie/bad-neuenahr-ahrweiler</loc><lastmod>2025-01-29</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+
+  <!-- Bonn -->
+  <url><loc>https://ahrglanz.de/objekte/wohnanlage/bonn</loc><lastmod>2025-01-29</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://ahrglanz.de/objekte/buero/bonn</loc><lastmod>2025-01-29</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://ahrglanz.de/objekte/hotel/bonn</loc><lastmod>2025-01-29</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://ahrglanz.de/objekte/kita/bonn</loc><lastmod>2025-01-29</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://ahrglanz.de/objekte/praxis/bonn</loc><lastmod>2025-01-29</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://ahrglanz.de/objekte/bildungseinrichtung/bonn</loc><lastmod>2025-01-29</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://ahrglanz.de/objekte/gesundheit/bonn</loc><lastmod>2025-01-29</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://ahrglanz.de/objekte/sportclub/bonn</loc><lastmod>2025-01-29</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://ahrglanz.de/objekte/industrie/bonn</loc><lastmod>2025-01-29</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://ahrglanz.de/objekte/geschaeft/bonn</loc><lastmod>2025-01-29</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://ahrglanz.de/objekte/gastronomie/bonn</loc><lastmod>2025-01-29</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+
+  <!-- Koblenz -->
+  <url><loc>https://ahrglanz.de/objekte/wohnanlage/koblenz</loc><lastmod>2025-01-29</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://ahrglanz.de/objekte/buero/koblenz</loc><lastmod>2025-01-29</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://ahrglanz.de/objekte/hotel/koblenz</loc><lastmod>2025-01-29</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://ahrglanz.de/objekte/kita/koblenz</loc><lastmod>2025-01-29</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://ahrglanz.de/objekte/praxis/koblenz</loc><lastmod>2025-01-29</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://ahrglanz.de/objekte/bildungseinrichtung/koblenz</loc><lastmod>2025-01-29</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://ahrglanz.de/objekte/gesundheit/koblenz</loc><lastmod>2025-01-29</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://ahrglanz.de/objekte/sportclub/koblenz</loc><lastmod>2025-01-29</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://ahrglanz.de/objekte/industrie/koblenz</loc><lastmod>2025-01-29</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://ahrglanz.de/objekte/geschaeft/koblenz</loc><lastmod>2025-01-29</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://ahrglanz.de/objekte/gastronomie/koblenz</loc><lastmod>2025-01-29</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+
+  <!-- Sinzig -->
+  <url><loc>https://ahrglanz.de/objekte/wohnanlage/sinzig</loc><lastmod>2025-01-29</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://ahrglanz.de/objekte/buero/sinzig</loc><lastmod>2025-01-29</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://ahrglanz.de/objekte/praxis/sinzig</loc><lastmod>2025-01-29</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://ahrglanz.de/objekte/gastronomie/sinzig</loc><lastmod>2025-01-29</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+
+  <!-- Remagen -->
+  <url><loc>https://ahrglanz.de/objekte/wohnanlage/remagen</loc><lastmod>2025-01-29</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://ahrglanz.de/objekte/buero/remagen</loc><lastmod>2025-01-29</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://ahrglanz.de/objekte/praxis/remagen</loc><lastmod>2025-01-29</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://ahrglanz.de/objekte/bildungseinrichtung/remagen</loc><lastmod>2025-01-29</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+
+  <!-- Andernach -->
+  <url><loc>https://ahrglanz.de/objekte/wohnanlage/andernach</loc><lastmod>2025-01-29</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://ahrglanz.de/objekte/buero/andernach</loc><lastmod>2025-01-29</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://ahrglanz.de/objekte/praxis/andernach</loc><lastmod>2025-01-29</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://ahrglanz.de/objekte/industrie/andernach</loc><lastmod>2025-01-29</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+
+  <!-- Neuwied -->
+  <url><loc>https://ahrglanz.de/objekte/wohnanlage/neuwied</loc><lastmod>2025-01-29</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://ahrglanz.de/objekte/buero/neuwied</loc><lastmod>2025-01-29</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://ahrglanz.de/objekte/praxis/neuwied</loc><lastmod>2025-01-29</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://ahrglanz.de/objekte/industrie/neuwied</loc><lastmod>2025-01-29</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+
+  <!-- Mayen -->
+  <url><loc>https://ahrglanz.de/objekte/wohnanlage/mayen</loc><lastmod>2025-01-29</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://ahrglanz.de/objekte/buero/mayen</loc><lastmod>2025-01-29</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://ahrglanz.de/objekte/praxis/mayen</loc><lastmod>2025-01-29</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://ahrglanz.de/objekte/industrie/mayen</loc><lastmod>2025-01-29</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+
+  <!-- Bad Honnef -->
+  <url><loc>https://ahrglanz.de/objekte/wohnanlage/bad-honnef</loc><lastmod>2025-01-29</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://ahrglanz.de/objekte/buero/bad-honnef</loc><lastmod>2025-01-29</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://ahrglanz.de/objekte/praxis/bad-honnef</loc><lastmod>2025-01-29</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+
+  <!-- Königswinter -->
+  <url><loc>https://ahrglanz.de/objekte/wohnanlage/koenigswinter</loc><lastmod>2025-01-29</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://ahrglanz.de/objekte/buero/koenigswinter</loc><lastmod>2025-01-29</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://ahrglanz.de/objekte/hotel/koenigswinter</loc><lastmod>2025-01-29</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+
+  <!-- Bad Godesberg -->
+  <url><loc>https://ahrglanz.de/objekte/wohnanlage/bad-godesberg</loc><lastmod>2025-01-29</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://ahrglanz.de/objekte/buero/bad-godesberg</loc><lastmod>2025-01-29</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://ahrglanz.de/objekte/praxis/bad-godesberg</loc><lastmod>2025-01-29</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+
+  <!-- Beuel -->
+  <url><loc>https://ahrglanz.de/objekte/wohnanlage/beuel</loc><lastmod>2025-01-29</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://ahrglanz.de/objekte/buero/beuel</loc><lastmod>2025-01-29</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+
+  <!-- Meckenheim -->
+  <url><loc>https://ahrglanz.de/objekte/wohnanlage/meckenheim</loc><lastmod>2025-01-29</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://ahrglanz.de/objekte/buero/meckenheim</loc><lastmod>2025-01-29</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+
+  <!-- Rheinbach -->
+  <url><loc>https://ahrglanz.de/objekte/wohnanlage/rheinbach</loc><lastmod>2025-01-29</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://ahrglanz.de/objekte/buero/rheinbach</loc><lastmod>2025-01-29</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+
+  <!-- Grafschaft -->
+  <url><loc>https://ahrglanz.de/objekte/wohnanlage/grafschaft</loc><lastmod>2025-01-29</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://ahrglanz.de/objekte/buero/grafschaft</loc><lastmod>2025-01-29</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+
+  <!-- Bad Breisig -->
+  <url><loc>https://ahrglanz.de/objekte/wohnanlage/bad-breisig</loc><lastmod>2025-01-29</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://ahrglanz.de/objekte/hotel/bad-breisig</loc><lastmod>2025-01-29</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+
+  <!-- Ahrweiler -->
+  <url><loc>https://ahrglanz.de/objekte/wohnanlage/ahrweiler</loc><lastmod>2025-01-29</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://ahrglanz.de/objekte/gastronomie/ahrweiler</loc><lastmod>2025-01-29</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+
+  <!-- ========================================== -->
+  <!-- RECHTLICHES -->
+  <!-- ========================================== -->
   <url>
     <loc>https://ahrglanz.de/impressum</loc>
-    <lastmod>2025-01-26</lastmod>
+    <lastmod>2025-01-29</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://ahrglanz.de/datenschutz</loc>
-    <lastmod>2025-01-26</lastmod>
+    <lastmod>2025-01-29</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
