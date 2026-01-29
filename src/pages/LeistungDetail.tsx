@@ -468,23 +468,18 @@ const LeistungDetail = () => {
   // Get localized SEO content
   const seoContent = getLeistungSEOContent(slug!, leistung.title, city);
   
+  // Subtile Lokalisierung: Nur Ortsnamen in bestehenden Texten ersetzen
   const dynamicHeroDescription = city 
-    ? seoContent.heroDescriptionLocalized
+    ? leistung.heroDescription.replace(/Bad Neuenahr-Ahrweiler/g, city.name).replace(/Bonn & Umgebung/g, city.region || '')
     : leistung.heroDescription;
   
   const dynamicSectionDescription = city
-    ? seoContent.sectionDescriptionLocalized
+    ? leistung.sectionDescription.replace(/Bad Neuenahr-Ahrweiler/g, city.name)
     : leistung.sectionDescription;
-  
-  const dynamicBulletIntro = city
-    ? seoContent.bulletIntroLocalized
-    : 'Mit geschultem Personal, professionellen Reinigungsmitteln und festen Qualitätsstandards erzielen wir nachhaltige Ergebnisse – zuverlässig und gründlich.';
   
   const dynamicClosingText = city 
     ? seoContent.closingTextLocalized
     : leistung.closingText;
-  
-  const localSEOParagraph = city ? seoContent.localSEOParagraph : null;
 
   const scrollToQuote = () => {
     navigate('/#quote-form');
@@ -564,11 +559,6 @@ const LeistungDetail = () => {
               <p className="text-muted-foreground text-lg">
                 {dynamicSectionDescription}
               </p>
-              {localSEOParagraph && (
-                <p className="text-muted-foreground text-base mt-4 italic">
-                  {localSEOParagraph}
-                </p>
-              )}
             </div>
           </div>
         </section>
@@ -606,7 +596,7 @@ const LeistungDetail = () => {
                   {leistung.bulletSubtitle}
                 </h2>
                 <p className="text-muted-foreground mb-8">
-                  {dynamicBulletIntro}
+                  Mit geschultem Personal, professionellen Reinigungsmitteln und festen Qualitätsstandards erzielen wir nachhaltige Ergebnisse – zuverlässig und gründlich.
                 </p>
                 <ul className="space-y-4">
                   {leistung.bulletPoints.map((point, index) => (
